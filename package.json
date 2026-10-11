@@ -14,11 +14,17 @@
     "typecheck": "astro check",
     "test": "vitest run",
     "test:watch": "vitest",
-    "e2e": "playwright test",
     "e2e:install": "playwright install chromium",
     "lhci": "lhci autorun",
     "ci": "npm run typecheck && npm run test && npm run test:build && npm run build && npm run e2e",
-    "test:build": "vitest run --config vitest.build.config.ts"
+    "test:build": "vitest run --config vitest.build.config.ts",
+    "e2e": "playwright test --project=site",
+    "fonts:fetch": "node scripts/fonts/py.mjs scripts/fonts/fetch_fonts.py",
+    "fonts:check": "node scripts/fonts/py.mjs scripts/fonts/check_fonts.py",
+    "fonts:test": "node scripts/fonts/py.mjs -m unittest discover -s scripts/fonts -p test_*.py",
+    "fonts:page": "node scripts/fonts/py.mjs scripts/fonts/build_test_page.py",
+    "fonts:serve": "node scripts/fonts/serve.mjs",
+    "fonts:e2e": "playwright test --project=fonts"
   },
   "dependencies": {
     "@astrojs/react": "^7.0.1",

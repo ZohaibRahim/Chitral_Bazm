@@ -1,0 +1,58 @@
+{
+  "_comment": "Candidate fonts for D-03 (PRD v3.1 §8). Sources are official only. git_blob_sha1 values come from the GitHub contents API for google/fonts and are verified on download; sha256 values are recorded in fonts.lock.json on first download and verified afterwards.",
+  "fonts": [
+    {
+      "id": "noto-nastaliq-urdu",
+      "family": "Noto Nastaliq Urdu",
+      "role": "candidate",
+      "style": "nastaliq",
+      "source": "google/fonts (official Google Fonts repository)",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notonastaliqurdu/NotoNastaliqUrdu%5Bwght%5D.ttf",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notonastaliqurdu/OFL.txt",
+      "file": "NotoNastaliqUrdu[wght].ttf",
+      "git_blob_sha1": "896bb7953039c81192d4b62a6968cae1a52bfc52",
+      "license": "OFL-1.1",
+      "subset": true
+    },
+    {
+      "id": "gulzar",
+      "family": "Gulzar",
+      "role": "candidate",
+      "style": "nastaliq",
+      "source": "google/fonts (official Google Fonts repository)",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/gulzar/Gulzar-Regular.ttf",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/gulzar/OFL.txt",
+      "file": "Gulzar-Regular.ttf",
+      "git_blob_sha1": "62b1b126aa600f65b6e2ffed3041580cafe46274",
+      "license": "OFL-1.1",
+      "subset": true
+    },
+    {
+      "id": "noto-naskh-arabic",
+      "family": "Noto Naskh Arabic",
+      "role": "candidate (Naskh fallback)",
+      "style": "naskh",
+      "source": "google/fonts (official Google Fonts repository)",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notonaskharabic/NotoNaskhArabic%5Bwght%5D.ttf",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notonaskharabic/OFL.txt",
+      "file": "NotoNaskhArabic[wght].ttf",
+      "git_blob_sha1": "a8d2867262dc7bb28492ad746de5d56235735c8b",
+      "license": "OFL-1.1",
+      "subset": true
+    },
+    {
+      "id": "awami-nastaliq",
+      "family": "Awami Nastaliq",
+      "role": "reference only (Graphite; Firefox)",
+      "style": "nastaliq",
+      "source": "SIL International (software.sil.org/awami), release 3.400, 2025-10-17",
+      "url": "https://software.sil.org/downloads/r/awami/AwamiNastaliq-3.400.zip",
+      "zip_member": "AwamiNastaliq-Regular.ttf",
+      "zip_license_member": "OFL.txt",
+      "file": "AwamiNastaliq-Regular.ttf",
+      "license": "OFL-1.1",
+      "subset": false,
+      "_subset_note": "Not subset: the fontTools subsetter does not preserve Graphite tables, which this font relies on."
+    }
+  ]
+}

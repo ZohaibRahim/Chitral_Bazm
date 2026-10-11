@@ -1,0 +1,4143 @@
+{
+  "generated": "2026-10-10T19:22:28-07:00",
+  "tools": {
+    "harfbuzz": "14.6.0",
+    "uharfbuzz": "0.56.3",
+    "fonttools": "4.66.1",
+    "python": "3.12.7",
+    "unicode_arabic_shaping": "18.0.0"
+  },
+  "required": {
+    "khowar_letters": [
+      "U+076E",
+      "U+076F",
+      "U+0770",
+      "U+0771",
+      "U+0681",
+      "U+0685"
+    ],
+    "urdu_letters": [
+      "U+0627",
+      "U+0622",
+      "U+0628",
+      "U+067E",
+      "U+062A",
+      "U+0679",
+      "U+062B",
+      "U+062C",
+      "U+0686",
+      "U+062D",
+      "U+062E",
+      "U+062F",
+      "U+0688",
+      "U+0630",
+      "U+0631",
+      "U+0691",
+      "U+0632",
+      "U+0698",
+      "U+0633",
+      "U+0634",
+      "U+0635",
+      "U+0636",
+      "U+0637",
+      "U+0638",
+      "U+0639",
+      "U+063A",
+      "U+0641",
+      "U+0642",
+      "U+06A9",
+      "U+06AF",
+      "U+0644",
+      "U+0645",
+      "U+0646",
+      "U+06BA",
+      "U+0648",
+      "U+06C1",
+      "U+06BE",
+      "U+0621",
+      "U+06CC",
+      "U+06D2",
+      "U+0626",
+      "U+0624",
+      "U+0623",
+      "U+06C2",
+      "U+06C3",
+      "U+06D3"
+    ],
+    "marks": [
+      "U+064B",
+      "U+064C",
+      "U+064D",
+      "U+064E",
+      "U+064F",
+      "U+0650",
+      "U+0651",
+      "U+0652",
+      "U+0654",
+      "U+0670"
+    ],
+    "punctuation": [
+      "U+060C",
+      "U+061B",
+      "U+061F",
+      "U+06D4"
+    ],
+    "urdu_digits": [
+      "U+06F0",
+      "U+06F1",
+      "U+06F2",
+      "U+06F3",
+      "U+06F4",
+      "U+06F5",
+      "U+06F6",
+      "U+06F7",
+      "U+06F8",
+      "U+06F9"
+    ]
+  },
+  "optional": {
+    "arabic_input_variants": [
+      "U+064A",
+      "U+0649",
+      "U+0643",
+      "U+0647",
+      "U+0629",
+      "U+0625",
+      "U+0671",
+      "U+06AA",
+      "U+06D5"
+    ],
+    "arabic_indic_digits": [
+      "U+0660",
+      "U+0661",
+      "U+0662",
+      "U+0663",
+      "U+0664",
+      "U+0665",
+      "U+0666",
+      "U+0667",
+      "U+0668",
+      "U+0669"
+    ],
+    "tatweel": [
+      "U+0640"
+    ],
+    "dotted_circle": [
+      "U+25CC"
+    ]
+  },
+  "fonts": [
+    {
+      "id": "noto-nastaliq-urdu",
+      "family": "Noto Nastaliq Urdu",
+      "role": "candidate",
+      "style": "nastaliq",
+      "source": "google/fonts (official Google Fonts repository)",
+      "license": "OFL-1.1",
+      "version": "Version 3.009",
+      "copyright": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/nastaliq)",
+      "variable": true,
+      "graphite_tables": [],
+      "ot_language_systems": {
+        "GSUB": [
+          "ARA",
+          "FAR",
+          "KSH",
+          "SND",
+          "URD",
+          "dflt"
+        ],
+        "GPOS": [
+          "ARA",
+          "FAR",
+          "KSH",
+          "SND",
+          "URD",
+          "dflt"
+        ]
+      },
+      "coverage": {
+        "khowar_letters": {
+          "missing": [],
+          "total": 6
+        },
+        "urdu_letters": {
+          "missing": [],
+          "total": 46
+        },
+        "marks": {
+          "missing": [],
+          "total": 10
+        },
+        "punctuation": {
+          "missing": [],
+          "total": 4
+        },
+        "urdu_digits": {
+          "missing": [],
+          "total": 10
+        },
+        "arabic_input_variants": {
+          "missing": [
+            "U+06AA ڪ"
+          ],
+          "total": 9
+        },
+        "arabic_indic_digits": {
+          "missing": [],
+          "total": 10
+        },
+        "tatweel": {
+          "missing": [],
+          "total": 1
+        },
+        "dotted_circle": {
+          "missing": [],
+          "total": 1
+        }
+      },
+      "required_missing": [],
+      "shaping": {
+        "engine": "HarfBuzz 14.6.0 (uharfbuzz 0.56.3), OpenType only (no Graphite)",
+        "cases": 310,
+        "notdef": [],
+        "same_glyph_as_isolated": [],
+        "merged_with_neighbour": [
+          "U+076E ݮ medial_zwj",
+          "U+076E ݮ final_zwj",
+          "U+076F ݯ medial_zwj",
+          "U+076F ݯ final_zwj",
+          "U+0770 ݰ medial_zwj",
+          "U+0770 ݰ final_zwj",
+          "U+0771 ݱ final_zwj",
+          "U+0771 ݱ zwnj_isolated",
+          "U+0681 ځ medial_zwj",
+          "U+0681 ځ final_zwj",
+          "U+0685 څ medial_zwj",
+          "U+0685 څ final_zwj",
+          "U+0627 ا final_zwj",
+          "U+0627 ا zwnj_isolated",
+          "U+0622 آ final_zwj",
+          "U+0622 آ zwnj_isolated",
+          "U+0628 ب medial_zwj",
+          "U+0628 ب final_zwj",
+          "U+067E پ medial_zwj",
+          "U+067E پ final_zwj",
+          "U+062A ت medial_zwj",
+          "U+062A ت final_zwj",
+          "U+0679 ٹ medial_zwj",
+          "U+0679 ٹ final_zwj",
+          "U+062B ث medial_zwj",
+          "U+062B ث final_zwj",
+          "U+062C ج medial_zwj",
+          "U+062C ج final_zwj",
+          "U+0686 چ medial_zwj",
+          "U+0686 چ final_zwj",
+          "U+062D ح medial_zwj",
+          "U+062D ح final_zwj",
+          "U+062E خ medial_zwj",
+          "U+062E خ final_zwj",
+          "U+062F د final_zwj",
+          "U+062F د zwnj_isolated",
+          "U+0688 ڈ final_zwj",
+          "U+0688 ڈ zwnj_isolated",
+          "U+0630 ذ final_zwj",
+          "U+0630 ذ zwnj_isolated",
+          "U+0631 ر final_zwj",
+          "U+0631 ر zwnj_isolated",
+          "U+0691 ڑ final_zwj",
+          "U+0691 ڑ zwnj_isolated",
+          "U+0632 ز final_zwj",
+          "U+0632 ز zwnj_isolated",
+          "U+0698 ژ final_zwj",
+          "U+0698 ژ zwnj_isolated",
+          "U+0633 س medial_zwj",
+          "U+0633 س final_zwj",
+          "U+0634 ش medial_zwj",
+          "U+0634 ش final_zwj",
+          "U+0635 ص medial_zwj",
+          "U+0635 ص final_zwj",
+          "U+0636 ض medial_zwj",
+          "U+0636 ض final_zwj",
+          "U+0637 ط medial_zwj",
+          "U+0637 ط final_zwj",
+          "U+0638 ظ medial_zwj",
+          "U+0638 ظ final_zwj",
+          "U+0639 ع medial_zwj",
+          "U+0639 ع final_zwj",
+          "U+063A غ medial_zwj",
+          "U+063A غ final_zwj",
+          "U+0641 ف medial_zwj",
+          "U+0641 ف final_zwj",
+          "U+0642 ق medial_zwj",
+          "U+0642 ق final_zwj",
+          "U+06A9 ک medial_zwj",
+          "U+06A9 ک final_zwj",
+          "U+06AF گ medial_zwj",
+          "U+06AF گ final_zwj",
+          "U+0644 ل medial_zwj",
+          "U+0644 ل final_zwj",
+          "U+0645 م medial_zwj",
+          "U+0645 م final_zwj",
+          "U+0646 ن medial_zwj",
+          "U+0646 ن final_zwj",
+          "U+06BA ں medial_zwj",
+          "U+06BA ں final_zwj",
+          "U+0648 و final_zwj",
+          "U+0648 و zwnj_isolated",
+          "U+06C1 ہ medial_zwj",
+          "U+06C1 ہ final_zwj",
+          "U+06BE ھ medial_zwj",
+          "U+06BE ھ final_zwj",
+          "U+06CC ی medial_zwj",
+          "U+06CC ی final_zwj",
+          "U+06D2 ے final_zwj",
+          "U+06D2 ے zwnj_isolated",
+          "U+0626 ئ medial_zwj",
+          "U+0626 ئ final_zwj",
+          "U+0624 ؤ final_zwj",
+          "U+0624 ؤ zwnj_isolated",
+          "U+0623 أ final_zwj",
+          "U+0623 أ zwnj_isolated",
+          "U+06C2 ۂ medial_zwj",
+          "U+06C2 ۂ final_zwj",
+          "U+06C3 ۃ final_zwj",
+          "U+06C3 ۃ zwnj_isolated",
+          "U+06D3 ۓ final_zwj",
+          "U+06D3 ۓ zwnj_isolated"
+        ],
+        "khowar_detail": [
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "TahSmallEnclNS",
+              "HahSep"
+            ],
+            "signature": [
+              "ea2f6c85908baf61eb635150cd69e817093a5ae50443c91eb047c886203506ababcafd3deff1346a40f91485152c0e2d7bca8622c1485cb7600547b94bb584d6",
+              "65ea667cc8a097ee31141bb468b5a08703c6b1ef0d94c0961ffae82c34a4dffe2041fe1cc2579ae5b892a7cc862519411debebe8771e4ea91eeff6ce1b32c440"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "TahSmallBelowNS",
+              "sp0",
+              "HahIni"
+            ],
+            "signature": [
+              "1ed8492ffcfd75b4b50b5153f81a0764866920918b492b0ec77095c6c61f52665ec5733eba6e698cd02dfde3b6fea966bd62d372222fb2390bd50020364f1761",
+              "w0",
+              "61ac582e84bceed223bad335b8875c7965f37aa24aeb82fb788d78676eb50d05f1d72167fd0b3600dcfc1c9a269d014bb1145eec709af9f4737cc944e105b388"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "TahSmallBelowNS",
+              "HahMed"
+            ],
+            "signature": [
+              "1ed8492ffcfd75b4b50b5153f81a0764866920918b492b0ec77095c6c61f52665ec5733eba6e698cd02dfde3b6fea966bd62d372222fb2390bd50020364f1761",
+              "94f6bd4911258bfee440a480e98c8923a654311cd69bf0b7ff5174d135da12d0aa36d5cd418386da7976f1b92dd6d71235833d4d9b7c3390211c6bf5d72cd8fc"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "TahSmallEnclNS",
+              "HahFin"
+            ],
+            "signature": [
+              "ea2f6c85908baf61eb635150cd69e817093a5ae50443c91eb047c886203506ababcafd3deff1346a40f91485152c0e2d7bca8622c1485cb7600547b94bb584d6",
+              "0dfc632f2769bb10338adae4ad42b0e9f8a8ece7989343b42fe3664bc140e436efffdbf1a2ed53f45bc2482bf45c19de2e3366d9d8ea6959ea092d5389c4014c"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "TahSmallBelowNS",
+              "sp0",
+              "HahIni.outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "1ed8492ffcfd75b4b50b5153f81a0764866920918b492b0ec77095c6c61f52665ec5733eba6e698cd02dfde3b6fea966bd62d372222fb2390bd50020364f1761",
+              "w0",
+              "8f5c423170bfa1339086197c0cf377188e3957859b07d1f8db66fd91a7abeeba34252f7c434d0256caff961c2a7f339842d44966cb503dc1c4b2c751a2f4b2f1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "TahSmallBelowNS",
+              "HahMed.inD2outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "1ed8492ffcfd75b4b50b5153f81a0764866920918b492b0ec77095c6c61f52665ec5733eba6e698cd02dfde3b6fea966bd62d372222fb2390bd50020364f1761",
+              "633893a21603ca774dff0e804ac899397421d067c0c80847586ceb5244c6ef8cd0dd22da9d9dafb47dda3f2e52598a839a771d08171f794db0ab41475e55a2fe",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "17e0e75de9fb59644dfbc23a1a8cd791897f31c33301a7a588e19b732da40d2e974a462011c9d041c1c2dbcb43340dfd286730f248816b84e0851eefc33a8f58"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "TahSmallEnclNS",
+              "HahFin"
+            ],
+            "signature": [
+              "ea2f6c85908baf61eb635150cd69e817093a5ae50443c91eb047c886203506ababcafd3deff1346a40f91485152c0e2d7bca8622c1485cb7600547b94bb584d6",
+              "0dfc632f2769bb10338adae4ad42b0e9f8a8ece7989343b42fe3664bc140e436efffdbf1a2ed53f45bc2482bf45c19de2e3366d9d8ea6959ea092d5389c4014c",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "17e0e75de9fb59644dfbc23a1a8cd791897f31c33301a7a588e19b732da40d2e974a462011c9d041c1c2dbcb43340dfd286730f248816b84e0851eefc33a8f58"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "Tah2DotsEnclNS",
+              "HahSep"
+            ],
+            "signature": [
+              "c71d59ef20e1bf821d786fa86638f00627fd794700e634af874e4d0c0cbf68b3a754341b2e78252905b47cd3eb7a343c642f70c60b8b3ad1bf640ec95834b898",
+              "65ea667cc8a097ee31141bb468b5a08703c6b1ef0d94c0961ffae82c34a4dffe2041fe1cc2579ae5b892a7cc862519411debebe8771e4ea91eeff6ce1b32c440"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "Tah2DotsBelowNS",
+              "sp0",
+              "HahIni"
+            ],
+            "signature": [
+              "40863905c254a7954f6afb6ba05ea22273001c7318da047f6bb12f33f21d3d91d2a7e45958b2d63ec80e5d393ab41138f222bbe3e04149594d71a129bf9866bb",
+              "w0",
+              "61ac582e84bceed223bad335b8875c7965f37aa24aeb82fb788d78676eb50d05f1d72167fd0b3600dcfc1c9a269d014bb1145eec709af9f4737cc944e105b388"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "Tah2DotsBelowNS",
+              "HahMed"
+            ],
+            "signature": [
+              "40863905c254a7954f6afb6ba05ea22273001c7318da047f6bb12f33f21d3d91d2a7e45958b2d63ec80e5d393ab41138f222bbe3e04149594d71a129bf9866bb",
+              "94f6bd4911258bfee440a480e98c8923a654311cd69bf0b7ff5174d135da12d0aa36d5cd418386da7976f1b92dd6d71235833d4d9b7c3390211c6bf5d72cd8fc"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "Tah2DotsEnclNS",
+              "HahFin"
+            ],
+            "signature": [
+              "c71d59ef20e1bf821d786fa86638f00627fd794700e634af874e4d0c0cbf68b3a754341b2e78252905b47cd3eb7a343c642f70c60b8b3ad1bf640ec95834b898",
+              "0dfc632f2769bb10338adae4ad42b0e9f8a8ece7989343b42fe3664bc140e436efffdbf1a2ed53f45bc2482bf45c19de2e3366d9d8ea6959ea092d5389c4014c"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "Tah2DotsBelowNS",
+              "sp0",
+              "HahIni.outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "40863905c254a7954f6afb6ba05ea22273001c7318da047f6bb12f33f21d3d91d2a7e45958b2d63ec80e5d393ab41138f222bbe3e04149594d71a129bf9866bb",
+              "w0",
+              "8f5c423170bfa1339086197c0cf377188e3957859b07d1f8db66fd91a7abeeba34252f7c434d0256caff961c2a7f339842d44966cb503dc1c4b2c751a2f4b2f1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "Tah2DotsBelowNS",
+              "HahMed.inD2outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "40863905c254a7954f6afb6ba05ea22273001c7318da047f6bb12f33f21d3d91d2a7e45958b2d63ec80e5d393ab41138f222bbe3e04149594d71a129bf9866bb",
+              "633893a21603ca774dff0e804ac899397421d067c0c80847586ceb5244c6ef8cd0dd22da9d9dafb47dda3f2e52598a839a771d08171f794db0ab41475e55a2fe",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "17e0e75de9fb59644dfbc23a1a8cd791897f31c33301a7a588e19b732da40d2e974a462011c9d041c1c2dbcb43340dfd286730f248816b84e0851eefc33a8f58"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "Tah2DotsEnclNS",
+              "HahFin"
+            ],
+            "signature": [
+              "c71d59ef20e1bf821d786fa86638f00627fd794700e634af874e4d0c0cbf68b3a754341b2e78252905b47cd3eb7a343c642f70c60b8b3ad1bf640ec95834b898",
+              "0dfc632f2769bb10338adae4ad42b0e9f8a8ece7989343b42fe3664bc140e436efffdbf1a2ed53f45bc2482bf45c19de2e3366d9d8ea6959ea092d5389c4014c",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "17e0e75de9fb59644dfbc23a1a8cd791897f31c33301a7a588e19b732da40d2e974a462011c9d041c1c2dbcb43340dfd286730f248816b84e0851eefc33a8f58"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "SeenSep"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "74999a58c0fb9e82f3bc1178d9ccb8835e54b5647774daab51c700599788e12ad201e1e1abeae51af762bcaff2eb835b058d6f16da8ef0055e07db2aa112309e"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "sp0",
+              "SeenIni"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "w0",
+              "ccef997e9316c006030d23fe4f7eb731024c02ae0f2bd4f7b63685c7fcc45b0a2dcd2dfea78d529b2ed1c293470a0a4a9692cc6ce6bb5963506d71c2abcd07fa"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "SeenMed"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "4ee204aed38454c120b6988d91c4ea40672d2bb824d40226052d6936d9b4459e3068875a91de78f30a6999293503a72e8484d92f0f6f5566d7048fafe2594fbc"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "SeenFin"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "49916dd71a26d76ba51abaa4d8cf952c83234cabb2782ffca885e479f4b0f1b163778ec0c0486bd3e5a9b50545cf8f41eabfe0afb8e4d260be480d808ced475c"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "sp0",
+              "SeenIni.outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "w0",
+              "2f9521e0e035ad7c70cbe0352ea39b77816fedf95ebda7b924efa7b5411fd85e02edbfed1029470ec3c85f532d83a8bd5c47ddc22964180945e7a46ba30f37c6"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "SeenMed.inT2outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "85b2c2406d79202eeb2063cba807eca1a82414412fea14c96430b4e1c00b7f2918f1e8631849dff6aa33e081427508e37a7c7a692b3a8fbcabd513b8dc18f4de",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "460b7d08d5d8cb63578c5c8c783dd35b2c7b0a6530cfd3bea82b72c682942ea04b4cbce5f87d285783a1a2272b1d03e7db3bd36e7b8cbdb46072e57fc988c776"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "SeenFin"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "49916dd71a26d76ba51abaa4d8cf952c83234cabb2782ffca885e479f4b0f1b163778ec0c0486bd3e5a9b50545cf8f41eabfe0afb8e4d260be480d808ced475c",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "460b7d08d5d8cb63578c5c8c783dd35b2c7b0a6530cfd3bea82b72c682942ea04b4cbce5f87d285783a1a2272b1d03e7db3bd36e7b8cbdb46072e57fc988c776"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "isolated",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "RehSep"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "b9b8927baa699c509970b61040f7a0c3ac9af420f443efde01093747e1a6902359c64ce12563ce72ed44988f92f604a0ba042790dd27887ab5d084c1bf30db36"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "final_zwj",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "RehFin"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "5bf80d81de992b5d415dd6f961a264dc5c9eb9ddf15cdfdd9c83545bc63afc559c6c5de23b23d8d60f4ddd582d7fbf99fd634b2ee5edc6fcac58665f671571be"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "final_real",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "RehFin.inD4B"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "6121896f98972eb6aafd6404ca44b99a3b1c4d41cd346f5e2d0a6978c206c6831ef3f9c8ab2e3bc06bc6632ceb70d669e6b9d5c41e0ad0adaefb6a0f11cb4289",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "0510981c9a265a42fec4ccd78812f6bb0640a25d64dd848227d383aeff69a2898759858e6ada56564d4da6bd07023d0a0afdf180a21ab4162814d11de76db5eb"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "zwnj_isolated",
+            "glyphs": [
+              "Tah2DotsAboveNS",
+              "RehSep"
+            ],
+            "signature": [
+              "369b093adf6c13adedf8b1c4976738940ac6c4d9bf2172f9f37760ccbe498ec69c03d1ba3d01c7ed87a2050c0e81a7fca60254fff99e88802b755b3acebf64c1",
+              "b9b8927baa699c509970b61040f7a0c3ac9af420f443efde01093747e1a6902359c64ce12563ce72ed44988f92f604a0ba042790dd27887ab5d084c1bf30db36",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "0bc5dc9c528f3f1983b9b5ddc206207a2d18cc55dbbf63ea7df2f62000849becf1d766947c3cda77899875f3c6fb3ae2916ced6da9145f07ab83d637bb0b9398"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "HamzaAboveNS",
+              "HahSep"
+            ],
+            "signature": [
+              "ebfd9a75f2bb65fa69c0f9e66d5333de5c5961d1bbfb26a7ea955ded10bcfbb04c9177685bb0878df6f1bf3281a91a93e113d5df23a6c37586dcada0ef728fe9",
+              "65ea667cc8a097ee31141bb468b5a08703c6b1ef0d94c0961ffae82c34a4dffe2041fe1cc2579ae5b892a7cc862519411debebe8771e4ea91eeff6ce1b32c440"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "HamzaAboveNS",
+              "sp0",
+              "HahIni"
+            ],
+            "signature": [
+              "ebfd9a75f2bb65fa69c0f9e66d5333de5c5961d1bbfb26a7ea955ded10bcfbb04c9177685bb0878df6f1bf3281a91a93e113d5df23a6c37586dcada0ef728fe9",
+              "w0",
+              "61ac582e84bceed223bad335b8875c7965f37aa24aeb82fb788d78676eb50d05f1d72167fd0b3600dcfc1c9a269d014bb1145eec709af9f4737cc944e105b388"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "HamzaAboveNS",
+              "HahMed"
+            ],
+            "signature": [
+              "ebfd9a75f2bb65fa69c0f9e66d5333de5c5961d1bbfb26a7ea955ded10bcfbb04c9177685bb0878df6f1bf3281a91a93e113d5df23a6c37586dcada0ef728fe9",
+              "94f6bd4911258bfee440a480e98c8923a654311cd69bf0b7ff5174d135da12d0aa36d5cd418386da7976f1b92dd6d71235833d4d9b7c3390211c6bf5d72cd8fc"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "HamzaAboveNS",
+              "HahFin"
+            ],
+            "signature": [
+              "ebfd9a75f2bb65fa69c0f9e66d5333de5c5961d1bbfb26a7ea955ded10bcfbb04c9177685bb0878df6f1bf3281a91a93e113d5df23a6c37586dcada0ef728fe9",
+              "0dfc632f2769bb10338adae4ad42b0e9f8a8ece7989343b42fe3664bc140e436efffdbf1a2ed53f45bc2482bf45c19de2e3366d9d8ea6959ea092d5389c4014c"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "HamzaAboveNS",
+              "sp0",
+              "HahIni.outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "ebfd9a75f2bb65fa69c0f9e66d5333de5c5961d1bbfb26a7ea955ded10bcfbb04c9177685bb0878df6f1bf3281a91a93e113d5df23a6c37586dcada0ef728fe9",
+              "w0",
+              "8f5c423170bfa1339086197c0cf377188e3957859b07d1f8db66fd91a7abeeba34252f7c434d0256caff961c2a7f339842d44966cb503dc1c4b2c751a2f4b2f1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "HamzaAboveNS",
+              "HahMed.inD2outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "ebfd9a75f2bb65fa69c0f9e66d5333de5c5961d1bbfb26a7ea955ded10bcfbb04c9177685bb0878df6f1bf3281a91a93e113d5df23a6c37586dcada0ef728fe9",
+              "633893a21603ca774dff0e804ac899397421d067c0c80847586ceb5244c6ef8cd0dd22da9d9dafb47dda3f2e52598a839a771d08171f794db0ab41475e55a2fe",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "17e0e75de9fb59644dfbc23a1a8cd791897f31c33301a7a588e19b732da40d2e974a462011c9d041c1c2dbcb43340dfd286730f248816b84e0851eefc33a8f58"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "HamzaAboveNS",
+              "HahFin"
+            ],
+            "signature": [
+              "ebfd9a75f2bb65fa69c0f9e66d5333de5c5961d1bbfb26a7ea955ded10bcfbb04c9177685bb0878df6f1bf3281a91a93e113d5df23a6c37586dcada0ef728fe9",
+              "0dfc632f2769bb10338adae4ad42b0e9f8a8ece7989343b42fe3664bc140e436efffdbf1a2ed53f45bc2482bf45c19de2e3366d9d8ea6959ea092d5389c4014c",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "17e0e75de9fb59644dfbc23a1a8cd791897f31c33301a7a588e19b732da40d2e974a462011c9d041c1c2dbcb43340dfd286730f248816b84e0851eefc33a8f58"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "ThreeDotsUpAboveNS",
+              "HahSep"
+            ],
+            "signature": [
+              "57b591cf8bafc1e33253e3f21ed55bc38be49a49f1d84b64b2dff446ff40385b4cb3d963d410e31a00e26e36ec9b962b0caa8575a3b417872ffaddd38a865ca3",
+              "65ea667cc8a097ee31141bb468b5a08703c6b1ef0d94c0961ffae82c34a4dffe2041fe1cc2579ae5b892a7cc862519411debebe8771e4ea91eeff6ce1b32c440"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "ThreeDotsUpAboveNS",
+              "sp0",
+              "HahIni"
+            ],
+            "signature": [
+              "57b591cf8bafc1e33253e3f21ed55bc38be49a49f1d84b64b2dff446ff40385b4cb3d963d410e31a00e26e36ec9b962b0caa8575a3b417872ffaddd38a865ca3",
+              "w0",
+              "61ac582e84bceed223bad335b8875c7965f37aa24aeb82fb788d78676eb50d05f1d72167fd0b3600dcfc1c9a269d014bb1145eec709af9f4737cc944e105b388"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "ThreeDotsUpAboveNS",
+              "HahMed"
+            ],
+            "signature": [
+              "57b591cf8bafc1e33253e3f21ed55bc38be49a49f1d84b64b2dff446ff40385b4cb3d963d410e31a00e26e36ec9b962b0caa8575a3b417872ffaddd38a865ca3",
+              "94f6bd4911258bfee440a480e98c8923a654311cd69bf0b7ff5174d135da12d0aa36d5cd418386da7976f1b92dd6d71235833d4d9b7c3390211c6bf5d72cd8fc"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "ThreeDotsUpAboveNS",
+              "HahFin"
+            ],
+            "signature": [
+              "57b591cf8bafc1e33253e3f21ed55bc38be49a49f1d84b64b2dff446ff40385b4cb3d963d410e31a00e26e36ec9b962b0caa8575a3b417872ffaddd38a865ca3",
+              "0dfc632f2769bb10338adae4ad42b0e9f8a8ece7989343b42fe3664bc140e436efffdbf1a2ed53f45bc2482bf45c19de2e3366d9d8ea6959ea092d5389c4014c"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "ThreeDotsUpAboveNS",
+              "sp0",
+              "HahIni.outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "57b591cf8bafc1e33253e3f21ed55bc38be49a49f1d84b64b2dff446ff40385b4cb3d963d410e31a00e26e36ec9b962b0caa8575a3b417872ffaddd38a865ca3",
+              "w0",
+              "8f5c423170bfa1339086197c0cf377188e3957859b07d1f8db66fd91a7abeeba34252f7c434d0256caff961c2a7f339842d44966cb503dc1c4b2c751a2f4b2f1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "ThreeDotsUpAboveNS",
+              "HahMed.inD2outT2"
+            ],
+            "signature": [
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "6edb01826102ec63e26053bd502855ad439f41ee50afb0b9f2def1e136e2dd3614b7b9766c540acc5db91dd4760f95b922a377d89d8e09e3e5f6379114c80497",
+              "57b591cf8bafc1e33253e3f21ed55bc38be49a49f1d84b64b2dff446ff40385b4cb3d963d410e31a00e26e36ec9b962b0caa8575a3b417872ffaddd38a865ca3",
+              "633893a21603ca774dff0e804ac899397421d067c0c80847586ceb5244c6ef8cd0dd22da9d9dafb47dda3f2e52598a839a771d08171f794db0ab41475e55a2fe",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "17e0e75de9fb59644dfbc23a1a8cd791897f31c33301a7a588e19b732da40d2e974a462011c9d041c1c2dbcb43340dfd286730f248816b84e0851eefc33a8f58"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "ThreeDotsUpAboveNS",
+              "HahFin"
+            ],
+            "signature": [
+              "57b591cf8bafc1e33253e3f21ed55bc38be49a49f1d84b64b2dff446ff40385b4cb3d963d410e31a00e26e36ec9b962b0caa8575a3b417872ffaddd38a865ca3",
+              "0dfc632f2769bb10338adae4ad42b0e9f8a8ece7989343b42fe3664bc140e436efffdbf1a2ed53f45bc2482bf45c19de2e3366d9d8ea6959ea092d5389c4014c",
+              "w0l-4-187o-18-172o-46-146o-73-122q-87-112l-87-104o-80-94o-57-65o-30-35o-6-12q0-8l9-8o48-33o87-72q87-92o87-110o46-157q4-187|",
+              "w0",
+              "17e0e75de9fb59644dfbc23a1a8cd791897f31c33301a7a588e19b732da40d2e974a462011c9d041c1c2dbcb43340dfd286730f248816b84e0851eefc33a8f58"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          }
+        ]
+      },
+      "marks": {
+        "cases": 70,
+        "notdef": [],
+        "dotted_circle": [],
+        "mark_offset_zero": []
+      },
+      "language": {
+        "khw_vs_ur_differences": [],
+        "khw_same_as_ur": true,
+        "ar_same_as_ur": false,
+        "none_same_as_ur": true,
+        "khw_differs_glyph_count": 0
+      },
+      "subset": {
+        "file": "noto-nastaliq-urdu.subset.woff2",
+        "shaping_identical_to_original": true,
+        "mismatches": [],
+        "notdef": [],
+        "mark_notdef": []
+      },
+      "sizes_bytes": {
+        "original_ttf": 690304,
+        "original_woff2": 267248,
+        "subset_ttf": 467700,
+        "subset_woff2": 184864,
+        "subset_woff2_regular_only": 125788
+      },
+      "served_file_bytes": 184864,
+      "automatic_result": "PASS (automatic checks only; visual review pending)"
+    },
+    {
+      "id": "gulzar",
+      "family": "Gulzar",
+      "role": "candidate",
+      "style": "nastaliq",
+      "source": "google/fonts (official Google Fonts repository)",
+      "license": "OFL-1.1",
+      "version": "Version 1.000;[7b34f74]; ttfautohint (v1.8.4)",
+      "copyright": "Copyright 2021 The Gulzar Project Authors (http://github.com/googlefonts/gulzar/)",
+      "variable": false,
+      "graphite_tables": [],
+      "ot_language_systems": {
+        "GSUB": [
+          "ARA",
+          "FAR",
+          "SND",
+          "URD",
+          "dflt"
+        ],
+        "GPOS": [
+          "dflt"
+        ]
+      },
+      "coverage": {
+        "khowar_letters": {
+          "missing": [
+            "U+076E ݮ",
+            "U+076F ݯ",
+            "U+0770 ݰ",
+            "U+0771 ݱ",
+            "U+0681 ځ",
+            "U+0685 څ"
+          ],
+          "total": 6
+        },
+        "urdu_letters": {
+          "missing": [],
+          "total": 46
+        },
+        "marks": {
+          "missing": [],
+          "total": 10
+        },
+        "punctuation": {
+          "missing": [],
+          "total": 4
+        },
+        "urdu_digits": {
+          "missing": [],
+          "total": 10
+        },
+        "arabic_input_variants": {
+          "missing": [
+            "U+06D5 ە"
+          ],
+          "total": 9
+        },
+        "arabic_indic_digits": {
+          "missing": [],
+          "total": 10
+        },
+        "tatweel": {
+          "missing": [
+            "U+0640 ـ"
+          ],
+          "total": 1
+        },
+        "dotted_circle": {
+          "missing": [
+            "U+25CC ◌"
+          ],
+          "total": 1
+        }
+      },
+      "required_missing": [
+        "U+076E ݮ",
+        "U+076F ݯ",
+        "U+0770 ݰ",
+        "U+0771 ݱ",
+        "U+0681 ځ",
+        "U+0685 څ"
+      ],
+      "shaping": {
+        "engine": "HarfBuzz 14.6.0 (uharfbuzz 0.56.3), OpenType only (no Graphite)",
+        "cases": 310,
+        "notdef": [
+          "U+076E ݮ isolated",
+          "U+076E ݮ initial_zwj",
+          "U+076E ݮ medial_zwj",
+          "U+076E ݮ final_zwj",
+          "U+076E ݮ initial_real",
+          "U+076E ݮ medial_real",
+          "U+076E ݮ final_real",
+          "U+076F ݯ isolated",
+          "U+076F ݯ initial_zwj",
+          "U+076F ݯ medial_zwj",
+          "U+076F ݯ final_zwj",
+          "U+076F ݯ initial_real",
+          "U+076F ݯ medial_real",
+          "U+076F ݯ final_real",
+          "U+0770 ݰ isolated",
+          "U+0770 ݰ initial_zwj",
+          "U+0770 ݰ medial_zwj",
+          "U+0770 ݰ final_zwj",
+          "U+0770 ݰ initial_real",
+          "U+0770 ݰ medial_real",
+          "U+0770 ݰ final_real",
+          "U+0771 ݱ isolated",
+          "U+0771 ݱ final_zwj",
+          "U+0771 ݱ final_real",
+          "U+0771 ݱ zwnj_isolated",
+          "U+0681 ځ isolated",
+          "U+0681 ځ initial_zwj",
+          "U+0681 ځ medial_zwj",
+          "U+0681 ځ final_zwj",
+          "U+0681 ځ initial_real",
+          "U+0681 ځ medial_real",
+          "U+0681 ځ final_real",
+          "U+0685 څ isolated",
+          "U+0685 څ initial_zwj",
+          "U+0685 څ medial_zwj",
+          "U+0685 څ final_zwj",
+          "U+0685 څ initial_real",
+          "U+0685 څ medial_real",
+          "U+0685 څ final_real"
+        ],
+        "same_glyph_as_isolated": [
+          "U+076E ݮ initial_zwj",
+          "U+076E ݮ medial_zwj",
+          "U+076E ݮ final_zwj",
+          "U+076E ݮ initial_real",
+          "U+076E ݮ medial_real",
+          "U+076E ݮ final_real",
+          "U+076F ݯ initial_zwj",
+          "U+076F ݯ medial_zwj",
+          "U+076F ݯ final_zwj",
+          "U+076F ݯ initial_real",
+          "U+076F ݯ medial_real",
+          "U+076F ݯ final_real",
+          "U+0770 ݰ initial_zwj",
+          "U+0770 ݰ medial_zwj",
+          "U+0770 ݰ final_zwj",
+          "U+0770 ݰ initial_real",
+          "U+0770 ݰ medial_real",
+          "U+0770 ݰ final_real",
+          "U+0771 ݱ final_zwj",
+          "U+0771 ݱ final_real",
+          "U+0681 ځ initial_zwj",
+          "U+0681 ځ medial_zwj",
+          "U+0681 ځ final_zwj",
+          "U+0681 ځ initial_real",
+          "U+0681 ځ medial_real",
+          "U+0681 ځ final_real",
+          "U+0685 څ initial_zwj",
+          "U+0685 څ medial_zwj",
+          "U+0685 څ final_zwj",
+          "U+0685 څ initial_real",
+          "U+0685 څ medial_real",
+          "U+0685 څ final_real",
+          "U+06D3 ۓ final_zwj",
+          "U+06D3 ۓ final_real"
+        ],
+        "merged_with_neighbour": [
+          "U+076E ݮ medial_zwj",
+          "U+076E ݮ final_zwj",
+          "U+076F ݯ medial_zwj",
+          "U+076F ݯ final_zwj",
+          "U+0770 ݰ medial_zwj",
+          "U+0770 ݰ final_zwj",
+          "U+0771 ݱ final_zwj",
+          "U+0771 ݱ zwnj_isolated",
+          "U+0681 ځ medial_zwj",
+          "U+0681 ځ final_zwj",
+          "U+0685 څ medial_zwj",
+          "U+0685 څ final_zwj",
+          "U+0627 ا final_zwj",
+          "U+0627 ا zwnj_isolated",
+          "U+0622 آ final_zwj",
+          "U+0622 آ zwnj_isolated",
+          "U+0628 ب medial_zwj",
+          "U+0628 ب final_zwj",
+          "U+067E پ medial_zwj",
+          "U+067E پ final_zwj",
+          "U+062A ت medial_zwj",
+          "U+062A ت final_zwj",
+          "U+0679 ٹ medial_zwj",
+          "U+0679 ٹ final_zwj",
+          "U+062B ث medial_zwj",
+          "U+062B ث final_zwj",
+          "U+062C ج medial_zwj",
+          "U+062C ج final_zwj",
+          "U+0686 چ medial_zwj",
+          "U+0686 چ final_zwj",
+          "U+062D ح medial_zwj",
+          "U+062D ح final_zwj",
+          "U+062E خ medial_zwj",
+          "U+062E خ final_zwj",
+          "U+062F د final_zwj",
+          "U+062F د zwnj_isolated",
+          "U+0688 ڈ final_zwj",
+          "U+0688 ڈ zwnj_isolated",
+          "U+0630 ذ final_zwj",
+          "U+0630 ذ zwnj_isolated",
+          "U+0631 ر final_zwj",
+          "U+0631 ر zwnj_isolated",
+          "U+0691 ڑ final_zwj",
+          "U+0691 ڑ zwnj_isolated",
+          "U+0632 ز final_zwj",
+          "U+0632 ز zwnj_isolated",
+          "U+0698 ژ final_zwj",
+          "U+0698 ژ zwnj_isolated",
+          "U+0633 س medial_zwj",
+          "U+0633 س final_zwj",
+          "U+0634 ش medial_zwj",
+          "U+0634 ش final_zwj",
+          "U+0635 ص medial_zwj",
+          "U+0635 ص final_zwj",
+          "U+0636 ض medial_zwj",
+          "U+0636 ض final_zwj",
+          "U+0637 ط medial_zwj",
+          "U+0637 ط final_zwj",
+          "U+0638 ظ medial_zwj",
+          "U+0638 ظ final_zwj",
+          "U+0639 ع medial_zwj",
+          "U+0639 ع final_zwj",
+          "U+063A غ medial_zwj",
+          "U+063A غ final_zwj",
+          "U+0641 ف medial_zwj",
+          "U+0641 ف final_zwj",
+          "U+0642 ق medial_zwj",
+          "U+0642 ق final_zwj",
+          "U+06A9 ک medial_zwj",
+          "U+06A9 ک final_zwj",
+          "U+06AF گ medial_zwj",
+          "U+06AF گ final_zwj",
+          "U+0644 ل medial_zwj",
+          "U+0644 ل final_zwj",
+          "U+0645 م medial_zwj",
+          "U+0645 م final_zwj",
+          "U+0646 ن medial_zwj",
+          "U+0646 ن final_zwj",
+          "U+06BA ں medial_zwj",
+          "U+06BA ں final_zwj",
+          "U+0648 و final_zwj",
+          "U+0648 و zwnj_isolated",
+          "U+06C1 ہ medial_zwj",
+          "U+06C1 ہ final_zwj",
+          "U+06BE ھ medial_zwj",
+          "U+06BE ھ final_zwj",
+          "U+06CC ی medial_zwj",
+          "U+06CC ی final_zwj",
+          "U+06D2 ے final_zwj",
+          "U+06D2 ے zwnj_isolated",
+          "U+0626 ئ medial_zwj",
+          "U+0626 ئ final_zwj",
+          "U+0624 ؤ final_zwj",
+          "U+0624 ؤ zwnj_isolated",
+          "U+0623 أ final_zwj",
+          "U+0623 أ zwnj_isolated",
+          "U+06C2 ۂ medial_zwj",
+          "U+06C2 ۂ final_zwj",
+          "U+06C3 ۃ final_zwj",
+          "U+06C3 ۃ zwnj_isolated",
+          "U+06D3 ۓ final_zwj",
+          "U+06D3 ۓ zwnj_isolated"
+        ],
+        "khowar_detail": [
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "isolated",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "final_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "final_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "zwnj_isolated",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "c9f7b0447f054d1bd577899a1dfa6acff987a6390fb9b194cb6ec843438a5198b209c0ebeca1dfcd47c717c6c057dac98235ebc0b8a9b8752a7e9146c45b08d1"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "85f8715b6924ac25adeb7b904273fae2c6c93749da597755e154cb9b144473d184a2456313aa00f1c94fa500c751515550ab67c5ad15a19ca43bb6265bec3066",
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              ".notdef"
+            ],
+            "signature": [
+              "w545",
+              "6878bf411555b2f62011b51d3c2f62cc3c3437d8bb11b304f359d6e80e1b281353cfb16532772ef7bcaf685321cfbcf500a4a1a85b13a5fc484f6ad7ba30589f",
+              "f43228a79f5d16edad01b42b2a790d0c540948baa75e60b5c1fdce76378d761fc13e823ed69a7c8bcab797153bd0d365dead4357542c3d3d5989576cba252ac6"
+            ],
+            "notdef": true,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          }
+        ]
+      },
+      "marks": {
+        "cases": 70,
+        "notdef": [
+          "U+076E+U+064B",
+          "U+076E+U+064C",
+          "U+076E+U+064D",
+          "U+076E+U+064E",
+          "U+076E+U+064F",
+          "U+076E+U+0650",
+          "U+076E+U+0651",
+          "U+076E+U+0652",
+          "U+076E+U+0654",
+          "U+076E+U+0670",
+          "U+076F+U+064B",
+          "U+076F+U+064C",
+          "U+076F+U+064D",
+          "U+076F+U+064E",
+          "U+076F+U+064F",
+          "U+076F+U+0650",
+          "U+076F+U+0651",
+          "U+076F+U+0652",
+          "U+076F+U+0654",
+          "U+076F+U+0670",
+          "U+0770+U+064B",
+          "U+0770+U+064C",
+          "U+0770+U+064D",
+          "U+0770+U+064E",
+          "U+0770+U+064F",
+          "U+0770+U+0650",
+          "U+0770+U+0651",
+          "U+0770+U+0652",
+          "U+0770+U+0654",
+          "U+0770+U+0670",
+          "U+0771+U+064B",
+          "U+0771+U+064C",
+          "U+0771+U+064D",
+          "U+0771+U+064E",
+          "U+0771+U+064F",
+          "U+0771+U+0650",
+          "U+0771+U+0651",
+          "U+0771+U+0652",
+          "U+0771+U+0654",
+          "U+0771+U+0670",
+          "U+0681+U+064B",
+          "U+0681+U+064C",
+          "U+0681+U+064D",
+          "U+0681+U+064E",
+          "U+0681+U+064F",
+          "U+0681+U+0650",
+          "U+0681+U+0651",
+          "U+0681+U+0652",
+          "U+0681+U+0654",
+          "U+0681+U+0670",
+          "U+0685+U+064B",
+          "U+0685+U+064C",
+          "U+0685+U+064D",
+          "U+0685+U+064E",
+          "U+0685+U+064F",
+          "U+0685+U+0650",
+          "U+0685+U+0651",
+          "U+0685+U+0652",
+          "U+0685+U+0654",
+          "U+0685+U+0670"
+        ],
+        "dotted_circle": [],
+        "mark_offset_zero": []
+      },
+      "language": {
+        "khw_vs_ur_differences": [],
+        "khw_same_as_ur": true,
+        "ar_same_as_ur": false,
+        "none_same_as_ur": true,
+        "khw_differs_glyph_count": 0
+      },
+      "subset": {
+        "file": "gulzar.subset.woff2",
+        "shaping_identical_to_original": true,
+        "mismatches": [],
+        "notdef": [
+          "U+076E isolated",
+          "U+076E initial_zwj",
+          "U+076E medial_zwj",
+          "U+076E final_zwj",
+          "U+076E initial_real",
+          "U+076E medial_real",
+          "U+076E final_real",
+          "U+076F isolated",
+          "U+076F initial_zwj",
+          "U+076F medial_zwj",
+          "U+076F final_zwj",
+          "U+076F initial_real",
+          "U+076F medial_real",
+          "U+076F final_real",
+          "U+0770 isolated",
+          "U+0770 initial_zwj",
+          "U+0770 medial_zwj",
+          "U+0770 final_zwj",
+          "U+0770 initial_real",
+          "U+0770 medial_real",
+          "U+0770 final_real",
+          "U+0771 isolated",
+          "U+0771 final_zwj",
+          "U+0771 final_real",
+          "U+0771 zwnj_isolated",
+          "U+0681 isolated",
+          "U+0681 initial_zwj",
+          "U+0681 medial_zwj",
+          "U+0681 final_zwj",
+          "U+0681 initial_real",
+          "U+0681 medial_real",
+          "U+0681 final_real",
+          "U+0685 isolated",
+          "U+0685 initial_zwj",
+          "U+0685 medial_zwj",
+          "U+0685 final_zwj",
+          "U+0685 initial_real",
+          "U+0685 medial_real",
+          "U+0685 final_real"
+        ],
+        "mark_notdef": [
+          "U+076E+U+064B",
+          "U+076E+U+064C",
+          "U+076E+U+064D",
+          "U+076E+U+064E",
+          "U+076E+U+064F",
+          "U+076E+U+0650",
+          "U+076E+U+0651",
+          "U+076E+U+0652",
+          "U+076E+U+0654",
+          "U+076E+U+0670",
+          "U+076F+U+064B",
+          "U+076F+U+064C",
+          "U+076F+U+064D",
+          "U+076F+U+064E",
+          "U+076F+U+064F",
+          "U+076F+U+0650",
+          "U+076F+U+0651",
+          "U+076F+U+0652",
+          "U+076F+U+0654",
+          "U+076F+U+0670",
+          "U+0770+U+064B",
+          "U+0770+U+064C",
+          "U+0770+U+064D",
+          "U+0770+U+064E",
+          "U+0770+U+064F",
+          "U+0770+U+0650",
+          "U+0770+U+0651",
+          "U+0770+U+0652",
+          "U+0770+U+0654",
+          "U+0770+U+0670",
+          "U+0771+U+064B",
+          "U+0771+U+064C",
+          "U+0771+U+064D",
+          "U+0771+U+064E",
+          "U+0771+U+064F",
+          "U+0771+U+0650",
+          "U+0771+U+0651",
+          "U+0771+U+0652",
+          "U+0771+U+0654",
+          "U+0771+U+0670",
+          "U+0681+U+064B",
+          "U+0681+U+064C",
+          "U+0681+U+064D",
+          "U+0681+U+064E",
+          "U+0681+U+064F",
+          "U+0681+U+0650",
+          "U+0681+U+0651",
+          "U+0681+U+0652",
+          "U+0681+U+0654",
+          "U+0681+U+0670",
+          "U+0685+U+064B",
+          "U+0685+U+064C",
+          "U+0685+U+064D",
+          "U+0685+U+064E",
+          "U+0685+U+064F",
+          "U+0685+U+0650",
+          "U+0685+U+0651",
+          "U+0685+U+0652",
+          "U+0685+U+0654",
+          "U+0685+U+0670"
+        ]
+      },
+      "sizes_bytes": {
+        "original_ttf": 963496,
+        "original_woff2": 237424,
+        "subset_ttf": 852676,
+        "subset_woff2": 198672
+      },
+      "served_file_bytes": 198672,
+      "automatic_result": "FAIL"
+    },
+    {
+      "id": "noto-naskh-arabic",
+      "family": "Noto Naskh Arabic",
+      "role": "candidate (Naskh fallback)",
+      "style": "naskh",
+      "source": "google/fonts (official Google Fonts repository)",
+      "license": "OFL-1.1",
+      "version": "Version 2.021",
+      "copyright": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/arabic)",
+      "variable": true,
+      "graphite_tables": [],
+      "ot_language_systems": {
+        "GSUB": [
+          "FAR",
+          "KSH",
+          "KUR",
+          "RHG",
+          "SND",
+          "URD",
+          "dflt"
+        ],
+        "GPOS": [
+          "FAR",
+          "KSH",
+          "KUR",
+          "RHG",
+          "SND",
+          "URD",
+          "dflt"
+        ]
+      },
+      "coverage": {
+        "khowar_letters": {
+          "missing": [],
+          "total": 6
+        },
+        "urdu_letters": {
+          "missing": [],
+          "total": 46
+        },
+        "marks": {
+          "missing": [],
+          "total": 10
+        },
+        "punctuation": {
+          "missing": [],
+          "total": 4
+        },
+        "urdu_digits": {
+          "missing": [],
+          "total": 10
+        },
+        "arabic_input_variants": {
+          "missing": [],
+          "total": 9
+        },
+        "arabic_indic_digits": {
+          "missing": [],
+          "total": 10
+        },
+        "tatweel": {
+          "missing": [],
+          "total": 1
+        },
+        "dotted_circle": {
+          "missing": [],
+          "total": 1
+        }
+      },
+      "required_missing": [],
+      "shaping": {
+        "engine": "HarfBuzz 14.6.0 (uharfbuzz 0.56.3), OpenType only (no Graphite)",
+        "cases": 310,
+        "notdef": [],
+        "same_glyph_as_isolated": [],
+        "merged_with_neighbour": [
+          "U+076E ݮ medial_zwj",
+          "U+076E ݮ final_zwj",
+          "U+076F ݯ medial_zwj",
+          "U+076F ݯ final_zwj",
+          "U+0770 ݰ medial_zwj",
+          "U+0770 ݰ final_zwj",
+          "U+0771 ݱ final_zwj",
+          "U+0771 ݱ zwnj_isolated",
+          "U+0681 ځ medial_zwj",
+          "U+0681 ځ final_zwj",
+          "U+0685 څ medial_zwj",
+          "U+0685 څ final_zwj",
+          "U+0627 ا final_zwj",
+          "U+0627 ا zwnj_isolated",
+          "U+0622 آ final_zwj",
+          "U+0622 آ zwnj_isolated",
+          "U+0628 ب medial_zwj",
+          "U+0628 ب final_zwj",
+          "U+067E پ medial_zwj",
+          "U+067E پ final_zwj",
+          "U+062A ت medial_zwj",
+          "U+062A ت final_zwj",
+          "U+0679 ٹ medial_zwj",
+          "U+0679 ٹ final_zwj",
+          "U+062B ث medial_zwj",
+          "U+062B ث final_zwj",
+          "U+062C ج medial_zwj",
+          "U+062C ج final_zwj",
+          "U+0686 چ medial_zwj",
+          "U+0686 چ final_zwj",
+          "U+062D ح medial_zwj",
+          "U+062D ح final_zwj",
+          "U+062E خ medial_zwj",
+          "U+062E خ final_zwj",
+          "U+062F د final_zwj",
+          "U+062F د zwnj_isolated",
+          "U+0688 ڈ final_zwj",
+          "U+0688 ڈ zwnj_isolated",
+          "U+0630 ذ final_zwj",
+          "U+0630 ذ zwnj_isolated",
+          "U+0631 ر final_zwj",
+          "U+0631 ر zwnj_isolated",
+          "U+0691 ڑ final_zwj",
+          "U+0691 ڑ zwnj_isolated",
+          "U+0632 ز final_zwj",
+          "U+0632 ز zwnj_isolated",
+          "U+0698 ژ final_zwj",
+          "U+0698 ژ zwnj_isolated",
+          "U+0633 س medial_zwj",
+          "U+0633 س final_zwj",
+          "U+0634 ش medial_zwj",
+          "U+0634 ش final_zwj",
+          "U+0635 ص medial_zwj",
+          "U+0635 ص final_zwj",
+          "U+0636 ض medial_zwj",
+          "U+0636 ض final_zwj",
+          "U+0637 ط medial_zwj",
+          "U+0637 ط final_zwj",
+          "U+0638 ظ medial_zwj",
+          "U+0638 ظ final_zwj",
+          "U+0639 ع medial_zwj",
+          "U+0639 ع final_zwj",
+          "U+063A غ medial_zwj",
+          "U+063A غ final_zwj",
+          "U+0641 ف medial_zwj",
+          "U+0641 ف final_zwj",
+          "U+0642 ق medial_zwj",
+          "U+0642 ق final_zwj",
+          "U+06A9 ک medial_zwj",
+          "U+06A9 ک final_zwj",
+          "U+06AF گ medial_zwj",
+          "U+06AF گ final_zwj",
+          "U+0644 ل medial_zwj",
+          "U+0644 ل final_zwj",
+          "U+0645 م medial_zwj",
+          "U+0645 م final_zwj",
+          "U+0646 ن medial_zwj",
+          "U+0646 ن final_zwj",
+          "U+06BA ں medial_zwj",
+          "U+06BA ں final_zwj",
+          "U+0648 و final_zwj",
+          "U+0648 و zwnj_isolated",
+          "U+06C1 ہ medial_zwj",
+          "U+06C1 ہ final_zwj",
+          "U+06BE ھ medial_zwj",
+          "U+06BE ھ final_zwj",
+          "U+06CC ی medial_zwj",
+          "U+06CC ی final_zwj",
+          "U+06D2 ے final_zwj",
+          "U+06D2 ے zwnj_isolated",
+          "U+0626 ئ medial_zwj",
+          "U+0626 ئ final_zwj",
+          "U+0624 ؤ final_zwj",
+          "U+0624 ؤ zwnj_isolated",
+          "U+0623 أ final_zwj",
+          "U+0623 أ zwnj_isolated",
+          "U+06C2 ۂ medial_zwj",
+          "U+06C2 ۂ final_zwj",
+          "U+06C3 ۃ final_zwj",
+          "U+06C3 ۃ zwnj_isolated",
+          "U+06D3 ۓ final_zwj",
+          "U+06D3 ۓ zwnj_isolated"
+        ],
+        "khowar_detail": [
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "tahcenterar",
+              "uni062D"
+            ],
+            "signature": [
+              "dc50da2bd6099cf7a5cc3f26ba0b778f6b081797b934ba64612e6ca4b729c9023dd9b9940af78e6bb7b6866d77352c168f113119bdabb7387a206adc480b8201",
+              "ed6080dbf3856151d9681d22eb1cb1fbd0ee8d2dd67063b02b9beb2b4d1360a96b6fb02a31028e562dc08367c0bb4102e5d447a65da3fc7f4d7554582e2b958e"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "tahbelowar",
+              "uni062D.init"
+            ],
+            "signature": [
+              "414f281e55a3c58b1c4fbbaa684e4dd041dfbbaf5a46e5beed425f7f3f1d80330b23a0c0a3e1993f6730fb02b73f4dbd01f1e097fc9d4c67613830dbc2f521f5",
+              "dd58445295479e0a4ba1fad4fad84933c8b4c20901f5424c01f06d6fb4fb8c2401ea0e40637d8a77be7a575e8fe31cdbd759000024ff50faec1571f08758ca4a"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "tahbelowar",
+              "uni062D.medi"
+            ],
+            "signature": [
+              "414f281e55a3c58b1c4fbbaa684e4dd041dfbbaf5a46e5beed425f7f3f1d80330b23a0c0a3e1993f6730fb02b73f4dbd01f1e097fc9d4c67613830dbc2f521f5",
+              "2b6b10bb2c7840be5d437cf762cb20a0b1c07ea1b3ca96110d8dae70007ac77cb88b3f9e01493f7f42501e83de49d30523776a1127e82a4200b180069d44f6ec"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "tahcenterar",
+              "uni062D.fina"
+            ],
+            "signature": [
+              "dc50da2bd6099cf7a5cc3f26ba0b778f6b081797b934ba64612e6ca4b729c9023dd9b9940af78e6bb7b6866d77352c168f113119bdabb7387a206adc480b8201",
+              "4fbb45f76fdababf3a6fc6869c81748cac621b1359ba966b99bc312517d83c34dd00eaab2fcc80c9d10799215cf824bd6393d55ed2c119e5e680bfe6e3993912"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "tahbelowar",
+              "uni062D.init"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "414f281e55a3c58b1c4fbbaa684e4dd041dfbbaf5a46e5beed425f7f3f1d80330b23a0c0a3e1993f6730fb02b73f4dbd01f1e097fc9d4c67613830dbc2f521f5",
+              "dd58445295479e0a4ba1fad4fad84933c8b4c20901f5424c01f06d6fb4fb8c2401ea0e40637d8a77be7a575e8fe31cdbd759000024ff50faec1571f08758ca4a"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "tahbelowar",
+              "uni062D.medi"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "414f281e55a3c58b1c4fbbaa684e4dd041dfbbaf5a46e5beed425f7f3f1d80330b23a0c0a3e1993f6730fb02b73f4dbd01f1e097fc9d4c67613830dbc2f521f5",
+              "2b6b10bb2c7840be5d437cf762cb20a0b1c07ea1b3ca96110d8dae70007ac77cb88b3f9e01493f7f42501e83de49d30523776a1127e82a4200b180069d44f6ec",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "tahcenterar",
+              "uni062D.fina"
+            ],
+            "signature": [
+              "dc50da2bd6099cf7a5cc3f26ba0b778f6b081797b934ba64612e6ca4b729c9023dd9b9940af78e6bb7b6866d77352c168f113119bdabb7387a206adc480b8201",
+              "4fbb45f76fdababf3a6fc6869c81748cac621b1359ba966b99bc312517d83c34dd00eaab2fcc80c9d10799215cf824bd6393d55ed2c119e5e680bfe6e3993912",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "twodotshorizontalcenter_tahabovear",
+              "uni062D"
+            ],
+            "signature": [
+              "c9dbf6267b97dab23c074b65ca5c810430b9b501c795da712ce0d7bef29cd70301686827df669cfa40e77ebf93991cb403f22d7195f84f33cc355d4289607a14",
+              "ed6080dbf3856151d9681d22eb1cb1fbd0ee8d2dd67063b02b9beb2b4d1360a96b6fb02a31028e562dc08367c0bb4102e5d447a65da3fc7f4d7554582e2b958e"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "twodotshorizontalbelow_tahabovear",
+              "uni062D.init"
+            ],
+            "signature": [
+              "f5d2895e1d2fa11e84c2eeabebbaf3b7c3716826449995e1cf9cb47320685aa9d8809aedab90fb9bdc50c3955a25904a955838e04e33bd50fc75e62a0ec70484",
+              "dd58445295479e0a4ba1fad4fad84933c8b4c20901f5424c01f06d6fb4fb8c2401ea0e40637d8a77be7a575e8fe31cdbd759000024ff50faec1571f08758ca4a"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "twodotshorizontalbelow_tahabovear",
+              "uni062D.medi"
+            ],
+            "signature": [
+              "f5d2895e1d2fa11e84c2eeabebbaf3b7c3716826449995e1cf9cb47320685aa9d8809aedab90fb9bdc50c3955a25904a955838e04e33bd50fc75e62a0ec70484",
+              "2b6b10bb2c7840be5d437cf762cb20a0b1c07ea1b3ca96110d8dae70007ac77cb88b3f9e01493f7f42501e83de49d30523776a1127e82a4200b180069d44f6ec"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "twodotshorizontalcenter_tahabovear",
+              "uni062D.fina"
+            ],
+            "signature": [
+              "c9dbf6267b97dab23c074b65ca5c810430b9b501c795da712ce0d7bef29cd70301686827df669cfa40e77ebf93991cb403f22d7195f84f33cc355d4289607a14",
+              "4fbb45f76fdababf3a6fc6869c81748cac621b1359ba966b99bc312517d83c34dd00eaab2fcc80c9d10799215cf824bd6393d55ed2c119e5e680bfe6e3993912"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "twodotshorizontalbelow_tahabovear",
+              "uni062D.init"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "f5d2895e1d2fa11e84c2eeabebbaf3b7c3716826449995e1cf9cb47320685aa9d8809aedab90fb9bdc50c3955a25904a955838e04e33bd50fc75e62a0ec70484",
+              "dd58445295479e0a4ba1fad4fad84933c8b4c20901f5424c01f06d6fb4fb8c2401ea0e40637d8a77be7a575e8fe31cdbd759000024ff50faec1571f08758ca4a"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "twodotshorizontalbelow_tahabovear",
+              "uni062D.medi"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "f5d2895e1d2fa11e84c2eeabebbaf3b7c3716826449995e1cf9cb47320685aa9d8809aedab90fb9bdc50c3955a25904a955838e04e33bd50fc75e62a0ec70484",
+              "2b6b10bb2c7840be5d437cf762cb20a0b1c07ea1b3ca96110d8dae70007ac77cb88b3f9e01493f7f42501e83de49d30523776a1127e82a4200b180069d44f6ec",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "twodotshorizontalcenter_tahabovear",
+              "uni062D.fina"
+            ],
+            "signature": [
+              "c9dbf6267b97dab23c074b65ca5c810430b9b501c795da712ce0d7bef29cd70301686827df669cfa40e77ebf93991cb403f22d7195f84f33cc355d4289607a14",
+              "4fbb45f76fdababf3a6fc6869c81748cac621b1359ba966b99bc312517d83c34dd00eaab2fcc80c9d10799215cf824bd6393d55ed2c119e5e680bfe6e3993912",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0633"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "f50df4f56162e07d76f4fd6a1b612da4486ac16685141000a2d6b10d92b04f194a50f9955855e08e6d66cea633290d37b35ca6e81c5b605af55a3a71bd809f52"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0633.init"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "f3e1ab2d1d48aa5ec906fddfe9a4c90136c7c703d556cc7d01299884853ada639ef9821baef89fb1813aeca6d28ac5b07c14013d74f9c4dcc1ba4a29f6c13558"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0633.medi"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "32278d0b315deb5ccf0492ba568045acc516d2c5ab06c4bb8b70cba2cbfc5e4d35933ed06815b8c63276351ba286d4472e5cabf2bce65d6b0ca32d57a8a5046c"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0633.fina"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "25c11abaf088c92df555f019006effa78a81d1cff439f15605977352b67a0fcd3aad31891e485c73efec821f6e1722d05b91c5de4294a2c122d8f80de238a920"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0633.init"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "f3e1ab2d1d48aa5ec906fddfe9a4c90136c7c703d556cc7d01299884853ada639ef9821baef89fb1813aeca6d28ac5b07c14013d74f9c4dcc1ba4a29f6c13558"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0633.medi"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "32278d0b315deb5ccf0492ba568045acc516d2c5ab06c4bb8b70cba2cbfc5e4d35933ed06815b8c63276351ba286d4472e5cabf2bce65d6b0ca32d57a8a5046c",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0633.fina"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "25c11abaf088c92df555f019006effa78a81d1cff439f15605977352b67a0fcd3aad31891e485c73efec821f6e1722d05b91c5de4294a2c122d8f80de238a920",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "isolated",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0631"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "1494dd2cff6678487456a71085c18858d5e0e9c04aa9e2b913730e833fb184653462600c77a79e3795391db0e8f135e7e4d455da96eb0e2b4898c39fd5dc81af"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "final_zwj",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0631.fina"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "4ae35787e9a164ccfe224623a8110bb231f4c51c68e6ebfb05412fb53b7f2adbb791982f76051da4d8ee33f0f78f7f9e28e4ac9c7aa537d6527fdf626551a447"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "final_real",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0631.fina"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "4ae35787e9a164ccfe224623a8110bb231f4c51c68e6ebfb05412fb53b7f2adbb791982f76051da4d8ee33f0f78f7f9e28e4ac9c7aa537d6527fdf626551a447",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "zwnj_isolated",
+            "glyphs": [
+              "twodotshorizontalabove_tahabovear",
+              "uni0631"
+            ],
+            "signature": [
+              "6733b43c6352e146f622e619d0e7c90f761c590c3e8f8d5daaeed992533365f579ebaa41895130dc564c26024c708df3169c4e563e133c1d054ae5800da2651e",
+              "1494dd2cff6678487456a71085c18858d5e0e9c04aa9e2b913730e833fb184653462600c77a79e3795391db0e8f135e7e4d455da96eb0e2b4898c39fd5dc81af",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "01aed83b332dd295edc750a6b734ca4e01039f225df01a7ef9b288368635ca292f6c4dfc7ebf5c9bee162dd3d84371ed2cac9ed72b44fc4938f49a41f9788c2d"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "uni0654",
+              "uni062D"
+            ],
+            "signature": [
+              "9807219ef94b88510f7e6b1489728bd29bcaaab929e91899f4dfeddd7c001de772c74545f93a5dcf9a128924e8ac0718a0be9e4e297edb29747e7cee9d6a2cd4",
+              "ed6080dbf3856151d9681d22eb1cb1fbd0ee8d2dd67063b02b9beb2b4d1360a96b6fb02a31028e562dc08367c0bb4102e5d447a65da3fc7f4d7554582e2b958e"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "uni0654",
+              "uni062D.init"
+            ],
+            "signature": [
+              "9807219ef94b88510f7e6b1489728bd29bcaaab929e91899f4dfeddd7c001de772c74545f93a5dcf9a128924e8ac0718a0be9e4e297edb29747e7cee9d6a2cd4",
+              "dd58445295479e0a4ba1fad4fad84933c8b4c20901f5424c01f06d6fb4fb8c2401ea0e40637d8a77be7a575e8fe31cdbd759000024ff50faec1571f08758ca4a"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "uni0654",
+              "uni062D.medi"
+            ],
+            "signature": [
+              "9807219ef94b88510f7e6b1489728bd29bcaaab929e91899f4dfeddd7c001de772c74545f93a5dcf9a128924e8ac0718a0be9e4e297edb29747e7cee9d6a2cd4",
+              "2b6b10bb2c7840be5d437cf762cb20a0b1c07ea1b3ca96110d8dae70007ac77cb88b3f9e01493f7f42501e83de49d30523776a1127e82a4200b180069d44f6ec"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "uni0654",
+              "uni062D.fina"
+            ],
+            "signature": [
+              "9807219ef94b88510f7e6b1489728bd29bcaaab929e91899f4dfeddd7c001de772c74545f93a5dcf9a128924e8ac0718a0be9e4e297edb29747e7cee9d6a2cd4",
+              "4fbb45f76fdababf3a6fc6869c81748cac621b1359ba966b99bc312517d83c34dd00eaab2fcc80c9d10799215cf824bd6393d55ed2c119e5e680bfe6e3993912"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "uni0654",
+              "uni062D.init"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "9807219ef94b88510f7e6b1489728bd29bcaaab929e91899f4dfeddd7c001de772c74545f93a5dcf9a128924e8ac0718a0be9e4e297edb29747e7cee9d6a2cd4",
+              "dd58445295479e0a4ba1fad4fad84933c8b4c20901f5424c01f06d6fb4fb8c2401ea0e40637d8a77be7a575e8fe31cdbd759000024ff50faec1571f08758ca4a"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "uni0654",
+              "uni062D.medi"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "9807219ef94b88510f7e6b1489728bd29bcaaab929e91899f4dfeddd7c001de772c74545f93a5dcf9a128924e8ac0718a0be9e4e297edb29747e7cee9d6a2cd4",
+              "2b6b10bb2c7840be5d437cf762cb20a0b1c07ea1b3ca96110d8dae70007ac77cb88b3f9e01493f7f42501e83de49d30523776a1127e82a4200b180069d44f6ec",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "uni0654",
+              "uni062D.fina"
+            ],
+            "signature": [
+              "9807219ef94b88510f7e6b1489728bd29bcaaab929e91899f4dfeddd7c001de772c74545f93a5dcf9a128924e8ac0718a0be9e4e297edb29747e7cee9d6a2cd4",
+              "4fbb45f76fdababf3a6fc6869c81748cac621b1359ba966b99bc312517d83c34dd00eaab2fcc80c9d10799215cf824bd6393d55ed2c119e5e680bfe6e3993912",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "threedotsupabovear",
+              "uni062D"
+            ],
+            "signature": [
+              "7b3969f0f1c37897d36d040398db6a00ffd62224826447a91ce5539056091ab1544eeda0d57daaa73b07d66de51e82bed1d359d14e80aa48dc82fbb40de2968f",
+              "ed6080dbf3856151d9681d22eb1cb1fbd0ee8d2dd67063b02b9beb2b4d1360a96b6fb02a31028e562dc08367c0bb4102e5d447a65da3fc7f4d7554582e2b958e"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "threedotsupabovear",
+              "uni062D.init"
+            ],
+            "signature": [
+              "7b3969f0f1c37897d36d040398db6a00ffd62224826447a91ce5539056091ab1544eeda0d57daaa73b07d66de51e82bed1d359d14e80aa48dc82fbb40de2968f",
+              "dd58445295479e0a4ba1fad4fad84933c8b4c20901f5424c01f06d6fb4fb8c2401ea0e40637d8a77be7a575e8fe31cdbd759000024ff50faec1571f08758ca4a"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "threedotsupabovear",
+              "uni062D.medi"
+            ],
+            "signature": [
+              "7b3969f0f1c37897d36d040398db6a00ffd62224826447a91ce5539056091ab1544eeda0d57daaa73b07d66de51e82bed1d359d14e80aa48dc82fbb40de2968f",
+              "2b6b10bb2c7840be5d437cf762cb20a0b1c07ea1b3ca96110d8dae70007ac77cb88b3f9e01493f7f42501e83de49d30523776a1127e82a4200b180069d44f6ec"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "threedotsupabovear",
+              "uni062D.fina"
+            ],
+            "signature": [
+              "7b3969f0f1c37897d36d040398db6a00ffd62224826447a91ce5539056091ab1544eeda0d57daaa73b07d66de51e82bed1d359d14e80aa48dc82fbb40de2968f",
+              "4fbb45f76fdababf3a6fc6869c81748cac621b1359ba966b99bc312517d83c34dd00eaab2fcc80c9d10799215cf824bd6393d55ed2c119e5e680bfe6e3993912"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "threedotsupabovear",
+              "uni062D.init"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "7b3969f0f1c37897d36d040398db6a00ffd62224826447a91ce5539056091ab1544eeda0d57daaa73b07d66de51e82bed1d359d14e80aa48dc82fbb40de2968f",
+              "dd58445295479e0a4ba1fad4fad84933c8b4c20901f5424c01f06d6fb4fb8c2401ea0e40637d8a77be7a575e8fe31cdbd759000024ff50faec1571f08758ca4a"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "threedotsupabovear",
+              "uni062D.medi"
+            ],
+            "signature": [
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "0ea1fa2e051f911481a6ce9e452debe61358373cd508f97683c4ea7077e3d55c6d5dba580941df3d54d8e762919471fe525473f87f5696a0f9045ea3ca3fd24b",
+              "7b3969f0f1c37897d36d040398db6a00ffd62224826447a91ce5539056091ab1544eeda0d57daaa73b07d66de51e82bed1d359d14e80aa48dc82fbb40de2968f",
+              "2b6b10bb2c7840be5d437cf762cb20a0b1c07ea1b3ca96110d8dae70007ac77cb88b3f9e01493f7f42501e83de49d30523776a1127e82a4200b180069d44f6ec",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "threedotsupabovear",
+              "uni062D.fina"
+            ],
+            "signature": [
+              "7b3969f0f1c37897d36d040398db6a00ffd62224826447a91ce5539056091ab1544eeda0d57daaa73b07d66de51e82bed1d359d14e80aa48dc82fbb40de2968f",
+              "4fbb45f76fdababf3a6fc6869c81748cac621b1359ba966b99bc312517d83c34dd00eaab2fcc80c9d10799215cf824bd6393d55ed2c119e5e680bfe6e3993912",
+              "w0[q72+748o28+781q0+813o26+839o60+875q70+886o86+869o119+836q136+821o125+805o92+768|(+1+0+0+1+0-923)]",
+              "8130d5dde10412a47cadec87df6c628d6a936f3d16323da2bd7e417ac2dabd7198cf34cc512af12b33945d169616d0c1c95dcb388e1782b0906f5148e05c418f"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          }
+        ]
+      },
+      "marks": {
+        "cases": 70,
+        "notdef": [],
+        "dotted_circle": [],
+        "mark_offset_zero": []
+      },
+      "language": {
+        "khw_vs_ur_differences": [
+          "۴ U+06F4: ur=uni06F4.locl khw=uni06F4",
+          "۶ U+06F6: ur=uni0666 khw=uni06F6",
+          "۷ U+06F7: ur=uni06F7.locl khw=uni06F7"
+        ],
+        "khw_same_as_ur": false,
+        "ar_same_as_ur": false,
+        "none_same_as_ur": false,
+        "khw_differs_glyph_count": 3
+      },
+      "subset": {
+        "file": "noto-naskh-arabic.subset.woff2",
+        "shaping_identical_to_original": true,
+        "mismatches": [],
+        "notdef": [],
+        "mark_notdef": []
+      },
+      "sizes_bytes": {
+        "original_ttf": 307592,
+        "original_woff2": 123392,
+        "subset_ttf": 53484,
+        "subset_woff2": 27388,
+        "subset_woff2_regular_only": 16536
+      },
+      "served_file_bytes": 27388,
+      "automatic_result": "PASS (automatic checks only; visual review pending)"
+    },
+    {
+      "id": "awami-nastaliq",
+      "family": "Awami Nastaliq",
+      "role": "reference only (Graphite; Firefox)",
+      "style": "nastaliq",
+      "source": "SIL International (software.sil.org/awami), release 3.400, 2025-10-17",
+      "license": "OFL-1.1",
+      "version": "Version 3.400",
+      "copyright": "Copyright (c) 2014-2025, SIL Global (https://www.sil.org) with Reserved Font Names \"Awami\" and \"SIL\".",
+      "variable": false,
+      "graphite_tables": [
+        "Feat",
+        "Glat",
+        "Gloc",
+        "Silf",
+        "Sill"
+      ],
+      "ot_language_systems": {
+        "GSUB": [],
+        "GPOS": []
+      },
+      "coverage": {
+        "khowar_letters": {
+          "missing": [],
+          "total": 6
+        },
+        "urdu_letters": {
+          "missing": [],
+          "total": 46
+        },
+        "marks": {
+          "missing": [],
+          "total": 10
+        },
+        "punctuation": {
+          "missing": [],
+          "total": 4
+        },
+        "urdu_digits": {
+          "missing": [],
+          "total": 10
+        },
+        "arabic_input_variants": {
+          "missing": [
+            "U+06AA ڪ"
+          ],
+          "total": 9
+        },
+        "arabic_indic_digits": {
+          "missing": [],
+          "total": 10
+        },
+        "tatweel": {
+          "missing": [
+            "U+0640 ـ"
+          ],
+          "total": 1
+        },
+        "dotted_circle": {
+          "missing": [],
+          "total": 1
+        }
+      },
+      "required_missing": [],
+      "shaping": {
+        "engine": "HarfBuzz 14.6.0 (uharfbuzz 0.56.3), OpenType only (no Graphite)",
+        "cases": 310,
+        "notdef": [],
+        "same_glyph_as_isolated": [
+          "U+076E ݮ initial_zwj",
+          "U+076E ݮ medial_zwj",
+          "U+076E ݮ final_zwj",
+          "U+076E ݮ initial_real",
+          "U+076E ݮ medial_real",
+          "U+076E ݮ final_real",
+          "U+076F ݯ initial_zwj",
+          "U+076F ݯ medial_zwj",
+          "U+076F ݯ final_zwj",
+          "U+076F ݯ initial_real",
+          "U+076F ݯ medial_real",
+          "U+076F ݯ final_real",
+          "U+0770 ݰ initial_zwj",
+          "U+0770 ݰ medial_zwj",
+          "U+0770 ݰ final_zwj",
+          "U+0770 ݰ initial_real",
+          "U+0770 ݰ medial_real",
+          "U+0770 ݰ final_real",
+          "U+0771 ݱ final_zwj",
+          "U+0771 ݱ final_real",
+          "U+0681 ځ initial_zwj",
+          "U+0681 ځ medial_zwj",
+          "U+0681 ځ final_zwj",
+          "U+0681 ځ initial_real",
+          "U+0681 ځ medial_real",
+          "U+0681 ځ final_real",
+          "U+0685 څ initial_zwj",
+          "U+0685 څ medial_zwj",
+          "U+0685 څ final_zwj",
+          "U+0685 څ initial_real",
+          "U+0685 څ medial_real",
+          "U+0685 څ final_real",
+          "U+0627 ا final_zwj",
+          "U+0627 ا final_real",
+          "U+0622 آ final_zwj",
+          "U+0622 آ final_real",
+          "U+0628 ب initial_zwj",
+          "U+0628 ب medial_zwj",
+          "U+0628 ب final_zwj",
+          "U+0628 ب initial_real",
+          "U+0628 ب medial_real",
+          "U+0628 ب final_real",
+          "U+067E پ initial_zwj",
+          "U+067E پ medial_zwj",
+          "U+067E پ final_zwj",
+          "U+067E پ initial_real",
+          "U+067E پ medial_real",
+          "U+067E پ final_real",
+          "U+062A ت initial_zwj",
+          "U+062A ت medial_zwj",
+          "U+062A ت final_zwj",
+          "U+062A ت initial_real",
+          "U+062A ت medial_real",
+          "U+062A ت final_real",
+          "U+0679 ٹ initial_zwj",
+          "U+0679 ٹ medial_zwj",
+          "U+0679 ٹ final_zwj",
+          "U+0679 ٹ initial_real",
+          "U+0679 ٹ medial_real",
+          "U+0679 ٹ final_real",
+          "U+062B ث initial_zwj",
+          "U+062B ث medial_zwj",
+          "U+062B ث final_zwj",
+          "U+062B ث initial_real",
+          "U+062B ث medial_real",
+          "U+062B ث final_real",
+          "U+062C ج initial_zwj",
+          "U+062C ج medial_zwj",
+          "U+062C ج final_zwj",
+          "U+062C ج initial_real",
+          "U+062C ج medial_real",
+          "U+062C ج final_real",
+          "U+0686 چ initial_zwj",
+          "U+0686 چ medial_zwj",
+          "U+0686 چ final_zwj",
+          "U+0686 چ initial_real",
+          "U+0686 چ medial_real",
+          "U+0686 چ final_real",
+          "U+062D ح initial_zwj",
+          "U+062D ح medial_zwj",
+          "U+062D ح final_zwj",
+          "U+062D ح initial_real",
+          "U+062D ح medial_real",
+          "U+062D ح final_real",
+          "U+062E خ initial_zwj",
+          "U+062E خ medial_zwj",
+          "U+062E خ final_zwj",
+          "U+062E خ initial_real",
+          "U+062E خ medial_real",
+          "U+062E خ final_real",
+          "U+062F د final_zwj",
+          "U+062F د final_real",
+          "U+0688 ڈ final_zwj",
+          "U+0688 ڈ final_real",
+          "U+0630 ذ final_zwj",
+          "U+0630 ذ final_real",
+          "U+0631 ر final_zwj",
+          "U+0631 ر final_real",
+          "U+0691 ڑ final_zwj",
+          "U+0691 ڑ final_real",
+          "U+0632 ز final_zwj",
+          "U+0632 ز final_real",
+          "U+0698 ژ final_zwj",
+          "U+0698 ژ final_real",
+          "U+0633 س initial_zwj",
+          "U+0633 س medial_zwj",
+          "U+0633 س final_zwj",
+          "U+0633 س initial_real",
+          "U+0633 س medial_real",
+          "U+0633 س final_real",
+          "U+0634 ش initial_zwj",
+          "U+0634 ش medial_zwj",
+          "U+0634 ش final_zwj",
+          "U+0634 ش initial_real",
+          "U+0634 ش medial_real",
+          "U+0634 ش final_real",
+          "U+0635 ص initial_zwj",
+          "U+0635 ص medial_zwj",
+          "U+0635 ص final_zwj",
+          "U+0635 ص initial_real",
+          "U+0635 ص medial_real",
+          "U+0635 ص final_real",
+          "U+0636 ض initial_zwj",
+          "U+0636 ض medial_zwj",
+          "U+0636 ض final_zwj",
+          "U+0636 ض initial_real",
+          "U+0636 ض medial_real",
+          "U+0636 ض final_real",
+          "U+0637 ط initial_zwj",
+          "U+0637 ط medial_zwj",
+          "U+0637 ط final_zwj",
+          "U+0637 ط initial_real",
+          "U+0637 ط medial_real",
+          "U+0637 ط final_real",
+          "U+0638 ظ initial_zwj",
+          "U+0638 ظ medial_zwj",
+          "U+0638 ظ final_zwj",
+          "U+0638 ظ initial_real",
+          "U+0638 ظ medial_real",
+          "U+0638 ظ final_real",
+          "U+0639 ع initial_zwj",
+          "U+0639 ع medial_zwj",
+          "U+0639 ع final_zwj",
+          "U+0639 ع initial_real",
+          "U+0639 ع medial_real",
+          "U+0639 ع final_real",
+          "U+063A غ initial_zwj",
+          "U+063A غ medial_zwj",
+          "U+063A غ final_zwj",
+          "U+063A غ initial_real",
+          "U+063A غ medial_real",
+          "U+063A غ final_real",
+          "U+0641 ف initial_zwj",
+          "U+0641 ف medial_zwj",
+          "U+0641 ف final_zwj",
+          "U+0641 ف initial_real",
+          "U+0641 ف medial_real",
+          "U+0641 ف final_real",
+          "U+0642 ق initial_zwj",
+          "U+0642 ق medial_zwj",
+          "U+0642 ق final_zwj",
+          "U+0642 ق initial_real",
+          "U+0642 ق medial_real",
+          "U+0642 ق final_real",
+          "U+06A9 ک initial_zwj",
+          "U+06A9 ک medial_zwj",
+          "U+06A9 ک final_zwj",
+          "U+06A9 ک initial_real",
+          "U+06A9 ک medial_real",
+          "U+06A9 ک final_real",
+          "U+06AF گ initial_zwj",
+          "U+06AF گ medial_zwj",
+          "U+06AF گ final_zwj",
+          "U+06AF گ initial_real",
+          "U+06AF گ medial_real",
+          "U+06AF گ final_real",
+          "U+0644 ل initial_zwj",
+          "U+0644 ل medial_zwj",
+          "U+0644 ل final_zwj",
+          "U+0644 ل initial_real",
+          "U+0644 ل medial_real",
+          "U+0644 ل final_real",
+          "U+0645 م initial_zwj",
+          "U+0645 م medial_zwj",
+          "U+0645 م final_zwj",
+          "U+0645 م initial_real",
+          "U+0645 م medial_real",
+          "U+0645 م final_real",
+          "U+0646 ن initial_zwj",
+          "U+0646 ن medial_zwj",
+          "U+0646 ن final_zwj",
+          "U+0646 ن initial_real",
+          "U+0646 ن medial_real",
+          "U+0646 ن final_real",
+          "U+06BA ں initial_zwj",
+          "U+06BA ں medial_zwj",
+          "U+06BA ں final_zwj",
+          "U+06BA ں initial_real",
+          "U+06BA ں medial_real",
+          "U+06BA ں final_real",
+          "U+0648 و final_zwj",
+          "U+0648 و final_real",
+          "U+06C1 ہ initial_zwj",
+          "U+06C1 ہ medial_zwj",
+          "U+06C1 ہ final_zwj",
+          "U+06C1 ہ initial_real",
+          "U+06C1 ہ medial_real",
+          "U+06C1 ہ final_real",
+          "U+06BE ھ initial_zwj",
+          "U+06BE ھ medial_zwj",
+          "U+06BE ھ final_zwj",
+          "U+06BE ھ initial_real",
+          "U+06BE ھ medial_real",
+          "U+06BE ھ final_real",
+          "U+06CC ی initial_zwj",
+          "U+06CC ی medial_zwj",
+          "U+06CC ی final_zwj",
+          "U+06CC ی initial_real",
+          "U+06CC ی medial_real",
+          "U+06CC ی final_real",
+          "U+06D2 ے final_zwj",
+          "U+06D2 ے final_real",
+          "U+0626 ئ initial_zwj",
+          "U+0626 ئ medial_zwj",
+          "U+0626 ئ final_zwj",
+          "U+0626 ئ initial_real",
+          "U+0626 ئ medial_real",
+          "U+0626 ئ final_real",
+          "U+0624 ؤ final_zwj",
+          "U+0624 ؤ final_real",
+          "U+0623 أ final_zwj",
+          "U+0623 أ final_real",
+          "U+06C2 ۂ initial_zwj",
+          "U+06C2 ۂ medial_zwj",
+          "U+06C2 ۂ final_zwj",
+          "U+06C2 ۂ initial_real",
+          "U+06C2 ۂ medial_real",
+          "U+06C2 ۂ final_real",
+          "U+06C3 ۃ final_zwj",
+          "U+06C3 ۃ final_real",
+          "U+06D3 ۓ final_zwj",
+          "U+06D3 ۓ final_real"
+        ],
+        "merged_with_neighbour": [
+          "U+076E ݮ medial_zwj",
+          "U+076E ݮ final_zwj",
+          "U+076F ݯ medial_zwj",
+          "U+076F ݯ final_zwj",
+          "U+0770 ݰ medial_zwj",
+          "U+0770 ݰ final_zwj",
+          "U+0771 ݱ final_zwj",
+          "U+0771 ݱ zwnj_isolated",
+          "U+0681 ځ medial_zwj",
+          "U+0681 ځ final_zwj",
+          "U+0685 څ medial_zwj",
+          "U+0685 څ final_zwj",
+          "U+0627 ا final_zwj",
+          "U+0627 ا zwnj_isolated",
+          "U+0622 آ final_zwj",
+          "U+0622 آ zwnj_isolated",
+          "U+0628 ب medial_zwj",
+          "U+0628 ب final_zwj",
+          "U+067E پ medial_zwj",
+          "U+067E پ final_zwj",
+          "U+062A ت medial_zwj",
+          "U+062A ت final_zwj",
+          "U+0679 ٹ medial_zwj",
+          "U+0679 ٹ final_zwj",
+          "U+062B ث medial_zwj",
+          "U+062B ث final_zwj",
+          "U+062C ج medial_zwj",
+          "U+062C ج final_zwj",
+          "U+0686 چ medial_zwj",
+          "U+0686 چ final_zwj",
+          "U+062D ح medial_zwj",
+          "U+062D ح final_zwj",
+          "U+062E خ medial_zwj",
+          "U+062E خ final_zwj",
+          "U+062F د final_zwj",
+          "U+062F د zwnj_isolated",
+          "U+0688 ڈ final_zwj",
+          "U+0688 ڈ zwnj_isolated",
+          "U+0630 ذ final_zwj",
+          "U+0630 ذ zwnj_isolated",
+          "U+0631 ر final_zwj",
+          "U+0631 ر zwnj_isolated",
+          "U+0691 ڑ final_zwj",
+          "U+0691 ڑ zwnj_isolated",
+          "U+0632 ز final_zwj",
+          "U+0632 ز zwnj_isolated",
+          "U+0698 ژ final_zwj",
+          "U+0698 ژ zwnj_isolated",
+          "U+0633 س medial_zwj",
+          "U+0633 س final_zwj",
+          "U+0634 ش medial_zwj",
+          "U+0634 ش final_zwj",
+          "U+0635 ص medial_zwj",
+          "U+0635 ص final_zwj",
+          "U+0636 ض medial_zwj",
+          "U+0636 ض final_zwj",
+          "U+0637 ط medial_zwj",
+          "U+0637 ط final_zwj",
+          "U+0638 ظ medial_zwj",
+          "U+0638 ظ final_zwj",
+          "U+0639 ع medial_zwj",
+          "U+0639 ع final_zwj",
+          "U+063A غ medial_zwj",
+          "U+063A غ final_zwj",
+          "U+0641 ف medial_zwj",
+          "U+0641 ف final_zwj",
+          "U+0642 ق medial_zwj",
+          "U+0642 ق final_zwj",
+          "U+06A9 ک medial_zwj",
+          "U+06A9 ک final_zwj",
+          "U+06AF گ medial_zwj",
+          "U+06AF گ final_zwj",
+          "U+0644 ل medial_zwj",
+          "U+0644 ل final_zwj",
+          "U+0645 م medial_zwj",
+          "U+0645 م final_zwj",
+          "U+0646 ن medial_zwj",
+          "U+0646 ن final_zwj",
+          "U+06BA ں medial_zwj",
+          "U+06BA ں final_zwj",
+          "U+0648 و final_zwj",
+          "U+0648 و zwnj_isolated",
+          "U+06C1 ہ medial_zwj",
+          "U+06C1 ہ final_zwj",
+          "U+06BE ھ medial_zwj",
+          "U+06BE ھ final_zwj",
+          "U+06CC ی medial_zwj",
+          "U+06CC ی final_zwj",
+          "U+06D2 ے final_zwj",
+          "U+06D2 ے zwnj_isolated",
+          "U+0626 ئ medial_zwj",
+          "U+0626 ئ final_zwj",
+          "U+0624 ؤ final_zwj",
+          "U+0624 ؤ zwnj_isolated",
+          "U+0623 أ final_zwj",
+          "U+0623 أ zwnj_isolated",
+          "U+06C2 ۂ medial_zwj",
+          "U+06C2 ۂ final_zwj",
+          "U+06C3 ۃ final_zwj",
+          "U+06C3 ۃ zwnj_isolated",
+          "U+06D3 ۓ final_zwj",
+          "U+06D3 ۓ zwnj_isolated"
+        ],
+        "khowar_detail": [
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "absHahSmallTahBelow"
+            ],
+            "signature": [
+              "5119f5bc131b34870fd22b59f080bdfdfa6da8801039444c68764028d2b14892b3aef39110deb711dc5d4e5fb07a6d14fb773e95658457172d26b0d31e07e5f0"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "absHahSmallTahBelow"
+            ],
+            "signature": [
+              "5119f5bc131b34870fd22b59f080bdfdfa6da8801039444c68764028d2b14892b3aef39110deb711dc5d4e5fb07a6d14fb773e95658457172d26b0d31e07e5f0"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "absHahSmallTahBelow"
+            ],
+            "signature": [
+              "5119f5bc131b34870fd22b59f080bdfdfa6da8801039444c68764028d2b14892b3aef39110deb711dc5d4e5fb07a6d14fb773e95658457172d26b0d31e07e5f0"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "absHahSmallTahBelow"
+            ],
+            "signature": [
+              "5119f5bc131b34870fd22b59f080bdfdfa6da8801039444c68764028d2b14892b3aef39110deb711dc5d4e5fb07a6d14fb773e95658457172d26b0d31e07e5f0"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "absHahSmallTahBelow"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "5119f5bc131b34870fd22b59f080bdfdfa6da8801039444c68764028d2b14892b3aef39110deb711dc5d4e5fb07a6d14fb773e95658457172d26b0d31e07e5f0"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "absHahSmallTahBelow"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "5119f5bc131b34870fd22b59f080bdfdfa6da8801039444c68764028d2b14892b3aef39110deb711dc5d4e5fb07a6d14fb773e95658457172d26b0d31e07e5f0",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076E",
+            "char": "ݮ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "absHahSmallTahBelow"
+            ],
+            "signature": [
+              "5119f5bc131b34870fd22b59f080bdfdfa6da8801039444c68764028d2b14892b3aef39110deb711dc5d4e5fb07a6d14fb773e95658457172d26b0d31e07e5f0",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "absHahSmallTahTwoDots"
+            ],
+            "signature": [
+              "adfdc156655a68d113f304a8639c4710832ea9995252867075db2b6cbbc52d7cdcd6e63f4c8b91857c2541a736ecd99c66b8f5325c4cd2aaafcc8e61dd02b45d"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "absHahSmallTahTwoDots"
+            ],
+            "signature": [
+              "adfdc156655a68d113f304a8639c4710832ea9995252867075db2b6cbbc52d7cdcd6e63f4c8b91857c2541a736ecd99c66b8f5325c4cd2aaafcc8e61dd02b45d"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "absHahSmallTahTwoDots"
+            ],
+            "signature": [
+              "adfdc156655a68d113f304a8639c4710832ea9995252867075db2b6cbbc52d7cdcd6e63f4c8b91857c2541a736ecd99c66b8f5325c4cd2aaafcc8e61dd02b45d"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "absHahSmallTahTwoDots"
+            ],
+            "signature": [
+              "adfdc156655a68d113f304a8639c4710832ea9995252867075db2b6cbbc52d7cdcd6e63f4c8b91857c2541a736ecd99c66b8f5325c4cd2aaafcc8e61dd02b45d"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "absHahSmallTahTwoDots"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "adfdc156655a68d113f304a8639c4710832ea9995252867075db2b6cbbc52d7cdcd6e63f4c8b91857c2541a736ecd99c66b8f5325c4cd2aaafcc8e61dd02b45d"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "absHahSmallTahTwoDots"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "adfdc156655a68d113f304a8639c4710832ea9995252867075db2b6cbbc52d7cdcd6e63f4c8b91857c2541a736ecd99c66b8f5325c4cd2aaafcc8e61dd02b45d",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+076F",
+            "char": "ݯ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "absHahSmallTahTwoDots"
+            ],
+            "signature": [
+              "adfdc156655a68d113f304a8639c4710832ea9995252867075db2b6cbbc52d7cdcd6e63f4c8b91857c2541a736ecd99c66b8f5325c4cd2aaafcc8e61dd02b45d",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "absSeenSmallTahTwoDots"
+            ],
+            "signature": [
+              "e439f9018b9acc1bfe5ff88446ae02c62ebf39ab48977c20d79488d986aad2a5b3efff76e4367a92b111aeaada3639af3a7b16fdab7469913d690fb85583445b"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "absSeenSmallTahTwoDots"
+            ],
+            "signature": [
+              "e439f9018b9acc1bfe5ff88446ae02c62ebf39ab48977c20d79488d986aad2a5b3efff76e4367a92b111aeaada3639af3a7b16fdab7469913d690fb85583445b"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "absSeenSmallTahTwoDots"
+            ],
+            "signature": [
+              "e439f9018b9acc1bfe5ff88446ae02c62ebf39ab48977c20d79488d986aad2a5b3efff76e4367a92b111aeaada3639af3a7b16fdab7469913d690fb85583445b"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "absSeenSmallTahTwoDots"
+            ],
+            "signature": [
+              "e439f9018b9acc1bfe5ff88446ae02c62ebf39ab48977c20d79488d986aad2a5b3efff76e4367a92b111aeaada3639af3a7b16fdab7469913d690fb85583445b"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "absSeenSmallTahTwoDots"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "e439f9018b9acc1bfe5ff88446ae02c62ebf39ab48977c20d79488d986aad2a5b3efff76e4367a92b111aeaada3639af3a7b16fdab7469913d690fb85583445b"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "absSeenSmallTahTwoDots"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "e439f9018b9acc1bfe5ff88446ae02c62ebf39ab48977c20d79488d986aad2a5b3efff76e4367a92b111aeaada3639af3a7b16fdab7469913d690fb85583445b",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0770",
+            "char": "ݰ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "absSeenSmallTahTwoDots"
+            ],
+            "signature": [
+              "e439f9018b9acc1bfe5ff88446ae02c62ebf39ab48977c20d79488d986aad2a5b3efff76e4367a92b111aeaada3639af3a7b16fdab7469913d690fb85583445b",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "isolated",
+            "glyphs": [
+              "absRehSmallTahTwoDots"
+            ],
+            "signature": [
+              "a9cf8a37167865c4aea0c0f558ce8edf715c08a95b737e956a2943cca88c3c99c0ec5cd09f4ba473f964249e0c6d573b657686fa82e9852885aaab723cc0149c"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "final_zwj",
+            "glyphs": [
+              "absRehSmallTahTwoDots"
+            ],
+            "signature": [
+              "a9cf8a37167865c4aea0c0f558ce8edf715c08a95b737e956a2943cca88c3c99c0ec5cd09f4ba473f964249e0c6d573b657686fa82e9852885aaab723cc0149c"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "final_real",
+            "glyphs": [
+              "absRehSmallTahTwoDots"
+            ],
+            "signature": [
+              "a9cf8a37167865c4aea0c0f558ce8edf715c08a95b737e956a2943cca88c3c99c0ec5cd09f4ba473f964249e0c6d573b657686fa82e9852885aaab723cc0149c",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0771",
+            "char": "ݱ",
+            "joining_type": "R",
+            "form": "zwnj_isolated",
+            "glyphs": [
+              "absRehSmallTahTwoDots"
+            ],
+            "signature": [
+              "a9cf8a37167865c4aea0c0f558ce8edf715c08a95b737e956a2943cca88c3c99c0ec5cd09f4ba473f964249e0c6d573b657686fa82e9852885aaab723cc0149c",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "absHahHamzaAbove"
+            ],
+            "signature": [
+              "48dd2da7135d4686dbc8857cd86d031aee85ebe1735bcc553ab76ecf8694cfa3ddc9a1d7598791ecec8f01599268e7d3c73d7d649fbd42a8b44a0e7c59ee2ef1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "absHahHamzaAbove"
+            ],
+            "signature": [
+              "48dd2da7135d4686dbc8857cd86d031aee85ebe1735bcc553ab76ecf8694cfa3ddc9a1d7598791ecec8f01599268e7d3c73d7d649fbd42a8b44a0e7c59ee2ef1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "absHahHamzaAbove"
+            ],
+            "signature": [
+              "48dd2da7135d4686dbc8857cd86d031aee85ebe1735bcc553ab76ecf8694cfa3ddc9a1d7598791ecec8f01599268e7d3c73d7d649fbd42a8b44a0e7c59ee2ef1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "absHahHamzaAbove"
+            ],
+            "signature": [
+              "48dd2da7135d4686dbc8857cd86d031aee85ebe1735bcc553ab76ecf8694cfa3ddc9a1d7598791ecec8f01599268e7d3c73d7d649fbd42a8b44a0e7c59ee2ef1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "absHahHamzaAbove"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "48dd2da7135d4686dbc8857cd86d031aee85ebe1735bcc553ab76ecf8694cfa3ddc9a1d7598791ecec8f01599268e7d3c73d7d649fbd42a8b44a0e7c59ee2ef1"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "absHahHamzaAbove"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "48dd2da7135d4686dbc8857cd86d031aee85ebe1735bcc553ab76ecf8694cfa3ddc9a1d7598791ecec8f01599268e7d3c73d7d649fbd42a8b44a0e7c59ee2ef1",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0681",
+            "char": "ځ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "absHahHamzaAbove"
+            ],
+            "signature": [
+              "48dd2da7135d4686dbc8857cd86d031aee85ebe1735bcc553ab76ecf8694cfa3ddc9a1d7598791ecec8f01599268e7d3c73d7d649fbd42a8b44a0e7c59ee2ef1",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "isolated",
+            "glyphs": [
+              "absHahThreeDotsAbove"
+            ],
+            "signature": [
+              "3c2771c9c4e110e740406f68495a550eccde03b40913fbd3a4a91f1ff75ef8e65caa53e8bca2f8e3fa6aa0291eb1fbc11cb0812e25014aee2ad93d5ddc0d5df6"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": false
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "initial_zwj",
+            "glyphs": [
+              "absHahThreeDotsAbove"
+            ],
+            "signature": [
+              "3c2771c9c4e110e740406f68495a550eccde03b40913fbd3a4a91f1ff75ef8e65caa53e8bca2f8e3fa6aa0291eb1fbc11cb0812e25014aee2ad93d5ddc0d5df6"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "medial_zwj",
+            "glyphs": [
+              "absHahThreeDotsAbove"
+            ],
+            "signature": [
+              "3c2771c9c4e110e740406f68495a550eccde03b40913fbd3a4a91f1ff75ef8e65caa53e8bca2f8e3fa6aa0291eb1fbc11cb0812e25014aee2ad93d5ddc0d5df6"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "final_zwj",
+            "glyphs": [
+              "absHahThreeDotsAbove"
+            ],
+            "signature": [
+              "3c2771c9c4e110e740406f68495a550eccde03b40913fbd3a4a91f1ff75ef8e65caa53e8bca2f8e3fa6aa0291eb1fbc11cb0812e25014aee2ad93d5ddc0d5df6"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": true,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "initial_real",
+            "glyphs": [
+              "absHahThreeDotsAbove"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "3c2771c9c4e110e740406f68495a550eccde03b40913fbd3a4a91f1ff75ef8e65caa53e8bca2f8e3fa6aa0291eb1fbc11cb0812e25014aee2ad93d5ddc0d5df6"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "medial_real",
+            "glyphs": [
+              "absHahThreeDotsAbove"
+            ],
+            "signature": [
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701",
+              "3c2771c9c4e110e740406f68495a550eccde03b40913fbd3a4a91f1ff75ef8e65caa53e8bca2f8e3fa6aa0291eb1fbc11cb0812e25014aee2ad93d5ddc0d5df6",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          },
+          {
+            "cp": "U+0685",
+            "char": "څ",
+            "joining_type": "D",
+            "form": "final_real",
+            "glyphs": [
+              "absHahThreeDotsAbove"
+            ],
+            "signature": [
+              "3c2771c9c4e110e740406f68495a550eccde03b40913fbd3a4a91f1ff75ef8e65caa53e8bca2f8e3fa6aa0291eb1fbc11cb0812e25014aee2ad93d5ddc0d5df6",
+              "96db613f9587e497df0fc3f5a14619f027438510ca673c8672de66b9f855437ab127b04a1b17d208e14c6d9ef042aa3523ab86ebb3dfdb356289e47d77dfe701"
+            ],
+            "notdef": false,
+            "merged_with_neighbour": false,
+            "same_glyph_as_isolated": true
+          }
+        ]
+      },
+      "marks": {
+        "cases": 70,
+        "notdef": [],
+        "dotted_circle": [],
+        "mark_offset_zero": []
+      },
+      "language": {
+        "khw_vs_ur_differences": [],
+        "khw_same_as_ur": true,
+        "ar_same_as_ur": true,
+        "none_same_as_ur": true,
+        "khw_differs_glyph_count": 0
+      },
+      "subset": {
+        "file": "awami-nastaliq.full.woff2",
+        "skipped_reason": "Not subset: the fontTools subsetter does not preserve Graphite tables, which this font relies on."
+      },
+      "sizes_bytes": {
+        "original_ttf": 644396,
+        "original_woff2": 331448
+      },
+      "served_file_bytes": 331448,
+      "automatic_result": "PASS (automatic checks only; visual review pending)"
+    }
+  ]
+}

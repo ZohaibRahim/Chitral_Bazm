@@ -14,10 +14,10 @@ IDs follow PRD v3.1 §15. "Confirmed" decisions are final until revisited here w
 | — | Tailwind CSS is part of the approved stack (v4, via `@tailwindcss/vite`). | 2026-10-10 | Owner (Prompts 1 and 3). Not mentioned in PRD v3.1; adopted as an owner decision. |
 | — | E0–E5 are internal evidence records, not automatic legal permission. | 2026-10-10 | Owner (Prompt 2); PRD §6. |
 | — | `khw` is a valid BCP 47 primary language subtag ("Khowar", added 2009-07-29). | 2026-10-10 | Verified against the IANA Language Subtag Registry (File-Date 2026-09-17) during T-01, as PRD §8 requires. |
-| — | **Temporary `is_minor` person field approved.** Age verification and guardian-consent support are incomplete. The future model must distinguish minor, adult and unknown status. Until consent verification exists, known minors are never publicly identified (always withheld). | 2026-10-11 | Owner. Needed to enforce PRD §7 rule 6. |
-| D-16b | **Provisional genre vocabulary:** `folk`, `traditional`, `ghazal`, `dialogue-song`, `wedding-song`, `elegy`, `devotional`, `contemporary`, `childrens-song`. Provisional classifications the primary Khowar editor may refine. | 2026-10-11 | Owner. Replaces the PRD default that referred to PRD v2. Implemented in `src/content/vocab.ts`. |
-| — | `yaml` (2.9.1, the version Astro uses) approved as a development dependency. | 2026-10-11 | Owner. Used by tests and by the build-time credit-reference check. |
-| — | Credit-to-person reference validation must run at build time no later than T-09. | 2026-10-11 | Owner. Implemented in T-03: every song's credits are checked against `src/content/people/` during content sync, so any build fails on an unknown person or inconsistent basis. |
+| — | **Temporary `is_minor` person field approved.** Age verification and guardian-consent support are incomplete. The future model must distinguish minor, adult and unknown status. Until consent verification exists, known minors are never publicly identified (always withheld). | 2026-10-10 | Owner. Needed to enforce PRD §7 rule 6. |
+| D-16b | **Provisional genre vocabulary:** `folk`, `traditional`, `ghazal`, `dialogue-song`, `wedding-song`, `elegy`, `devotional`, `contemporary`, `childrens-song`. Provisional classifications the primary Khowar editor may refine. | 2026-10-10 | Owner. Replaces the PRD default that referred to PRD v2. Implemented in `src/content/vocab.ts`. |
+| — | `yaml` (2.9.1, the version Astro uses) approved as a development dependency. | 2026-10-10 | Owner. Used by tests and by the build-time credit-reference check. |
+| — | Credit-to-person reference validation must run at build time no later than T-09. | 2026-10-10 | Owner. Implemented in T-03: every song's credits are checked against `src/content/people/` during content sync, so any build fails on an unknown person or inconsistent basis. |
 
 ## Open
 
@@ -41,16 +41,16 @@ IDs follow PRD v3.1 §15. "Confirmed" decisions are final until revisited here w
 
 ## Implementation choices (T-02, T-04)
 
-Made while implementing PRD §5 and §7, and accepted with T-02/T-04 on 2026-10-11. The owner may revise any of them.
+Made while implementing PRD §5 and §7, and accepted with T-02/T-04 on 2026-10-10. The owner may revise any of them.
 
 | Date | Choice | Why |
 |---|---|---|
-| 2026-10-11 | Original lyric lines accept `lang: khw` or `ur`, and `script: Arab` only. | PRD §3/§8 only describe Khowar and Urdu lines. Other languages can be added when a real song needs them. |
-| 2026-10-11 | `recorded_on` is required for `own_choice` and `family_choice`, and optional for `official_release_credit` and `default_withheld`. | PRD §7 rule 1 says a choice "is recorded with a date". |
-| 2026-10-11 | Evidence grade E0 must have no `evidence_ids`; E1–E5 need at least one. Ids cannot contain slashes. | E0 means "nothing documented" (§6). Blocking path-like ids keeps documents out of the repo (§5, D-13b). |
-| 2026-10-11 | Original text must contain Arabic-script letters; Roman and English layers must not. Every line needs at least one rendering. | Catches swapped or missing layers. A stanza may still omit English entirely, as required by PRD §3. |
-| 2026-10-11 | A song's `slug` must equal its file name. | Guarantees unique slugs. Astro only warns on duplicates by default. |
-| 2026-10-11 | Credit/person consistency (unknown person, `own_choice` for a deceased person or a minor, `family_choice` for someone not recorded as deceased) is checked by `src/lib/credits/visibility.ts`. Superseded in T-03: now enforced at build time (see Confirmed). | Astro's `reference()` does not check that the referenced entry exists. |
+| 2026-10-10 | Original lyric lines accept `lang: khw` or `ur`, and `script: Arab` only. | PRD §3/§8 only describe Khowar and Urdu lines. Other languages can be added when a real song needs them. |
+| 2026-10-10 | `recorded_on` is required for `own_choice` and `family_choice`, and optional for `official_release_credit` and `default_withheld`. | PRD §7 rule 1 says a choice "is recorded with a date". |
+| 2026-10-10 | Evidence grade E0 must have no `evidence_ids`; E1–E5 need at least one. Ids cannot contain slashes. | E0 means "nothing documented" (§6). Blocking path-like ids keeps documents out of the repo (§5, D-13b). |
+| 2026-10-10 | Original text must contain Arabic-script letters; Roman and English layers must not. Every line needs at least one rendering. | Catches swapped or missing layers. A stanza may still omit English entirely, as required by PRD §3. |
+| 2026-10-10 | A song's `slug` must equal its file name. | Guarantees unique slugs. Astro only warns on duplicates by default. |
+| 2026-10-10 | Credit/person consistency (unknown person, `own_choice` for a deceased person or a minor, `family_choice` for someone not recorded as deceased) is checked by `src/lib/credits/visibility.ts`. Superseded in T-03: now enforced at build time (see Confirmed). | Astro's `reference()` does not check that the referenced entry exists. |
 
 ## Implementation choices (T-03)
 
@@ -58,25 +58,37 @@ Made while implementing PRD §6. Conservative; the owner may revise any of them.
 
 | Date | Choice | Why |
 |---|---|---|
-| 2026-10-11 | The build checks **technical completeness** of rights records, not legal validity. Results carry `legalValidity: "not_assessed_by_build"`. | An E4/E5 grade only claims documented permission. Whether a document is genuine and covers this use is a human/legal check against the private store. |
-| 2026-10-11 | E4/E5 qualify only if unrevoked, with ≥ 1 evidence id and a recorded `license` (scope of permission). E2/E3 qualify only with `legal_advice_confirmed`. E0/E1 never qualify. Any `revoked_on` (even future-dated) blocks. | PRD §6; the license requirement is stricter than the SQL view (documented in `LYRIC_RULE_DIFFERENCES_FROM_SQL`). |
-| 2026-10-11 | Each rendering layer that appears on any line needs its own qualifying record: Roman (`roman_popular` or `roman_editorial`) → `rights.transliteration`; English → `rights.translation_en`. A missing or non-qualifying layer record blocks the **whole song**; the layer is not silently dropped. | PRD §6 rule: "every displayed rendering layer has its own publishable record". |
-| 2026-10-11 | Review requires `second_reader`, `verified_on`, and a second reader different from `transcribed_by` (case and spacing ignored). | D-12 independent review. |
-| 2026-10-11 | A synthetic song with `status: published` is rejected by the schema, so every build fails (dev, preview, production). The production catalog also asserts that it contains no synthetic songs. | P1-5, enforced loudly rather than by silent filtering. |
-| 2026-10-11 | Real (non-synthetic) songs appear only when publishable, in every mode. Synthetic songs appear only in development and preview (`KLA_SITE_MODE=preview`), always `noindex`, never when withdrawn. | PRD T-03: "synthetic songs render only in dev/preview with noindex". |
-| 2026-10-11 | `npm run build` uses `astro build --force`. | Astro caches entries by file content: without `--force`, changing only a person file would not re-check the songs that credit them. Found by the build tests. |
-| 2026-10-11 | `KLA_CONTENT_ROOT` env var overrides the content directory. Used only by the build tests. | Lets real builds run against temporary content without touching `src/content/`. |
+| 2026-10-10 | The build checks **technical completeness** of rights records, not legal validity. Results carry `legalValidity: "not_assessed_by_build"`. | An E4/E5 grade only claims documented permission. Whether a document is genuine and covers this use is a human/legal check against the private store. |
+| 2026-10-10 | E4/E5 qualify only if unrevoked, with ≥ 1 evidence id and a recorded `license` (scope of permission). E2/E3 qualify only with `legal_advice_confirmed`. E0/E1 never qualify. Any `revoked_on` (even future-dated) blocks. | PRD §6; the license requirement is stricter than the SQL view (documented in `LYRIC_RULE_DIFFERENCES_FROM_SQL`). |
+| 2026-10-10 | Each rendering layer that appears on any line needs its own qualifying record: Roman (`roman_popular` or `roman_editorial`) → `rights.transliteration`; English → `rights.translation_en`. A missing or non-qualifying layer record blocks the **whole song**; the layer is not silently dropped. | PRD §6 rule: "every displayed rendering layer has its own publishable record". |
+| 2026-10-10 | Review requires `second_reader`, `verified_on`, and a second reader different from `transcribed_by` (case and spacing ignored). | D-12 independent review. |
+| 2026-10-10 | A synthetic song with `status: published` is rejected by the schema, so every build fails (dev, preview, production). The production catalog also asserts that it contains no synthetic songs. | P1-5, enforced loudly rather than by silent filtering. |
+| 2026-10-10 | Real (non-synthetic) songs appear only when publishable, in every mode. Synthetic songs appear only in development and preview (`KLA_SITE_MODE=preview`), always `noindex`, never when withdrawn. | PRD T-03: "synthetic songs render only in dev/preview with noindex". |
+| 2026-10-10 | `npm run build` uses `astro build --force`. | Astro caches entries by file content: without `--force`, changing only a person file would not re-check the songs that credit them. Found by the build tests. |
+| 2026-10-10 | `KLA_CONTENT_ROOT` env var overrides the content directory. Used only by the build tests. | Lets real builds run against temporary content without touching `src/content/`. |
 
 **Known gaps:**
 - No field records that someone has checked the evidence documents themselves (who reviewed them, and when). The build can only see that ids, a grade, a license and dates are recorded.
 - Song titles (`titles.roman_popular`, `titles.en`) are not covered by layer records.
 - Revocation takes effect at the next build, not instantly.
 
+## Font evidence for D-03 (T-06, T-07) — findings, not a decision
+
+D-03 stays **open** until the owner reviews the rendering on devices. Full data: `tests/fonts/results/2026-10-10/`.
+
+| Date | Finding | Source |
+|---|---|---|
+| 2026-10-10 | **Gulzar 1.000 has none of the six Khowar letters** (ݮ ݯ ݰ ݱ ځ څ) in any cmap subtable. Browsers fall back to another font for them (Chromium used Times New Roman), and PRD §8 forbids splitting Arabic letters across fonts. | fontTools coverage; Chromium CDP |
+| 2026-10-10 | **Awami Nastaliq 3.400 has no OpenType GSUB**, only Graphite tables. HarfBuzz and Chromium show every letter unjoined. It can only be judged in Firefox (Graphite). Confirms PRD: reference only. | fontTools tables; HarfBuzz shaping |
+| 2026-10-10 | **Noto Nastaliq Urdu 3.009** and **Noto Naskh Arabic 2.021** cover every required code point, select distinct contextual forms for every Khowar letter, and shape identically after subsetting. Automatic checks only; letterforms not yet reviewed. | HarfBuzz 14.6.0 |
+| 2026-10-10 | Served subset sizes (WOFF2): Noto Nastaliq Urdu 181 KB (variable font), or 123 KB if instanced to one regular weight; Noto Naskh Arabic 27 KB (16 KB regular only). The PRD's 120 KB target is met only by Naskh, or roughly met by a regular-only Nastaliq. | `font-report.md` |
+| 2026-10-10 | **Language tags matter for Noto Naskh Arabic**: digits ۴ ۶ ۷ take Urdu-style forms only under `lang="ur"`; under `lang="khw"` they use the default forms. Noto Nastaliq Urdu shapes `khw` and `ur` identically. If Khowar should use Urdu-style forms, Khowar runs may need `font-language-override: "URD"` (D-03). | HarfBuzz language comparison |
+
 ## Open project questions (not PRD D-items)
 
 | Date raised | Question | Status |
 |---|---|---|
-| 2026-10-10 | Initialize git and add a GitHub remote? Needed for per-step commits (PRD §14) and the CI workflow (T-01 acceptance). | Resolved 2026-10-11: git initialized, `origin` = github.com/ZohaibRahim/Chitral_Bazm, CI workflow added (checks only, no deploy). Pushing is done only on the owner's instruction. |
+| 2026-10-10 | Initialize git and add a GitHub remote? Needed for per-step commits (PRD §14) and the CI workflow (T-01 acceptance). | Resolved 2026-10-10: git initialized, `origin` = github.com/ZohaibRahim/Chitral_Bazm, CI workflow added (checks only, no deploy). Pushing is done only on the owner's instruction. |
 | 2026-10-10 | Keep the project inside OneDrive? `node_modules` and test artifacts are large and sync-heavy. | Open |
 | 2026-10-10 | Is dark mode in the design scope? | Open |
 | 2026-10-10 | May design-system notes from `ui-ux-pro-max` be saved under `docs/design-system/`? | Open |

@@ -1,0 +1,5 @@
+# Dev-only font tooling (T-06). Install into the project venv: python -m venv .venv && .venv/Scripts/python -m pip install -r scripts/fonts/requirements.txt
+fonttools[woff]==4.66.1
+brotli==1.2.0
+uharfbuzz==0.56.3
+zopfli==0.4.3

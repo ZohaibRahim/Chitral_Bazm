@@ -13,7 +13,12 @@ playwright/.cache/
 .lighthouseci/
 coverage/
 tests/.tmp/
-# Device-matrix screenshots are kept (tests/fonts/results/); generated font subsets are rebuilt by scripts/fonts/.
+# Font tooling (T-06/T-07): downloaded fonts and generated subsets are rebuilt by npm run fonts:fetch / fonts:check.
+# Reports, screenshots and device reviews in tests/fonts/results/ ARE committed.
+.venv/
+__pycache__/
+scripts/fonts/sources/
+tests/fonts/build/
 
 # Environment and secrets
 .env

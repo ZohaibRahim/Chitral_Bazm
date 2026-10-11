@@ -22,6 +22,7 @@ Astro (static output) · strict TypeScript (`astro/tsconfigs/strictest`) · Tail
 No PostgreSQL, Supabase or CMS until the PRD §10 migration conditions are met (D-19).
 
 Commands: `npm run dev` · `build` (`--force`: always re-validates all content) · `typecheck` · `test` (unit) · `test:build` (real negative/positive builds) · `e2e` · `lhci` (after `build`) · `ci`.
+Font tooling (dev-only, needs `.venv` from `scripts/fonts/requirements.txt`): `fonts:fetch` → `fonts:check` (exits 1 while any candidate lacks a required glyph) → `fonts:page` → `fonts:e2e`; `fonts:test` self-tests the checker; `fonts:serve -- --host 0.0.0.0` for phone review. Font binaries are never committed.
 Site modes: production (default) · preview (`KLA_SITE_MODE=preview`, synthetic shown, all noindex) · development (`astro dev`).
 
 ## Workflow

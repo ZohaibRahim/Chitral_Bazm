@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Khowar font test (T-07): development only</title>
+<style>
+@font-face { font-family: "KLA Noto Nastaliq Urdu"; src: url("build/noto-nastaliq-urdu.subset.woff2") format("woff2"); font-display: block; }
+.f-noto-nastaliq-urdu { font-family: "KLA Noto Nastaliq Urdu"; }
+@font-face { font-family: "KLA Gulzar"; src: url("build/gulzar.subset.woff2") format("woff2"); font-display: block; }
+.f-gulzar { font-family: "KLA Gulzar"; }
+@font-face { font-family: "KLA Noto Naskh Arabic"; src: url("build/noto-naskh-arabic.subset.woff2") format("woff2"); font-display: block; }
+.f-noto-naskh-arabic { font-family: "KLA Noto Naskh Arabic"; }
+@font-face { font-family: "KLA Awami Nastaliq"; src: url("build/awami-nastaliq.full.woff2") format("woff2"); font-display: block; }
+.f-awami-nastaliq { font-family: "KLA Awami Nastaliq"; }
+:root { --line: #c9c4bb; --muted: #5b5750; --bad: #9b1c1c; --ok: #1f5f3a; }
+* { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 64rem; padding: 1rem; font: 16px/1.5 system-ui, sans-serif; color: #1c1b19; background: #fbfaf7; }
+h1 { font-size: 1.5rem; } h2 { font-size: 1.25rem; margin-top: 2.5rem; border-top: 2px solid var(--line); padding-top: 1rem; }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 .5rem; }
+.notice { border: 2px solid var(--bad); padding: .75rem 1rem; background: #fff; }
+table { border-collapse: collapse; width: 100%; font-size: .875rem; } th, td { border: 1px solid var(--line); padding: .35rem .5rem; text-align: left; vertical-align: top; }
+.table-wrap { overflow-x: auto; }
+.font-row { margin: .5rem 0 1rem; } .font-name { font-size: .8rem; color: var(--muted); }
+.cells { display: flex; flex-wrap: wrap; gap: .4rem; }
+.cell { display: flex; flex-direction: column; align-items: center; min-width: 4.5rem; border: 1px solid var(--line); background: #fff; padding: .25rem; }
+.cell .sp { font-size: 2.25rem; line-height: 2.4; } .cell small { font-size: .7rem; color: var(--muted); }
+.cell.missing { border-color: var(--bad); background: #fdf0f0; } .cell.missing small { color: var(--bad); }
+.rtl { font-size: 1.6rem; } .lh { background: linear-gradient(#f1ede5 50%, #fff 50%); }
+.lh-1-8 { line-height: 1.8; background-size: 100% 3.6em; } .lh-2-2 { line-height: 2.2; background-size: 100% 4.4em; } .lh-2-6 { line-height: 2.6; background-size: 100% 5.2em; }
+fieldset { border: 1px solid var(--line); margin: .5rem 0; } legend { font-weight: 600; }
+.review label { margin-inline-end: 1rem; white-space: nowrap; }
+textarea { width: 100%; min-height: 8rem; font-family: ui-monospace, monospace; }
+.tag { font-size: .75rem; padding: 0 .35rem; border-radius: .25rem; background: #ece7dc; }
+</style>
+</head>
+<body>
+<h1>Khowar font test (T-07)</h1>
+<p class="notice"><strong>Development tool only.</strong> Not part of the public site, never deployed with it, and marked
+<code>noindex</code>. Every specimen below is a synthetic letter sequence, not a word or a lyric. Generated 2026-10-10 from
+<code>scripts/fonts/build_test_page.py</code>.</p>
+
+<h2 id="results">What is verified, and by what</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Font</th><th>Version</th><th>Role</th><th>1. Unicode coverage<br><small>verified automatically (fontTools)</small></th>
+<th>2. Shaping<br><small>verified automatically (HarfBuzz 14.6.0, OpenType only)</small></th>
+<th>3. Browser rendering<br><small>Chromium: automated (Playwright). Other browsers: manual.</small></th>
+<th>4. Correct Khowar letterforms<br><small>needs a fluent Khowar reader</small></th><th>WOFF2 served</th></tr></thead><tbody>
+<tr><td>Noto Nastaliq Urdu</td><td>Version 3.009</td><td>candidate</td><td>complete</td><td>0 .notdef; 0 joined contexts identical to isolated</td><td>See <code>results/2026-10-10/browser-chromium.json</code></td><td>Pending (section 2 checklist)</td><td>181 KB</td></tr>
+<tr><td>Gulzar</td><td>Version 1.000;[7b34f74]; ttfautohint (v1.8.4)</td><td>candidate</td><td><strong>missing 6</strong>: U+076E ݮ, U+076F ݯ, U+0770 ݰ, U+0771 ݱ, U+0681 ځ, U+0685 څ</td><td>39 .notdef; 34 joined contexts identical to isolated</td><td>See <code>results/2026-10-10/browser-chromium.json</code></td><td>Pending (section 2 checklist)</td><td>194 KB</td></tr>
+<tr><td>Noto Naskh Arabic</td><td>Version 2.021</td><td>candidate (Naskh fallback)</td><td>complete</td><td>0 .notdef; 0 joined contexts identical to isolated</td><td>See <code>results/2026-10-10/browser-chromium.json</code></td><td>Pending (section 2 checklist)</td><td>27 KB</td></tr>
+<tr><td>Awami Nastaliq</td><td>Version 3.400</td><td>reference only (Graphite; Firefox)</td><td>complete</td><td>0 .notdef; 242 joined contexts identical to isolated (no OpenType GSUB: Graphite only)</td><td>See <code>results/2026-10-10/browser-chromium.json</code></td><td>Pending (section 2 checklist)</td><td>324 KB</td></tr>
+</tbody></table></div>
+<p>Automatic checks prove that glyphs exist and that contextual glyphs are selected. They do <strong>not</strong> prove the glyphs are correct Khowar letterforms. A red cell means the font lacks that character: whatever appears there comes from a browser fallback font, not from the font under test.</p>
+<h2 id="matrix">1. Khowar letters: joining forms by font</h2>
+<p>Forms with ZWJ (U+200D) force the joined shape without a neighbour; “real” forms use beh (ب) as the neighbour. ݱ joins only on the right (Unicode joining type R), so it has no initial or medial form.</p>
+<h3 id="l-U+076E"><span lang="khw" dir="rtl">ݮ</span> U+076E <span class="tag">joining type D</span> <span class="tag">compare: <span lang="ur" dir="rtl">ج</span> U+062C</span></h3>
+<div class="font-row"><div class="font-name">Noto Nastaliq Urdu</div><div class="cells">
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076E" data-form="isolated">ݮ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076E" data-form="initial_zwj">ݮ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076E" data-form="medial_zwj">‍ݮ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076E" data-form="final_zwj">‍ݮ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076E" data-form="initial_real">ݮب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076E" data-form="medial_real">بݮب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076E" data-form="final_real">بݮ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="ur" dir="rtl" data-kind="compare" data-font="noto-nastaliq-urdu" data-cp="U+062C">بجب</span><small>compare U+062C</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Gulzar (character not in font)</div><div class="cells">
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076E" data-form="isolated">ݮ</span><small>isolated</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076E" data-form="initial_zwj">ݮ‍</span><small>initial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076E" data-form="medial_zwj">‍ݮ‍</span><small>medial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076E" data-form="final_zwj">‍ݮ</span><small>final zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076E" data-form="initial_real">ݮب</span><small>initial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076E" data-form="medial_real">بݮب</span><small>medial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076E" data-form="final_real">بݮ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-gulzar" lang="ur" dir="rtl" data-kind="compare" data-font="gulzar" data-cp="U+062C">بجب</span><small>compare U+062C</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Noto Naskh Arabic</div><div class="cells">
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076E" data-form="isolated">ݮ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076E" data-form="initial_zwj">ݮ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076E" data-form="medial_zwj">‍ݮ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076E" data-form="final_zwj">‍ݮ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076E" data-form="initial_real">ݮب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076E" data-form="medial_real">بݮب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076E" data-form="final_real">بݮ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="ur" dir="rtl" data-kind="compare" data-font="noto-naskh-arabic" data-cp="U+062C">بجب</span><small>compare U+062C</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Awami Nastaliq</div><div class="cells">
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076E" data-form="isolated">ݮ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076E" data-form="initial_zwj">ݮ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076E" data-form="medial_zwj">‍ݮ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076E" data-form="final_zwj">‍ݮ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076E" data-form="initial_real">ݮب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076E" data-form="medial_real">بݮب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076E" data-form="final_real">بݮ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="ur" dir="rtl" data-kind="compare" data-font="awami-nastaliq" data-cp="U+062C">بجب</span><small>compare U+062C</small></div>
+</div></div>
+<h3 id="l-U+076F"><span lang="khw" dir="rtl">ݯ</span> U+076F <span class="tag">joining type D</span> <span class="tag">compare: <span lang="ur" dir="rtl">چ</span> U+0686</span></h3>
+<div class="font-row"><div class="font-name">Noto Nastaliq Urdu</div><div class="cells">
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076F" data-form="isolated">ݯ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076F" data-form="initial_zwj">ݯ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076F" data-form="medial_zwj">‍ݯ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076F" data-form="final_zwj">‍ݯ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076F" data-form="initial_real">ݯب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076F" data-form="medial_real">بݯب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+076F" data-form="final_real">بݯ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="ur" dir="rtl" data-kind="compare" data-font="noto-nastaliq-urdu" data-cp="U+0686">بچب</span><small>compare U+0686</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Gulzar (character not in font)</div><div class="cells">
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076F" data-form="isolated">ݯ</span><small>isolated</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076F" data-form="initial_zwj">ݯ‍</span><small>initial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076F" data-form="medial_zwj">‍ݯ‍</span><small>medial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076F" data-form="final_zwj">‍ݯ</span><small>final zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076F" data-form="initial_real">ݯب</span><small>initial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076F" data-form="medial_real">بݯب</span><small>medial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+076F" data-form="final_real">بݯ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-gulzar" lang="ur" dir="rtl" data-kind="compare" data-font="gulzar" data-cp="U+0686">بچب</span><small>compare U+0686</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Noto Naskh Arabic</div><div class="cells">
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076F" data-form="isolated">ݯ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076F" data-form="initial_zwj">ݯ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076F" data-form="medial_zwj">‍ݯ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076F" data-form="final_zwj">‍ݯ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076F" data-form="initial_real">ݯب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076F" data-form="medial_real">بݯب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+076F" data-form="final_real">بݯ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="ur" dir="rtl" data-kind="compare" data-font="noto-naskh-arabic" data-cp="U+0686">بچب</span><small>compare U+0686</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Awami Nastaliq</div><div class="cells">
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076F" data-form="isolated">ݯ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076F" data-form="initial_zwj">ݯ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076F" data-form="medial_zwj">‍ݯ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076F" data-form="final_zwj">‍ݯ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076F" data-form="initial_real">ݯب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076F" data-form="medial_real">بݯب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+076F" data-form="final_real">بݯ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="ur" dir="rtl" data-kind="compare" data-font="awami-nastaliq" data-cp="U+0686">بچب</span><small>compare U+0686</small></div>
+</div></div>
+<h3 id="l-U+0770"><span lang="khw" dir="rtl">ݰ</span> U+0770 <span class="tag">joining type D</span> <span class="tag">compare: <span lang="ur" dir="rtl">ش</span> U+0634</span></h3>
+<div class="font-row"><div class="font-name">Noto Nastaliq Urdu</div><div class="cells">
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0770" data-form="isolated">ݰ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0770" data-form="initial_zwj">ݰ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0770" data-form="medial_zwj">‍ݰ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0770" data-form="final_zwj">‍ݰ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0770" data-form="initial_real">ݰب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0770" data-form="medial_real">بݰب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0770" data-form="final_real">بݰ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="ur" dir="rtl" data-kind="compare" data-font="noto-nastaliq-urdu" data-cp="U+0634">بشب</span><small>compare U+0634</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Gulzar (character not in font)</div><div class="cells">
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0770" data-form="isolated">ݰ</span><small>isolated</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0770" data-form="initial_zwj">ݰ‍</span><small>initial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0770" data-form="medial_zwj">‍ݰ‍</span><small>medial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0770" data-form="final_zwj">‍ݰ</span><small>final zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0770" data-form="initial_real">ݰب</span><small>initial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0770" data-form="medial_real">بݰب</span><small>medial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0770" data-form="final_real">بݰ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-gulzar" lang="ur" dir="rtl" data-kind="compare" data-font="gulzar" data-cp="U+0634">بشب</span><small>compare U+0634</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Noto Naskh Arabic</div><div class="cells">
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0770" data-form="isolated">ݰ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0770" data-form="initial_zwj">ݰ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0770" data-form="medial_zwj">‍ݰ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0770" data-form="final_zwj">‍ݰ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0770" data-form="initial_real">ݰب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0770" data-form="medial_real">بݰب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0770" data-form="final_real">بݰ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="ur" dir="rtl" data-kind="compare" data-font="noto-naskh-arabic" data-cp="U+0634">بشب</span><small>compare U+0634</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Awami Nastaliq</div><div class="cells">
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0770" data-form="isolated">ݰ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0770" data-form="initial_zwj">ݰ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0770" data-form="medial_zwj">‍ݰ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0770" data-form="final_zwj">‍ݰ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0770" data-form="initial_real">ݰب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0770" data-form="medial_real">بݰب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0770" data-form="final_real">بݰ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="ur" dir="rtl" data-kind="compare" data-font="awami-nastaliq" data-cp="U+0634">بشب</span><small>compare U+0634</small></div>
+</div></div>
+<h3 id="l-U+0771"><span lang="khw" dir="rtl">ݱ</span> U+0771 <span class="tag">joining type R</span> <span class="tag">compare: <span lang="ur" dir="rtl">ژ</span> U+0698</span></h3>
+<div class="font-row"><div class="font-name">Noto Nastaliq Urdu</div><div class="cells">
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0771" data-form="isolated">ݱ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0771" data-form="final_zwj">‍ݱ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0771" data-form="final_real">بݱ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="ur" dir="rtl" data-kind="compare" data-font="noto-nastaliq-urdu" data-cp="U+0698">بژب</span><small>compare U+0698</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Gulzar (character not in font)</div><div class="cells">
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0771" data-form="isolated">ݱ</span><small>isolated</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0771" data-form="final_zwj">‍ݱ</span><small>final zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0771" data-form="final_real">بݱ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-gulzar" lang="ur" dir="rtl" data-kind="compare" data-font="gulzar" data-cp="U+0698">بژب</span><small>compare U+0698</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Noto Naskh Arabic</div><div class="cells">
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0771" data-form="isolated">ݱ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0771" data-form="final_zwj">‍ݱ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0771" data-form="final_real">بݱ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="ur" dir="rtl" data-kind="compare" data-font="noto-naskh-arabic" data-cp="U+0698">بژب</span><small>compare U+0698</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Awami Nastaliq</div><div class="cells">
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0771" data-form="isolated">ݱ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0771" data-form="final_zwj">‍ݱ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0771" data-form="final_real">بݱ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="ur" dir="rtl" data-kind="compare" data-font="awami-nastaliq" data-cp="U+0698">بژب</span><small>compare U+0698</small></div>
+</div></div>
+<h3 id="l-U+0681"><span lang="khw" dir="rtl">ځ</span> U+0681 <span class="tag">joining type D</span> <span class="tag">compare: <span lang="ur" dir="rtl">ز</span> U+0632</span></h3>
+<div class="font-row"><div class="font-name">Noto Nastaliq Urdu</div><div class="cells">
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0681" data-form="isolated">ځ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0681" data-form="initial_zwj">ځ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0681" data-form="medial_zwj">‍ځ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0681" data-form="final_zwj">‍ځ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0681" data-form="initial_real">ځب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0681" data-form="medial_real">بځب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0681" data-form="final_real">بځ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="ur" dir="rtl" data-kind="compare" data-font="noto-nastaliq-urdu" data-cp="U+0632">بزب</span><small>compare U+0632</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Gulzar (character not in font)</div><div class="cells">
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0681" data-form="isolated">ځ</span><small>isolated</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0681" data-form="initial_zwj">ځ‍</span><small>initial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0681" data-form="medial_zwj">‍ځ‍</span><small>medial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0681" data-form="final_zwj">‍ځ</span><small>final zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0681" data-form="initial_real">ځب</span><small>initial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0681" data-form="medial_real">بځب</span><small>medial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0681" data-form="final_real">بځ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-gulzar" lang="ur" dir="rtl" data-kind="compare" data-font="gulzar" data-cp="U+0632">بزب</span><small>compare U+0632</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Noto Naskh Arabic</div><div class="cells">
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0681" data-form="isolated">ځ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0681" data-form="initial_zwj">ځ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0681" data-form="medial_zwj">‍ځ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0681" data-form="final_zwj">‍ځ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0681" data-form="initial_real">ځب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0681" data-form="medial_real">بځب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0681" data-form="final_real">بځ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="ur" dir="rtl" data-kind="compare" data-font="noto-naskh-arabic" data-cp="U+0632">بزب</span><small>compare U+0632</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Awami Nastaliq</div><div class="cells">
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0681" data-form="isolated">ځ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0681" data-form="initial_zwj">ځ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0681" data-form="medial_zwj">‍ځ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0681" data-form="final_zwj">‍ځ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0681" data-form="initial_real">ځب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0681" data-form="medial_real">بځب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0681" data-form="final_real">بځ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="ur" dir="rtl" data-kind="compare" data-font="awami-nastaliq" data-cp="U+0632">بزب</span><small>compare U+0632</small></div>
+</div></div>
+<h3 id="l-U+0685"><span lang="khw" dir="rtl">څ</span> U+0685 <span class="tag">joining type D</span> <span class="tag">compare: <span lang="ur" dir="rtl">چ</span> U+0686</span></h3>
+<div class="font-row"><div class="font-name">Noto Nastaliq Urdu</div><div class="cells">
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0685" data-form="isolated">څ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0685" data-form="initial_zwj">څ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0685" data-form="medial_zwj">‍څ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0685" data-form="final_zwj">‍څ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0685" data-form="initial_real">څب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0685" data-form="medial_real">بڅب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-nastaliq-urdu" data-cp="U+0685" data-form="final_real">بڅ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-nastaliq-urdu" lang="ur" dir="rtl" data-kind="compare" data-font="noto-nastaliq-urdu" data-cp="U+0686">بچب</span><small>compare U+0686</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Gulzar (character not in font)</div><div class="cells">
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0685" data-form="isolated">څ</span><small>isolated</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0685" data-form="initial_zwj">څ‍</span><small>initial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0685" data-form="medial_zwj">‍څ‍</span><small>medial zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0685" data-form="final_zwj">‍څ</span><small>final zwj</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0685" data-form="initial_real">څب</span><small>initial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0685" data-form="medial_real">بڅب</span><small>medial real</small></div>
+<div class="cell missing"><span class="sp f-gulzar" lang="khw" dir="rtl" data-kind="matrix" data-font="gulzar" data-cp="U+0685" data-form="final_real">بڅ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-gulzar" lang="ur" dir="rtl" data-kind="compare" data-font="gulzar" data-cp="U+0686">بچب</span><small>compare U+0686</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Noto Naskh Arabic</div><div class="cells">
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0685" data-form="isolated">څ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0685" data-form="initial_zwj">څ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0685" data-form="medial_zwj">‍څ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0685" data-form="final_zwj">‍څ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0685" data-form="initial_real">څب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0685" data-form="medial_real">بڅب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="matrix" data-font="noto-naskh-arabic" data-cp="U+0685" data-form="final_real">بڅ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-noto-naskh-arabic" lang="ur" dir="rtl" data-kind="compare" data-font="noto-naskh-arabic" data-cp="U+0686">بچب</span><small>compare U+0686</small></div>
+</div></div>
+<div class="font-row"><div class="font-name">Awami Nastaliq</div><div class="cells">
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0685" data-form="isolated">څ</span><small>isolated</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0685" data-form="initial_zwj">څ‍</span><small>initial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0685" data-form="medial_zwj">‍څ‍</span><small>medial zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0685" data-form="final_zwj">‍څ</span><small>final zwj</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0685" data-form="initial_real">څب</span><small>initial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0685" data-form="medial_real">بڅب</span><small>medial real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="khw" dir="rtl" data-kind="matrix" data-font="awami-nastaliq" data-cp="U+0685" data-form="final_real">بڅ</span><small>final real</small></div>
+<div class="cell"><span class="sp f-awami-nastaliq" lang="ur" dir="rtl" data-kind="compare" data-font="awami-nastaliq" data-cp="U+0686">بچب</span><small>compare U+0686</small></div>
+</div></div>
+<h2 id="review">2. Reviewer checklist (fluent Khowar reader)</h2>
+<p>For each letter and font, judge every form in section 1: is it the correct Khowar letter, clearly distinct from its Urdu-keyboard substitute, with dots and marks in the right place and no collisions? Record the device and browser, then export and save the JSON as <code>tests/fonts/results/&lt;date&gt;/review-&lt;device&gt;-&lt;browser&gt;.json</code>.</p>
+<form class="review" id="review-form"><p><label>Reviewer <input name="reviewer"></label> <label>Device <input name="device" placeholder="e.g. Samsung A14"></label> <label>Browser and version <input name="browser" placeholder="e.g. Samsung Internet 27"></label></p>
+<fieldset><legend>Noto Nastaliq Urdu</legend>
+<p><span lang="khw" dir="rtl" class="f-noto-nastaliq-urdu rtl">ݮ</span> U+076E: <label><input type="radio" name="noto-nastaliq-urdu|U+076E" value="correct"> correct</label><label><input type="radio" name="noto-nastaliq-urdu|U+076E" value="wrong"> wrong</label><label><input type="radio" name="noto-nastaliq-urdu|U+076E" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|U+076E|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-nastaliq-urdu rtl">ݯ</span> U+076F: <label><input type="radio" name="noto-nastaliq-urdu|U+076F" value="correct"> correct</label><label><input type="radio" name="noto-nastaliq-urdu|U+076F" value="wrong"> wrong</label><label><input type="radio" name="noto-nastaliq-urdu|U+076F" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|U+076F|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-nastaliq-urdu rtl">ݰ</span> U+0770: <label><input type="radio" name="noto-nastaliq-urdu|U+0770" value="correct"> correct</label><label><input type="radio" name="noto-nastaliq-urdu|U+0770" value="wrong"> wrong</label><label><input type="radio" name="noto-nastaliq-urdu|U+0770" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|U+0770|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-nastaliq-urdu rtl">ݱ</span> U+0771: <label><input type="radio" name="noto-nastaliq-urdu|U+0771" value="correct"> correct</label><label><input type="radio" name="noto-nastaliq-urdu|U+0771" value="wrong"> wrong</label><label><input type="radio" name="noto-nastaliq-urdu|U+0771" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|U+0771|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-nastaliq-urdu rtl">ځ</span> U+0681: <label><input type="radio" name="noto-nastaliq-urdu|U+0681" value="correct"> correct</label><label><input type="radio" name="noto-nastaliq-urdu|U+0681" value="wrong"> wrong</label><label><input type="radio" name="noto-nastaliq-urdu|U+0681" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|U+0681|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-nastaliq-urdu rtl">څ</span> U+0685: <label><input type="radio" name="noto-nastaliq-urdu|U+0685" value="correct"> correct</label><label><input type="radio" name="noto-nastaliq-urdu|U+0685" value="wrong"> wrong</label><label><input type="radio" name="noto-nastaliq-urdu|U+0685" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|U+0685|note" size="18"></label></p>
+<p>diacritics (sections 3–7): <label><input type="radio" name="noto-nastaliq-urdu|diacritics" value="ok"> ok</label><label><input type="radio" name="noto-nastaliq-urdu|diacritics" value="problem"> problem</label><label><input type="radio" name="noto-nastaliq-urdu|diacritics" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|diacritics|note" size="18"></label></p>
+<p>line height (sections 3–7): <label><input type="radio" name="noto-nastaliq-urdu|line-height" value="ok"> ok</label><label><input type="radio" name="noto-nastaliq-urdu|line-height" value="problem"> problem</label><label><input type="radio" name="noto-nastaliq-urdu|line-height" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|line-height|note" size="18"></label></p>
+<p>mixed text (sections 3–7): <label><input type="radio" name="noto-nastaliq-urdu|mixed-text" value="ok"> ok</label><label><input type="radio" name="noto-nastaliq-urdu|mixed-text" value="problem"> problem</label><label><input type="radio" name="noto-nastaliq-urdu|mixed-text" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|mixed-text|note" size="18"></label></p>
+<p>wrapping (sections 3–7): <label><input type="radio" name="noto-nastaliq-urdu|wrapping" value="ok"> ok</label><label><input type="radio" name="noto-nastaliq-urdu|wrapping" value="problem"> problem</label><label><input type="radio" name="noto-nastaliq-urdu|wrapping" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|wrapping|note" size="18"></label></p>
+<p>language tags (sections 3–7): <label><input type="radio" name="noto-nastaliq-urdu|language-tags" value="ok"> ok</label><label><input type="radio" name="noto-nastaliq-urdu|language-tags" value="problem"> problem</label><label><input type="radio" name="noto-nastaliq-urdu|language-tags" value="unsure"> unsure</label> <label>note <input name="noto-nastaliq-urdu|language-tags|note" size="18"></label></p>
+</fieldset>
+<fieldset><legend>Gulzar</legend>
+<p><span lang="khw" dir="rtl" class="f-gulzar rtl">ݮ</span> U+076E: <label><input type="radio" name="gulzar|U+076E" value="correct"> correct</label><label><input type="radio" name="gulzar|U+076E" value="wrong"> wrong</label><label><input type="radio" name="gulzar|U+076E" value="unsure"> unsure</label> <label>note <input name="gulzar|U+076E|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-gulzar rtl">ݯ</span> U+076F: <label><input type="radio" name="gulzar|U+076F" value="correct"> correct</label><label><input type="radio" name="gulzar|U+076F" value="wrong"> wrong</label><label><input type="radio" name="gulzar|U+076F" value="unsure"> unsure</label> <label>note <input name="gulzar|U+076F|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-gulzar rtl">ݰ</span> U+0770: <label><input type="radio" name="gulzar|U+0770" value="correct"> correct</label><label><input type="radio" name="gulzar|U+0770" value="wrong"> wrong</label><label><input type="radio" name="gulzar|U+0770" value="unsure"> unsure</label> <label>note <input name="gulzar|U+0770|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-gulzar rtl">ݱ</span> U+0771: <label><input type="radio" name="gulzar|U+0771" value="correct"> correct</label><label><input type="radio" name="gulzar|U+0771" value="wrong"> wrong</label><label><input type="radio" name="gulzar|U+0771" value="unsure"> unsure</label> <label>note <input name="gulzar|U+0771|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-gulzar rtl">ځ</span> U+0681: <label><input type="radio" name="gulzar|U+0681" value="correct"> correct</label><label><input type="radio" name="gulzar|U+0681" value="wrong"> wrong</label><label><input type="radio" name="gulzar|U+0681" value="unsure"> unsure</label> <label>note <input name="gulzar|U+0681|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-gulzar rtl">څ</span> U+0685: <label><input type="radio" name="gulzar|U+0685" value="correct"> correct</label><label><input type="radio" name="gulzar|U+0685" value="wrong"> wrong</label><label><input type="radio" name="gulzar|U+0685" value="unsure"> unsure</label> <label>note <input name="gulzar|U+0685|note" size="18"></label></p>
+<p>diacritics (sections 3–7): <label><input type="radio" name="gulzar|diacritics" value="ok"> ok</label><label><input type="radio" name="gulzar|diacritics" value="problem"> problem</label><label><input type="radio" name="gulzar|diacritics" value="unsure"> unsure</label> <label>note <input name="gulzar|diacritics|note" size="18"></label></p>
+<p>line height (sections 3–7): <label><input type="radio" name="gulzar|line-height" value="ok"> ok</label><label><input type="radio" name="gulzar|line-height" value="problem"> problem</label><label><input type="radio" name="gulzar|line-height" value="unsure"> unsure</label> <label>note <input name="gulzar|line-height|note" size="18"></label></p>
+<p>mixed text (sections 3–7): <label><input type="radio" name="gulzar|mixed-text" value="ok"> ok</label><label><input type="radio" name="gulzar|mixed-text" value="problem"> problem</label><label><input type="radio" name="gulzar|mixed-text" value="unsure"> unsure</label> <label>note <input name="gulzar|mixed-text|note" size="18"></label></p>
+<p>wrapping (sections 3–7): <label><input type="radio" name="gulzar|wrapping" value="ok"> ok</label><label><input type="radio" name="gulzar|wrapping" value="problem"> problem</label><label><input type="radio" name="gulzar|wrapping" value="unsure"> unsure</label> <label>note <input name="gulzar|wrapping|note" size="18"></label></p>
+<p>language tags (sections 3–7): <label><input type="radio" name="gulzar|language-tags" value="ok"> ok</label><label><input type="radio" name="gulzar|language-tags" value="problem"> problem</label><label><input type="radio" name="gulzar|language-tags" value="unsure"> unsure</label> <label>note <input name="gulzar|language-tags|note" size="18"></label></p>
+</fieldset>
+<fieldset><legend>Noto Naskh Arabic</legend>
+<p><span lang="khw" dir="rtl" class="f-noto-naskh-arabic rtl">ݮ</span> U+076E: <label><input type="radio" name="noto-naskh-arabic|U+076E" value="correct"> correct</label><label><input type="radio" name="noto-naskh-arabic|U+076E" value="wrong"> wrong</label><label><input type="radio" name="noto-naskh-arabic|U+076E" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|U+076E|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-naskh-arabic rtl">ݯ</span> U+076F: <label><input type="radio" name="noto-naskh-arabic|U+076F" value="correct"> correct</label><label><input type="radio" name="noto-naskh-arabic|U+076F" value="wrong"> wrong</label><label><input type="radio" name="noto-naskh-arabic|U+076F" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|U+076F|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-naskh-arabic rtl">ݰ</span> U+0770: <label><input type="radio" name="noto-naskh-arabic|U+0770" value="correct"> correct</label><label><input type="radio" name="noto-naskh-arabic|U+0770" value="wrong"> wrong</label><label><input type="radio" name="noto-naskh-arabic|U+0770" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|U+0770|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-naskh-arabic rtl">ݱ</span> U+0771: <label><input type="radio" name="noto-naskh-arabic|U+0771" value="correct"> correct</label><label><input type="radio" name="noto-naskh-arabic|U+0771" value="wrong"> wrong</label><label><input type="radio" name="noto-naskh-arabic|U+0771" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|U+0771|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-naskh-arabic rtl">ځ</span> U+0681: <label><input type="radio" name="noto-naskh-arabic|U+0681" value="correct"> correct</label><label><input type="radio" name="noto-naskh-arabic|U+0681" value="wrong"> wrong</label><label><input type="radio" name="noto-naskh-arabic|U+0681" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|U+0681|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-noto-naskh-arabic rtl">څ</span> U+0685: <label><input type="radio" name="noto-naskh-arabic|U+0685" value="correct"> correct</label><label><input type="radio" name="noto-naskh-arabic|U+0685" value="wrong"> wrong</label><label><input type="radio" name="noto-naskh-arabic|U+0685" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|U+0685|note" size="18"></label></p>
+<p>diacritics (sections 3–7): <label><input type="radio" name="noto-naskh-arabic|diacritics" value="ok"> ok</label><label><input type="radio" name="noto-naskh-arabic|diacritics" value="problem"> problem</label><label><input type="radio" name="noto-naskh-arabic|diacritics" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|diacritics|note" size="18"></label></p>
+<p>line height (sections 3–7): <label><input type="radio" name="noto-naskh-arabic|line-height" value="ok"> ok</label><label><input type="radio" name="noto-naskh-arabic|line-height" value="problem"> problem</label><label><input type="radio" name="noto-naskh-arabic|line-height" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|line-height|note" size="18"></label></p>
+<p>mixed text (sections 3–7): <label><input type="radio" name="noto-naskh-arabic|mixed-text" value="ok"> ok</label><label><input type="radio" name="noto-naskh-arabic|mixed-text" value="problem"> problem</label><label><input type="radio" name="noto-naskh-arabic|mixed-text" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|mixed-text|note" size="18"></label></p>
+<p>wrapping (sections 3–7): <label><input type="radio" name="noto-naskh-arabic|wrapping" value="ok"> ok</label><label><input type="radio" name="noto-naskh-arabic|wrapping" value="problem"> problem</label><label><input type="radio" name="noto-naskh-arabic|wrapping" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|wrapping|note" size="18"></label></p>
+<p>language tags (sections 3–7): <label><input type="radio" name="noto-naskh-arabic|language-tags" value="ok"> ok</label><label><input type="radio" name="noto-naskh-arabic|language-tags" value="problem"> problem</label><label><input type="radio" name="noto-naskh-arabic|language-tags" value="unsure"> unsure</label> <label>note <input name="noto-naskh-arabic|language-tags|note" size="18"></label></p>
+</fieldset>
+<fieldset><legend>Awami Nastaliq</legend>
+<p><span lang="khw" dir="rtl" class="f-awami-nastaliq rtl">ݮ</span> U+076E: <label><input type="radio" name="awami-nastaliq|U+076E" value="correct"> correct</label><label><input type="radio" name="awami-nastaliq|U+076E" value="wrong"> wrong</label><label><input type="radio" name="awami-nastaliq|U+076E" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|U+076E|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-awami-nastaliq rtl">ݯ</span> U+076F: <label><input type="radio" name="awami-nastaliq|U+076F" value="correct"> correct</label><label><input type="radio" name="awami-nastaliq|U+076F" value="wrong"> wrong</label><label><input type="radio" name="awami-nastaliq|U+076F" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|U+076F|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-awami-nastaliq rtl">ݰ</span> U+0770: <label><input type="radio" name="awami-nastaliq|U+0770" value="correct"> correct</label><label><input type="radio" name="awami-nastaliq|U+0770" value="wrong"> wrong</label><label><input type="radio" name="awami-nastaliq|U+0770" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|U+0770|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-awami-nastaliq rtl">ݱ</span> U+0771: <label><input type="radio" name="awami-nastaliq|U+0771" value="correct"> correct</label><label><input type="radio" name="awami-nastaliq|U+0771" value="wrong"> wrong</label><label><input type="radio" name="awami-nastaliq|U+0771" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|U+0771|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-awami-nastaliq rtl">ځ</span> U+0681: <label><input type="radio" name="awami-nastaliq|U+0681" value="correct"> correct</label><label><input type="radio" name="awami-nastaliq|U+0681" value="wrong"> wrong</label><label><input type="radio" name="awami-nastaliq|U+0681" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|U+0681|note" size="18"></label></p>
+<p><span lang="khw" dir="rtl" class="f-awami-nastaliq rtl">څ</span> U+0685: <label><input type="radio" name="awami-nastaliq|U+0685" value="correct"> correct</label><label><input type="radio" name="awami-nastaliq|U+0685" value="wrong"> wrong</label><label><input type="radio" name="awami-nastaliq|U+0685" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|U+0685|note" size="18"></label></p>
+<p>diacritics (sections 3–7): <label><input type="radio" name="awami-nastaliq|diacritics" value="ok"> ok</label><label><input type="radio" name="awami-nastaliq|diacritics" value="problem"> problem</label><label><input type="radio" name="awami-nastaliq|diacritics" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|diacritics|note" size="18"></label></p>
+<p>line height (sections 3–7): <label><input type="radio" name="awami-nastaliq|line-height" value="ok"> ok</label><label><input type="radio" name="awami-nastaliq|line-height" value="problem"> problem</label><label><input type="radio" name="awami-nastaliq|line-height" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|line-height|note" size="18"></label></p>
+<p>mixed text (sections 3–7): <label><input type="radio" name="awami-nastaliq|mixed-text" value="ok"> ok</label><label><input type="radio" name="awami-nastaliq|mixed-text" value="problem"> problem</label><label><input type="radio" name="awami-nastaliq|mixed-text" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|mixed-text|note" size="18"></label></p>
+<p>wrapping (sections 3–7): <label><input type="radio" name="awami-nastaliq|wrapping" value="ok"> ok</label><label><input type="radio" name="awami-nastaliq|wrapping" value="problem"> problem</label><label><input type="radio" name="awami-nastaliq|wrapping" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|wrapping|note" size="18"></label></p>
+<p>language tags (sections 3–7): <label><input type="radio" name="awami-nastaliq|language-tags" value="ok"> ok</label><label><input type="radio" name="awami-nastaliq|language-tags" value="problem"> problem</label><label><input type="radio" name="awami-nastaliq|language-tags" value="unsure"> unsure</label> <label>note <input name="awami-nastaliq|language-tags|note" size="18"></label></p>
+</fieldset>
+<p><button type="button" id="export">Export review as JSON</button> (needs JavaScript; without it, write results by hand)</p><textarea id="export-out" aria-label="Exported review JSON" readonly></textarea></form>
+<h2 id="marks">3. Diacritics on Khowar letters</h2>
+<p>Each Khowar letter between behs, carrying each common mark: zabar/zer/pesh, tanween, shadda, sukun, hamza above, superscript alef.</p>
+<h3>Noto Nastaliq Urdu</h3><p class="rtl f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="marks" data-font="noto-nastaliq-urdu">
+بݮًب بݮٌب بݮٍب بݮَب بݮُب بݮِب بݮّب بݮْب بݮٔب بݮٰب بݯًب بݯٌب بݯٍب بݯَب بݯُب بݯِب بݯّب بݯْب بݯٔب بݯٰب بݰًب بݰٌب بݰٍب بݰَب بݰُب بݰِب بݰّب بݰْب بݰٔب بݰٰب بݱًب بݱٌب بݱٍب بݱَب بݱُب بݱِب بݱّب بݱْب بݱٔب بݱٰب بځًب بځٌب بځٍب بځَب بځُب بځِب بځّب بځْب بځٔب بځٰب بڅًب بڅٌب بڅٍب بڅَب بڅُب بڅِب بڅّب بڅْب بڅٔب بڅٰب
+</p>
+<h3>Gulzar</h3><p class="rtl f-gulzar" lang="khw" dir="rtl" data-kind="marks" data-font="gulzar">
+بݮًب بݮٌب بݮٍب بݮَب بݮُب بݮِب بݮّب بݮْب بݮٔب بݮٰب بݯًب بݯٌب بݯٍب بݯَب بݯُب بݯِب بݯّب بݯْب بݯٔب بݯٰب بݰًب بݰٌب بݰٍب بݰَب بݰُب بݰِب بݰّب بݰْب بݰٔب بݰٰب بݱًب بݱٌب بݱٍب بݱَب بݱُب بݱِب بݱّب بݱْب بݱٔب بݱٰب بځًب بځٌب بځٍب بځَب بځُب بځِب بځّب بځْب بځٔب بځٰب بڅًب بڅٌب بڅٍب بڅَب بڅُب بڅِب بڅّب بڅْب بڅٔب بڅٰب
+</p>
+<h3>Noto Naskh Arabic</h3><p class="rtl f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="marks" data-font="noto-naskh-arabic">
+بݮًب بݮٌب بݮٍب بݮَب بݮُب بݮِب بݮّب بݮْب بݮٔب بݮٰب بݯًب بݯٌب بݯٍب بݯَب بݯُب بݯِب بݯّب بݯْب بݯٔب بݯٰب بݰًب بݰٌب بݰٍب بݰَب بݰُب بݰِب بݰّب بݰْب بݰٔب بݰٰب بݱًب بݱٌب بݱٍب بݱَب بݱُب بݱِب بݱّب بݱْب بݱٔب بݱٰب بځًب بځٌب بځٍب بځَب بځُب بځِب بځّب بځْب بځٔب بځٰب بڅًب بڅٌب بڅٍب بڅَب بڅُب بڅِب بڅّب بڅْب بڅٔب بڅٰب
+</p>
+<h3>Awami Nastaliq</h3><p class="rtl f-awami-nastaliq" lang="khw" dir="rtl" data-kind="marks" data-font="awami-nastaliq">
+بݮًب بݮٌب بݮٍب بݮَب بݮُب بݮِب بݮّب بݮْب بݮٔب بݮٰب بݯًب بݯٌب بݯٍب بݯَب بݯُب بݯِب بݯّب بݯْب بݯٔب بݯٰب بݰًب بݰٌب بݰٍب بݰَب بݰُب بݰِب بݰّب بݰْب بݰٔب بݰٰب بݱًب بݱٌب بݱٍب بݱَب بݱُب بݱِب بݱّب بݱْب بݱٔب بݱٰب بځًب بځٌب بځٍب بځَب بځُب بځِب بځّب بځْب بځٔب بځٰب بڅًب بڅٌب بڅٍب بڅَب بڅُب بڅِب بڅّب بڅْب بڅٔب بڅٰب
+</p>
+<h2 id="mixed">4. Mixed Khowar / Urdu lines, Latin inside RTL, RTL inside LTR</h2>
+<h3>Noto Nastaliq Urdu</h3><p class="rtl f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="mixed-khw" data-font="noto-nastaliq-urdu">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے <bdi lang="en" dir="ltr">Test Name 2026</bdi> سݯر لݯہ ݰا بݰی مݰن ݰے ۱۲۳</p><p class="rtl f-noto-nastaliq-urdu" lang="ur" dir="rtl" data-kind="mixed-ur" data-font="noto-nastaliq-urdu">بٹیڈیڑیںیھیہیے سݰر لݰہ ݱا بݱی مݱن ݱے</p><p lang="en" dir="ltr">An English sentence containing a Khowar run <bdi lang="khw" dir="rtl" class="f-noto-nastaliq-urdu rtl">ݮا بݮی مݮن</bdi> and the number 2026, which must stay in order.</p>
+<h3>Gulzar</h3><p class="rtl f-gulzar" lang="khw" dir="rtl" data-kind="mixed-khw" data-font="gulzar">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے <bdi lang="en" dir="ltr">Test Name 2026</bdi> سݯر لݯہ ݰا بݰی مݰن ݰے ۱۲۳</p><p class="rtl f-gulzar" lang="ur" dir="rtl" data-kind="mixed-ur" data-font="gulzar">بٹیڈیڑیںیھیہیے سݰر لݰہ ݱا بݱی مݱن ݱے</p><p lang="en" dir="ltr">An English sentence containing a Khowar run <bdi lang="khw" dir="rtl" class="f-gulzar rtl">ݮا بݮی مݮن</bdi> and the number 2026, which must stay in order.</p>
+<h3>Noto Naskh Arabic</h3><p class="rtl f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="mixed-khw" data-font="noto-naskh-arabic">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے <bdi lang="en" dir="ltr">Test Name 2026</bdi> سݯر لݯہ ݰا بݰی مݰن ݰے ۱۲۳</p><p class="rtl f-noto-naskh-arabic" lang="ur" dir="rtl" data-kind="mixed-ur" data-font="noto-naskh-arabic">بٹیڈیڑیںیھیہیے سݰر لݰہ ݱا بݱی مݱن ݱے</p><p lang="en" dir="ltr">An English sentence containing a Khowar run <bdi lang="khw" dir="rtl" class="f-noto-naskh-arabic rtl">ݮا بݮی مݮن</bdi> and the number 2026, which must stay in order.</p>
+<h3>Awami Nastaliq</h3><p class="rtl f-awami-nastaliq" lang="khw" dir="rtl" data-kind="mixed-khw" data-font="awami-nastaliq">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے <bdi lang="en" dir="ltr">Test Name 2026</bdi> سݯر لݯہ ݰا بݰی مݰن ݰے ۱۲۳</p><p class="rtl f-awami-nastaliq" lang="ur" dir="rtl" data-kind="mixed-ur" data-font="awami-nastaliq">بٹیڈیڑیںیھیہیے سݰر لݰہ ݱا بݱی مݱن ݱے</p><p lang="en" dir="ltr">An English sentence containing a Khowar run <bdi lang="khw" dir="rtl" class="f-awami-nastaliq rtl">ݮا بݮی مݮن</bdi> and the number 2026, which must stay in order.</p>
+<h2 id="wrap">5. Long line wrapping (check at 360 px)</h2>
+<h3>Noto Nastaliq Urdu</h3><p class="rtl f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="wrap" data-font="noto-nastaliq-urdu">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ ݱا بݱی مݱن ݱے سݱر لݱہ ځا بځی مځن ځے سځر لځہ څا بڅی مڅن څے سڅر لڅہ ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ ݱا بݱی مݱن ݱے سݱر لݱہ ځا بځی مځن ځے سځر لځہ څا بڅی مڅن څے سڅر لڅہ</p>
+<h3>Gulzar</h3><p class="rtl f-gulzar" lang="khw" dir="rtl" data-kind="wrap" data-font="gulzar">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ ݱا بݱی مݱن ݱے سݱر لݱہ ځا بځی مځن ځے سځر لځہ څا بڅی مڅن څے سڅر لڅہ ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ ݱا بݱی مݱن ݱے سݱر لݱہ ځا بځی مځن ځے سځر لځہ څا بڅی مڅن څے سڅر لڅہ</p>
+<h3>Noto Naskh Arabic</h3><p class="rtl f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="wrap" data-font="noto-naskh-arabic">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ ݱا بݱی مݱن ݱے سݱر لݱہ ځا بځی مځن ځے سځر لځہ څا بڅی مڅن څے سڅر لڅہ ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ ݱا بݱی مݱن ݱے سݱر لݱہ ځا بځی مځن ځے سځر لځہ څا بڅی مڅن څے سڅر لڅہ</p>
+<h3>Awami Nastaliq</h3><p class="rtl f-awami-nastaliq" lang="khw" dir="rtl" data-kind="wrap" data-font="awami-nastaliq">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ ݱا بݱی مݱن ݱے سݱر لݱہ ځا بځی مځن ځے سځر لځہ څا بڅی مڅن څے سڅر لڅہ ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ ݱا بݱی مݱن ݱے سݱر لݱہ ځا بځی مځن ځے سځر لځہ څا بڅی مڅن څے سڅر لڅہ</p>
+<h2 id="line-height">6. Line-height comparison (overlap test)</h2>
+<p>Alternating bands show each line box. Look for dots, marks or descenders touching the next or previous line.</p>
+<h3>Noto Nastaliq Urdu</h3>
+<p><small>line-height 1.8</small></p><p class="rtl lh lh-1-8 f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="line-height" data-lh="1.8" data-font="noto-nastaliq-urdu">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<p><small>line-height 2.2</small></p><p class="rtl lh lh-2-2 f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="line-height" data-lh="2.2" data-font="noto-nastaliq-urdu">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<p><small>line-height 2.6</small></p><p class="rtl lh lh-2-6 f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="line-height" data-lh="2.6" data-font="noto-nastaliq-urdu">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<h3>Gulzar</h3>
+<p><small>line-height 1.8</small></p><p class="rtl lh lh-1-8 f-gulzar" lang="khw" dir="rtl" data-kind="line-height" data-lh="1.8" data-font="gulzar">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<p><small>line-height 2.2</small></p><p class="rtl lh lh-2-2 f-gulzar" lang="khw" dir="rtl" data-kind="line-height" data-lh="2.2" data-font="gulzar">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<p><small>line-height 2.6</small></p><p class="rtl lh lh-2-6 f-gulzar" lang="khw" dir="rtl" data-kind="line-height" data-lh="2.6" data-font="gulzar">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<h3>Noto Naskh Arabic</h3>
+<p><small>line-height 1.8</small></p><p class="rtl lh lh-1-8 f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="line-height" data-lh="1.8" data-font="noto-naskh-arabic">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<p><small>line-height 2.2</small></p><p class="rtl lh lh-2-2 f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="line-height" data-lh="2.2" data-font="noto-naskh-arabic">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<p><small>line-height 2.6</small></p><p class="rtl lh lh-2-6 f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="line-height" data-lh="2.6" data-font="noto-naskh-arabic">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<h3>Awami Nastaliq</h3>
+<p><small>line-height 1.8</small></p><p class="rtl lh lh-1-8 f-awami-nastaliq" lang="khw" dir="rtl" data-kind="line-height" data-lh="1.8" data-font="awami-nastaliq">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<p><small>line-height 2.2</small></p><p class="rtl lh lh-2-2 f-awami-nastaliq" lang="khw" dir="rtl" data-kind="line-height" data-lh="2.2" data-font="awami-nastaliq">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<p><small>line-height 2.6</small></p><p class="rtl lh lh-2-6 f-awami-nastaliq" lang="khw" dir="rtl" data-kind="line-height" data-lh="2.6" data-font="awami-nastaliq">ݮا بݮی مݮن ݮے سݮر لݮہ ݯا بݯی مݯن ݯے سݯر لݯہ ݰا بݰی مݰن ݰے سݰر لݰہ</p>
+<h2 id="language">7. Language tag behaviour (lang="khw" vs "ur" vs "ar")</h2>
+<p>Same characters, different <code>lang</code>. Fonts with Urdu-specific forms (for example Urdu-style digits) may only apply them under <code>ur</code>. If Khowar should look like Urdu here, Khowar lines may need <code>font-language-override</code>; that is a D-03 decision.</p>
+<h3>Noto Nastaliq Urdu</h3>
+<p><small>lang="khw"</small></p><p class="rtl f-noto-nastaliq-urdu" lang="khw" dir="rtl" data-kind="language" data-lang="khw" data-font="noto-nastaliq-urdu">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<p><small>lang="ur"</small></p><p class="rtl f-noto-nastaliq-urdu" lang="ur" dir="rtl" data-kind="language" data-lang="ur" data-font="noto-nastaliq-urdu">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<p><small>lang="ar"</small></p><p class="rtl f-noto-nastaliq-urdu" lang="ar" dir="rtl" data-kind="language" data-lang="ar" data-font="noto-nastaliq-urdu">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<h3>Gulzar</h3>
+<p><small>lang="khw"</small></p><p class="rtl f-gulzar" lang="khw" dir="rtl" data-kind="language" data-lang="khw" data-font="gulzar">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<p><small>lang="ur"</small></p><p class="rtl f-gulzar" lang="ur" dir="rtl" data-kind="language" data-lang="ur" data-font="gulzar">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<p><small>lang="ar"</small></p><p class="rtl f-gulzar" lang="ar" dir="rtl" data-kind="language" data-lang="ar" data-font="gulzar">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<h3>Noto Naskh Arabic</h3>
+<p><small>HarfBuzz found differences between ur and khw: ۴ U+06F4: ur=uni06F4.locl khw=uni06F4; ۶ U+06F6: ur=uni0666 khw=uni06F6; ۷ U+06F7: ur=uni06F7.locl khw=uni06F7</small></p>
+<p><small>lang="khw"</small></p><p class="rtl f-noto-naskh-arabic" lang="khw" dir="rtl" data-kind="language" data-lang="khw" data-font="noto-naskh-arabic">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<p><small>lang="ur"</small></p><p class="rtl f-noto-naskh-arabic" lang="ur" dir="rtl" data-kind="language" data-lang="ur" data-font="noto-naskh-arabic">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<p><small>lang="ar"</small></p><p class="rtl f-noto-naskh-arabic" lang="ar" dir="rtl" data-kind="language" data-lang="ar" data-font="noto-naskh-arabic">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<h3>Awami Nastaliq</h3>
+<p><small>lang="khw"</small></p><p class="rtl f-awami-nastaliq" lang="khw" dir="rtl" data-kind="language" data-lang="khw" data-font="awami-nastaliq">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<p><small>lang="ur"</small></p><p class="rtl f-awami-nastaliq" lang="ur" dir="rtl" data-kind="language" data-lang="ur" data-font="awami-nastaliq">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<p><small>lang="ar"</small></p><p class="rtl f-awami-nastaliq" lang="ar" dir="rtl" data-kind="language" data-lang="ar" data-font="awami-nastaliq">۰۱۲۳۴۵۶۷۸۹ ہ ھ ی ے ۓ ئ بݮب بݯب بݰب بݱب بځب بڅب</p>
+<script>
+document.getElementById("export").addEventListener("click", () => {
+  const data = { exported: new Date().toISOString(), page: "tests/fonts/font-test.html", answers: {} };
+  for (const [key, value] of new FormData(document.getElementById("review-form"))) if (value) data.answers[key] = value;
+  document.getElementById("export-out").value = JSON.stringify(data, null, 2);
+});
+</script>
+</body>
+</html>

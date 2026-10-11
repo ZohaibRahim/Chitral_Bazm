@@ -1,0 +1,1988 @@
+{
+  "browser": "Chromium 156.0.8078.4",
+  "specimens": [
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "compare",
+      "cp": "U+062C",
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "isolated",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "initial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "medial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "final_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "compare",
+      "cp": "U+062C",
+      "form": null,
+      "rendered_with": [
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "compare",
+      "cp": "U+062C",
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "isolated",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "initial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "medial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076E",
+      "form": "final_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "compare",
+      "cp": "U+062C",
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "compare",
+      "cp": "U+0686",
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "isolated",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "initial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "medial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "final_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "compare",
+      "cp": "U+0686",
+      "form": null,
+      "rendered_with": [
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "compare",
+      "cp": "U+0686",
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "isolated",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "initial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "medial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+076F",
+      "form": "final_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "compare",
+      "cp": "U+0686",
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "compare",
+      "cp": "U+0634",
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "isolated",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "initial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "medial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "final_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "compare",
+      "cp": "U+0634",
+      "form": null,
+      "rendered_with": [
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "compare",
+      "cp": "U+0634",
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "isolated",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "initial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "medial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0770",
+      "form": "final_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "compare",
+      "cp": "U+0634",
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "compare",
+      "cp": "U+0698",
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "isolated",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "final_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "compare",
+      "cp": "U+0698",
+      "form": null,
+      "rendered_with": [
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "compare",
+      "cp": "U+0698",
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "isolated",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0771",
+      "form": "final_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "compare",
+      "cp": "U+0698",
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "compare",
+      "cp": "U+0632",
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "isolated",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "initial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "medial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "final_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "compare",
+      "cp": "U+0632",
+      "form": null,
+      "rendered_with": [
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "compare",
+      "cp": "U+0632",
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "isolated",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "initial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "medial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0681",
+      "form": "final_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "compare",
+      "cp": "U+0632",
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "compare",
+      "cp": "U+0686",
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "isolated",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "initial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "medial_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "final_real",
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "compare",
+      "cp": "U+0686",
+      "form": null,
+      "rendered_with": [
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "isolated",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "initial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "medial_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "final_real",
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "compare",
+      "cp": "U+0686",
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "isolated",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "initial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "medial_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "final_zwj",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "initial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "medial_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "matrix",
+      "cp": "U+0685",
+      "form": "final_real",
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "compare",
+      "cp": "U+0686",
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "marks",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "marks",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "marks",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "marks",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "mixed-khw",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu",
+        "Times New Roman (system)"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "mixed-ur",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "mixed-khw",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "mixed-ur",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "mixed-khw",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "mixed-ur",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "mixed-khw",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "mixed-ur",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "wrap",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "wrap",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "wrap",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "wrap",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "line-height",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "noto-nastaliq-urdu",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Nastaliq Urdu"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "gulzar",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Times New Roman (system)",
+        "Gulzar"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "noto-naskh-arabic",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Noto Naskh Arabic"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    },
+    {
+      "font": "awami-nastaliq",
+      "kind": "language",
+      "cp": null,
+      "form": null,
+      "rendered_with": [
+        "Awami Nastaliq"
+      ]
+    }
+  ]
+}
