@@ -1,0 +1,44 @@
+# VALID SCHEMA FIXTURE. Synthetic placeholder text, not lyrics. Exercises every optional
+# structure the schema supports. Not the Phase 1 sample songs (those are T-05).
+schema_version: 1
+slug: schema-valid
+status: draft
+synthetic: true
+titles:
+  khw_arab: "[ٹیسٹ ݮ ݯ]"
+  roman_popular: "Schema Valid"
+  roman_editorial: "Schema Valid (editorial)"
+  en: "Schema valid fixture"
+aliases: ["skema valid", "[ٹیسٹ]"]
+credits:
+  - { role: lyricist, traditional: true }
+  - { role: singer, person: singer-one, visibility: public, visibility_basis: own_choice, recorded_on: 2026-10-11 }
+  - { role: composer, person: composer-one, visibility: withheld, visibility_basis: default_withheld }
+rights:
+  lyric: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+  transliteration: { grade: E4, evidence_ids: ["EV-0001"], license: "staff work", legal_advice_confirmed: false }
+recordings:
+  - { platform: example, url: "https://example.com/recording", official: true }
+review: { transcribed_by: dev }
+stanzas:
+  - n: 1
+    lines:
+      - id: l1
+        lang: khw
+        script: Arab
+        text: "[synthetic ݮ ݯ ݰ ݱ ځ څ]"
+        renderings: { roman_popular: "[roman]", roman_editorial: "[roman editorial]", en: "[english]" }
+      - id: l2
+        lang: ur
+        script: Arab
+        text: "[synthetic اردو]"
+        renderings: { roman_popular: "[roman]" }
+  - n: 2
+    lines:
+      - id: s2-l1
+        lang: khw
+        script: Arab
+        text: "[synthetic ݰ]"
+        renderings: { roman_popular: "[roman only, no english]" }
+changelog:
+  - { date: 2026-10-11, by: dev, note: "T-02 schema fixture" }

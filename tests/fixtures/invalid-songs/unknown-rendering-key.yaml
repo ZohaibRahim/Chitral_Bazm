@@ -1,0 +1,19 @@
+# INVALID FIXTURE. Expected error: renderings has unrecognized key "english"
+schema_version: 1
+slug: unknown-rendering-key
+status: draft
+synthetic: true
+titles: { khw_arab: "[ٹیسٹ ݮ]", roman_popular: "Test Song" }
+credits:
+  - { role: lyricist, traditional: true }
+rights:
+  lyric: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+stanzas:
+  - n: 1
+    lines:
+      - id: l1
+        lang: khw
+        script: Arab
+        text: "[synthetic ݮ ݯ ݰ ݱ ځ څ]"
+        renderings: { roman_popular: "[roman]", english: "[english]" }
+changelog: [ { date: 2026-10-11, by: dev, note: "invalid fixture" } ]

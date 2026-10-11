@@ -36,6 +36,21 @@ IDs follow PRD v3.1 §15. "Confirmed" decisions are final until revisited here w
 | D-18 | Operator legal name, jurisdiction, DMCA agent | Phase 3 | None | |
 | D-19 | Whether to migrate to PostgreSQL | When PRD §10 conditions arise | Stay static | |
 
+## Implementation choices needing owner confirmation (T-02, T-04)
+
+Made while implementing PRD §5 and §7. Each is conservative and easy to change, but none is confirmed yet.
+
+| Date | Choice | Why |
+|---|---|---|
+| 2026-10-11 | Added optional `is_minor` to the person schema (not in the PRD §5 field list). Minors are always shown as withheld, and `own_choice` for a minor is rejected. | PRD §7 rule 6 (under-18s) cannot be enforced without knowing who is a minor. The schema has no way to record guardian consent, so no minor is ever named until a consent field and process are decided. |
+| 2026-10-11 | `GENRES` is an empty list, so any `genre` value fails validation. | D-16b is open, and its provisional default refers to PRD v2, which is not in this repository. |
+| 2026-10-11 | Original lyric lines accept `lang: khw` or `ur`, and `script: Arab` only. | PRD §3/§8 only describe Khowar and Urdu lines. Other languages can be added when a real song needs them. |
+| 2026-10-11 | `recorded_on` is required for `own_choice` and `family_choice`, and optional for `official_release_credit` and `default_withheld`. | PRD §7 rule 1 says a choice "is recorded with a date". |
+| 2026-10-11 | Evidence grade E0 must have no `evidence_ids`; E1–E5 need at least one. Ids cannot contain slashes. | E0 means "nothing documented" (§6). Blocking path-like ids keeps documents out of the repo (§5, D-13b). |
+| 2026-10-11 | Original text must contain Arabic-script letters; Roman and English layers must not. Every line needs at least one rendering. | Catches swapped or missing layers. A stanza may still omit English entirely, as required by PRD §3. |
+| 2026-10-11 | A song's `slug` must equal its file name. | Guarantees unique slugs. Astro only warns on duplicates by default. |
+| 2026-10-11 | Credit/person consistency (unknown person, `own_choice` for a deceased person, `family_choice` for someone not recorded as deceased) is checked by `src/lib/credits/visibility.ts`. It becomes a build failure once a page renders credits (T-09). | Astro's `reference()` does not check that the referenced entry exists, so a schema alone cannot enforce it. |
+
 ## Open project questions (not PRD D-items)
 
 | Date raised | Question | Status |

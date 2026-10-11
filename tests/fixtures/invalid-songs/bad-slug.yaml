@@ -1,0 +1,19 @@
+# INVALID FIXTURE. Expected error: slug must be kebab-case
+schema_version: 1
+slug: Bad_Slug
+status: draft
+synthetic: true
+titles: { khw_arab: "[ٹیسٹ ݮ]", roman_popular: "Test Song" }
+credits:
+  - { role: lyricist, traditional: true }
+rights:
+  lyric: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+stanzas:
+  - n: 1
+    lines:
+      - id: l1
+        lang: khw
+        script: Arab
+        text: "[synthetic ݮ ݯ ݰ ݱ ځ څ]"
+        renderings: { roman_popular: "[roman]", en: "[english]" }
+changelog: [ { date: 2026-10-11, by: dev, note: "invalid fixture" } ]
