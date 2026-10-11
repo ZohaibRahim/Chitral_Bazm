@@ -12,6 +12,7 @@ blob-report/
 playwright/.cache/
 .lighthouseci/
 coverage/
+tests/.tmp/
 # Device-matrix screenshots are kept (tests/fonts/results/); generated font subsets are rebuilt by scripts/fonts/.
 
 # Environment and secrets

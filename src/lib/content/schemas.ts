@@ -193,7 +193,7 @@ export const songSchema = z
     genre: z
       .array(
         z.string().refine((g) => GENRES.includes(g), {
-          message: "genre is not in the controlled list in src/content/vocab.ts (D-16b is open: the list is empty)",
+          message: "genre is not in the controlled list in src/content/vocab.ts (D-16b)",
         }),
       )
       .optional(),
@@ -234,6 +234,15 @@ export const songSchema = z
       .min(1, { message: "changelog needs at least one entry" }),
   })
   .superRefine((song, ctx) => {
+    // P1-5: synthetic content can never be marked published, so every build (dev, preview, production) fails loudly
+    // instead of silently filtering it. Publication itself is decided by src/lib/rights/publishability.ts.
+    if (song.synthetic && song.status === "published") {
+      ctx.addIssue({
+        code: "custom",
+        path: ["status"],
+        message: 'synthetic songs can never be "published" (PRD §3 P1-5); use draft or in_review',
+      });
+    }
     if (!song.synthetic && (song.provenance === undefined || song.provenance.length === 0)) {
       ctx.addIssue({ code: "custom", path: ["provenance"], message: "provenance is required for non-synthetic songs" });
     }
@@ -277,6 +286,7 @@ export const songSchema = z
   });
 
 export type Song = z.output<typeof songSchema>;
+export type EvidenceRecord = z.output<typeof evidenceSchema>;
 export type Line = z.output<typeof lineSchema>;
 
 // ---------------------------------------------------------------------------

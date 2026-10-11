@@ -37,6 +37,15 @@ export const RENDERING_KEYS = ["roman_popular", "roman_editorial", "en"] as cons
 // Same values as `source_records.kind` in future_schema.sql.
 export const PROVENANCE_TYPES = ["print", "recording", "manuscript", "oral", "web"] as const;
 
-// D-16b is OPEN: the PRD's provisional default ("short list from v2 genres") refers to a document
-// that is not in this repository. Until the owner supplies the list, no genre value is accepted.
-export const GENRES: readonly string[] = [];
+// D-16b (2026-10-11): provisional classifications; the primary Khowar editor may refine them.
+export const GENRES: readonly string[] = [
+  "folk",
+  "traditional",
+  "ghazal",
+  "dialogue-song",
+  "wedding-song",
+  "elegy",
+  "devotional",
+  "contemporary",
+  "childrens-song",
+];

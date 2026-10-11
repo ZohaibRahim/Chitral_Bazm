@@ -30,6 +30,9 @@ jobs:
       - name: Unit tests
         run: npm run test
 
+      - name: Build tests (negative content cases)
+        run: npm run test:build
+
       - name: Build
         run: npm run build
 

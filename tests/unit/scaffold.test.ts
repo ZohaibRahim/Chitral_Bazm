@@ -20,6 +20,11 @@ describe("scaffold", () => {
     expect(names).toContain("@astrojs/react");
   });
 
+  it("production builds clear the content cache so credits are re-checked when only people change (T-03)", () => {
+    const scripts = readJson("package.json")["scripts"] as Record<string, string>;
+    expect(scripts["build"]).toMatch(/astro build .*--force/);
+  });
+
   it("defines the build, test and e2e scripts required by T-01", () => {
     const scripts = readJson("package.json")["scripts"] as Record<string, string>;
     for (const name of ["build", "typecheck", "test", "e2e", "lhci"]) {

@@ -21,7 +21,8 @@ The owner is the solo developer and primary Khowar editor, and reads and writes 
 Astro (static output) · strict TypeScript (`astro/tsconfigs/strictest`) · Tailwind CSS v4 (via `@tailwindcss/vite`) · YAML content collections validated with Zod · React islands only where justified · Motion for React (`motion/react`) · MiniSearch with custom Khowar normalization · Vitest · Playwright + axe · Lighthouse CI.
 No PostgreSQL, Supabase or CMS until the PRD §10 migration conditions are met (D-19).
 
-Commands: `npm run dev` · `build` · `typecheck` · `test` · `e2e` · `lhci` (after `build`) · `ci` (typecheck + test + build + e2e).
+Commands: `npm run dev` · `build` (`--force`: always re-validates all content) · `typecheck` · `test` (unit) · `test:build` (real negative/positive builds) · `e2e` · `lhci` (after `build`) · `ci`.
+Site modes: production (default) · preview (`KLA_SITE_MODE=preview`, synthetic shown, all noindex) · development (`astro dev`).
 
 ## Workflow
 - Follow PRD §12 tasks and §14 sequence. One approved task per session; never start a task whose dependencies are unfinished, and never start unrelated tasks.
@@ -37,6 +38,8 @@ Commands: `npm run dev` · `build` · `typecheck` · `test` · `e2e` · `lhci` (
 - Never place lyric text, evidence documents or personal data in fixtures unless synthetic or authorized.
 - Rights evidence, signed forms, ID (CNIC) copies and legal notes stay outside this repository; content files only hold `evidence_ids`.
 - E0–E5 are internal evidence grades, not legal classifications or permission. Publication follows the PRD §6 rule; E2/E3 need recorded legal confirmation.
+- `src/lib/rights/publishability.ts` decides publication; `getCatalog()` (`src/lib/content/catalog.ts`) is the only way pages, the search index and the sitemap may obtain songs. Never call `getCollection("songs")` elsewhere. Editorial `status` alone never publishes anything.
+- The build checks technical completeness of evidence only; it never establishes legal validity.
 - Credits follow PRD §7 (consent, privacy, minimum data, under-18s).
 
 ## Khowar text, typography and search

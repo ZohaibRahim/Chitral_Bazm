@@ -19,6 +19,7 @@ const INVALID_SONGS: Record<string, Expected> = {
   "public-credit-default-basis.yaml": { path: "credits.1.visibility", message: /rule 8/ },
   "published-without-review.yaml": { path: "review", message: /required when status is "published"/ },
   "swapped-layers.yaml": { path: "stanzas.0.lines.0.renderings.roman_popular", message: /layers are not swapped/ },
+  "synthetic-published.yaml": { path: "status", message: /P1-5/ },
   "traditional-credit-with-person.yaml": { path: "credits.0.person", message: /rule 7/ },
   "unknown-field.yaml": { path: "", message: /Unrecognized key.*phone/ },
   "unknown-rendering-key.yaml": { path: "stanzas.0.lines.0.renderings", message: /Unrecognized key.*english/ },

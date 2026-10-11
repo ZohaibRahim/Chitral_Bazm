@@ -2,10 +2,12 @@
 schema_version: 1
 slug: published-without-review
 status: published
-synthetic: true
+synthetic: false
 titles: { khw_arab: "[ٹیسٹ ݮ]", roman_popular: "Test Song" }
 credits:
   - { role: lyricist, traditional: true }
+provenance:
+  - { source_id: SRC-0001, type: oral }
 rights:
   lyric: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
 stanzas:
