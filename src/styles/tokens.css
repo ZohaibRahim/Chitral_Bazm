@@ -1,0 +1,4 @@
+/* Tailwind entry point and design tokens.
+   Tokens are set in T-08 with the UI/UX Pro Max and frontend-design skills (D-17).
+   Khowar script rules (font, line-height, fallback metrics) go in khowar.css (T-08), not here. */
+@import "tailwindcss";

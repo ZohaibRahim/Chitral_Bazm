@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build output and Astro cache
+dist/
+.astro/
+
+# Test and audit artifacts
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.lighthouseci/
+coverage/
+# Device-matrix screenshots are kept (tests/fonts/results/); generated font subsets are rebuilt by scripts/fonts/.
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private rights evidence and personal data: never in this repository (PRD §5, §6, D-13b).
+# These patterns are a safety net; the real store lives outside the repo.
+private/
+evidence/
+rights-evidence/
+legal/
+*.cnic.*
+*cnic*
+*signed-permission*
+
+# Local tool state
+.vercel/
+.claude/settings.local.json
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/

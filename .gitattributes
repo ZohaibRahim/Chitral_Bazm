@@ -1,0 +1,9 @@
+# Keep LF everywhere so content, fixtures and folding vectors are byte-identical across platforms.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.zip binary
