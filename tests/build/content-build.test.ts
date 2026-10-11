@@ -42,6 +42,68 @@ const builtFiles = (dist: string): string[] =>
 
 afterAll(() => rmSync(TMP, { recursive: true, force: true }));
 
+/** Minimal reader for Astro's content data store (devalue "flat" JSON), enough to list collections and entry data. */
+function readDataStore(): Map<string, Map<string, { data: Record<string, unknown> }>> {
+  const flat = JSON.parse(readFileSync(join(ROOT, "node_modules", ".astro", "data-store.json"), "utf8")) as unknown[];
+  const seen = new Map<number, unknown>();
+  const hydrate = (index: number): unknown => {
+    if (index < 0) return undefined; // devalue sentinels: undefined, holes, NaN, infinities
+    if (seen.has(index)) return seen.get(index);
+    const value = flat[index];
+    if (Array.isArray(value)) {
+      if (value[0] === "Map") {
+        const map = new Map();
+        seen.set(index, map);
+        for (let i = 1; i < value.length; i += 2) map.set(hydrate(value[i] as number), hydrate(value[i + 1] as number));
+        return map;
+      }
+      if (value[0] === "Date") return new Date(value[1] as string);
+      if (value[0] === "Set") return new Set(value.slice(1).map((i) => hydrate(i as number)));
+      const arr: unknown[] = [];
+      seen.set(index, arr);
+      for (const i of value) arr.push(hydrate(i as number));
+      return arr;
+    }
+    if (value !== null && typeof value === "object") {
+      const obj: Record<string, unknown> = {};
+      seen.set(index, obj);
+      for (const [k, i] of Object.entries(value)) obj[k] = hydrate(i as number);
+      return obj;
+    }
+    return value;
+  };
+  return hydrate(0) as Map<string, Map<string, { data: Record<string, unknown> }>>;
+}
+
+describe("real content in src/content (T-05 synthetic fixtures)", () => {
+  it("loads the three fixtures through the Astro collections and emits none of them in production", () => {
+    const dist = join(TMP, "real-content", "dist");
+    rmSync(join(TMP, "real-content"), { recursive: true, force: true });
+    const env: NodeJS.ProcessEnv = { ...process.env, ASTRO_TELEMETRY_DISABLED: "1" };
+    delete env["KLA_CONTENT_ROOT"];
+    delete env["KLA_SITE_MODE"];
+    const r = spawnSync(process.execPath, [ASTRO, "build", "--force", "--outDir", dist], { cwd: ROOT, encoding: "utf8", env });
+    expect(r.status, `${r.stdout}\n${r.stderr}`).toBe(0);
+
+    const store = readDataStore();
+    const songs = store.get("songs");
+    expect([...(songs?.keys() ?? [])].sort()).toEqual(["test-fixture-01", "test-fixture-02", "test-fixture-03"]);
+    for (const entry of songs?.values() ?? []) {
+      expect(entry.data["synthetic"]).toBe(true);
+      expect(entry.data["status"]).toBe("draft");
+    }
+    expect([...(store.get("people")?.keys() ?? [])].sort()).toEqual(["test-person-a", "test-person-b", "test-person-c"]);
+
+    // Nothing from the fixtures reaches the production output (pages, assets, any future search index or sitemap).
+    const forbidden = [/test-fixture/, /Test Fixture/, /Test Person/, /[ݮݯݰݱځڅ]/u];
+    for (const file of builtFiles(dist)) {
+      expect(file).not.toMatch(/test-fixture/);
+      const content = readFileSync(join(dist, file), "utf8");
+      for (const pattern of forbidden) expect(content, `${file} matches ${pattern}`).not.toMatch(pattern);
+    }
+  });
+});
+
 describe("production build", () => {
   it("succeeds with a valid synthetic draft and emits nothing from it", () => {
     const r = build("valid-synthetic-draft", { songs: { "schema-valid.yaml": join(FIXTURES, "valid-songs", "schema-valid.yaml") } });

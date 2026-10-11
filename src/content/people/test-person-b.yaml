@@ -1,0 +1,4 @@
+# FICTITIOUS PERSON for synthetic fixtures (T-05). Not a real person.
+slug: test-person-b
+display_name: "Test Person B"
+is_living: true

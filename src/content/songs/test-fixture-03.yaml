@@ -1,0 +1,66 @@
+# SYNTHETIC TEST FIXTURE (T-05). Not a song, not Khowar poetry, never publishable.
+# Khowar lines are letter-position sequences; the Roman layer is a mechanical test
+# transliteration (not the D-05 editorial standard). Pending owner review.
+schema_version: 1
+slug: test-fixture-03
+status: draft
+synthetic: true
+titles:
+  khw_arab: "ٹیسٹ ۳ مخلوط متن"
+  roman_popular: "Test Fixture 03"
+  en: "Synthetic test fixture 3: mixed text, a long line, diacritics"
+aliases: ["mixed text fixture", "miksd tekst fikstur", "ٹیسٹ ۳"]
+credits:
+  - { role: lyricist, traditional: true }
+  - { role: singer, person: test-person-a, visibility: public, visibility_basis: own_choice, recorded_on: 2026-10-10 }
+  - { role: romanizer, person: test-person-b, visibility: withheld, visibility_basis: default_withheld }
+rights:
+  lyric: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+  transliteration: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+  translation_en: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+recordings:
+  - { platform: "example (test only, not a real recording)", url: "https://example.com/test-recording", official: false }
+stanzas:
+  - n: 1
+    lines:
+      - id: s1-l1
+        lang: khw
+        script: Arab
+        text: "ݮان بݯا مݰی ݱان ځان څان بݮب بݯب بݰب بݱا بځب بڅب مݮی مݯی مݰی بݱ مځی مڅی بݮ بݯ بݰ بځ بڅ"
+        renderings: { roman_popular: "[test] jan bcha mshi zhan dzan tsan bjb bchb bshb bzha bdzb btsb mji mchi mshi bzh mdzi mtsi bj bch bsh bdz bts", en: "[test] long line containing all six Khowar letters; must wrap at 360 px" }
+      - id: s1-l2
+        lang: khw
+        script: Arab
+        text: "بݮَا بݯِا بݰُا ځّان څْان"
+        renderings: { roman_popular: "[test] bja bcha bsha dzan tsan", en: "[test] diacritics on Khowar letters (zabar, zer, pesh, shadda, sukun)" }
+      - id: s1-l3
+        lang: khw
+        script: Arab
+        text: "ݰان ۲۰۲۶ Test-Name بݮا"
+        renderings: { roman_popular: "[test] shan 2026 Test-Name bja", en: "[test] Urdu digits and a Latin name inside an RTL line" }
+  - n: 2
+    lines:
+      - id: s2-l1
+        lang: khw
+        script: Arab
+        text: "ݮا"
+        renderings: { roman_popular: "[test] ja", en: "[test] one-token line" }
+      - id: s2-l2
+        lang: khw
+        script: Arab
+        text: "بݰ"
+        renderings: { roman_popular: "[test] bsh", en: "[test] one-token line" }
+  - n: 3
+    lines:
+      - id: s3-l1
+        lang: ur
+        script: Arab
+        text: "اردو آزمائشی متن ۲۰۲۶"
+        renderings: { roman_popular: "urdu aazmaishi matan 2026", en: "Urdu test text 2026." }
+      - id: s3-l2
+        lang: khw
+        script: Arab
+        text: "ځان څان"
+        renderings: { roman_popular: "[test] dzan tsan", en: "[test] short Khowar line after an Urdu line" }
+changelog:
+  - { date: 2026-10-10, by: dev, note: "T-05 synthetic fixture, generated; pending owner review" }

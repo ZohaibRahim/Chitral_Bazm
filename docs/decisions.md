@@ -72,6 +72,13 @@ Made while implementing PRD §6. Conservative; the owner may revise any of them.
 - Song titles (`titles.roman_popular`, `titles.en`) are not covered by layer records.
 - Revocation takes effect at the next build, not instantly.
 
+## Synthetic fixtures (T-05)
+
+| Date | Choice | Why |
+|---|---|---|
+| 2026-10-10 | The three fixtures (`src/content/songs/test-fixture-0{1,2,3}.yaml`) use **letter-position sequences**, not Khowar wording. Urdu lines are plain Urdu test sentences ("this is a test line"). Credits use fictitious `Test Person A/B/C`; every rights record is E0. **Pending owner review** (D-15: the owner writes or checks the synthetic Khowar text). | The prompt forbids passing synthetic strings off as Khowar poetry; sequences make the joining-context coverage exact and checkable. |
+| 2026-10-10 | The Roman layer uses a mechanical **test transliteration** that follows the PRD §9 fold targets (ݮ j, ݯ ch, ݰ sh, ݱ zh, ځ dz, څ ts; other letters one-to-one), prefixed `[test]`. It is not the D-05 editorial standard. | Gives T-11 search tests predictable Roman input; the owner may replace it. |
+
 ## Font evidence for D-03 (T-06, T-07) — findings, not a decision
 
 D-03 stays **open** until the owner reviews the rendering on devices. Full data: `tests/fonts/results/2026-10-10/`.

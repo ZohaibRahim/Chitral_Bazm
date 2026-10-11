@@ -1,0 +1,63 @@
+# SYNTHETIC TEST FIXTURE (T-05). Not a song, not Khowar poetry, never publishable.
+# Khowar lines are letter-position sequences; the Roman layer is a mechanical test
+# transliteration (not the D-05 editorial standard). Pending owner review.
+schema_version: 1
+slug: test-fixture-01
+status: draft
+synthetic: true
+titles:
+  khw_arab: "ٹیسٹ ۱ ݮ ݯ ݰ"
+  roman_popular: "Test Fixture 01"
+  en: "Synthetic test fixture 1: positions of U+076E, U+076F, U+0770"
+aliases: ["test fixture one", "tst fikstur 01", "ٹیسٹ ۱ ج چ ش"]
+credits:
+  - { role: lyricist, traditional: true }
+  - { role: singer, person: test-person-a, visibility: public, visibility_basis: own_choice, recorded_on: 2026-10-10 }
+rights:
+  lyric: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+  transliteration: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+  translation_en: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+stanzas:
+  - n: 1
+    lines:
+      - id: s1-l1
+        lang: khw
+        script: Arab
+        text: "ݮ اݮ ݮان بݮا بݮ"
+        renderings: { roman_popular: "[test] j aj jan bja bj", en: "[test] U+076E positions: isolated, isolated after alef, initial, medial, final" }
+      - id: s1-l2
+        lang: khw
+        script: Arab
+        text: "مݮی ݮم"
+        renderings: { roman_popular: "[test] mji jm", en: "[test] U+076E short line" }
+  - n: 2
+    lines:
+      - id: s2-l1
+        lang: khw
+        script: Arab
+        text: "ݯ اݯ ݯان بݯا بݯ"
+        renderings: { roman_popular: "[test] ch ach chan bcha bch", en: "[test] U+076F positions: isolated, isolated after alef, initial, medial, final" }
+      - id: s2-l2
+        lang: khw
+        script: Arab
+        text: "مݯی ݯم"
+        renderings: { roman_popular: "[test] mchi chm", en: "[test] U+076F short line" }
+  - n: 3
+    lines:
+      - id: s3-l1
+        lang: khw
+        script: Arab
+        text: "ݰ اݰ ݰان بݰا بݰ"
+        renderings: { roman_popular: "[test] sh ash shan bsha bsh", en: "[test] U+0770 positions: isolated, isolated after alef, initial, medial, final" }
+      - id: s3-l2
+        lang: khw
+        script: Arab
+        text: "مݰی ݰم"
+        renderings: { roman_popular: "[test] mshi shm", en: "[test] U+0770 short line" }
+      - id: s3-l3
+        lang: khw
+        script: Arab
+        text: "ݰان Alpha 7 بݰا"
+        renderings: { roman_popular: "[test] shan Alpha 7 bsha", en: "[test] Latin name and number inside an RTL line" }
+changelog:
+  - { date: 2026-10-10, by: dev, note: "T-05 synthetic fixture, generated; pending owner review" }

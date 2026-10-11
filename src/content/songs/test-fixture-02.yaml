@@ -1,0 +1,63 @@
+# SYNTHETIC TEST FIXTURE (T-05). Not a song, not Khowar poetry, never publishable.
+# Khowar lines are letter-position sequences; the Roman layer is a mechanical test
+# transliteration (not the D-05 editorial standard). Pending owner review.
+schema_version: 1
+slug: test-fixture-02
+status: draft
+synthetic: true
+titles:
+  khw_arab: "ٹیسٹ ۲ ځ څ ݱ"
+  roman_popular: "Test Fixture 02"
+  en: "Synthetic test fixture 2: positions of U+0681, U+0685, U+0771, an Urdu line, a Roman-only stanza"
+aliases: ["test fixture two", "tset fiksture 2", "ٹیسٹ ۲ ز چ ژ"]
+credits:
+  - { role: lyricist, person: test-person-b, visibility: initials, visibility_basis: own_choice, recorded_on: 2026-10-10 }
+  - { role: composer, person: test-person-c, visibility: withheld, visibility_basis: default_withheld }
+rights:
+  lyric: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+  transliteration: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+  translation_en: { grade: E0, evidence_ids: [], legal_advice_confirmed: false }
+stanzas:
+  - n: 1
+    lines:
+      - id: s1-l1
+        lang: khw
+        script: Arab
+        text: "ځ اځ ځان بځا بځ"
+        renderings: { roman_popular: "[test] dz adz dzan bdza bdz", en: "[test] U+0681 positions: isolated, isolated after alef, initial, medial, final" }
+      - id: s1-l2
+        lang: khw
+        script: Arab
+        text: "مځی ځم"
+        renderings: { roman_popular: "[test] mdzi dzm", en: "[test] U+0681 short line" }
+  - n: 2
+    lines:
+      - id: s2-l1
+        lang: khw
+        script: Arab
+        text: "څ اڅ څان بڅا بڅ"
+        renderings: { roman_popular: "[test] ts ats tsan btsa bts", en: "[test] U+0685 positions: isolated, isolated after alef, initial, medial, final" }
+      - id: s2-l2
+        lang: khw
+        script: Arab
+        text: "مڅی څم"
+        renderings: { roman_popular: "[test] mtsi tsm", en: "[test] U+0685 short line" }
+      - id: s2-l3
+        lang: ur
+        script: Arab
+        text: "یہ ایک آزمائشی سطر ہے"
+        renderings: { roman_popular: "yeh aik aazmaishi satar hai", en: "This is a test line." }
+  - n: 3
+    lines:
+      - id: s3-l1
+        lang: khw
+        script: Arab
+        text: "ݱ اݱ بݱ بݱا ݱان"
+        renderings: { roman_popular: "[test] zh azh bzh bzha zhan" }
+      - id: s3-l2
+        lang: khw
+        script: Arab
+        text: "بݱ ݱ"
+        renderings: { roman_popular: "[test] bzh zh" }
+changelog:
+  - { date: 2026-10-10, by: dev, note: "T-05 synthetic fixture, generated; pending owner review" }
