@@ -5,5 +5,5 @@
     "jsxImportSource": "react"
   },
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist", "node_modules", ".claude", "test-results", "playwright-report", ".lighthouseci", "tests/.tmp"]
+  "exclude": ["dist", "dist-preview", "node_modules", ".claude", "test-results", "playwright-report", ".lighthouseci", "tests/.tmp"]
 }

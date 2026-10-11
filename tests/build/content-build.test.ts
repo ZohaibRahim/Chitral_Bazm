@@ -75,6 +75,48 @@ function readDataStore(): Map<string, Map<string, { data: Record<string, unknown
   return hydrate(0) as Map<string, Map<string, { data: Record<string, unknown> }>>;
 }
 
+describe("preview mode (T-09 test-only fixture rendering)", () => {
+  it("renders the three fixtures as noindex song pages only when KLA_SITE_MODE=preview", () => {
+    const dist = join(TMP, "preview", "dist");
+    rmSync(join(TMP, "preview"), { recursive: true, force: true });
+    const env: NodeJS.ProcessEnv = { ...process.env, ASTRO_TELEMETRY_DISABLED: "1", KLA_SITE_MODE: "preview" };
+    delete env["KLA_CONTENT_ROOT"];
+    const r = spawnSync(process.execPath, [ASTRO, "build", "--force", "--outDir", dist], { cwd: ROOT, encoding: "utf8", env });
+    expect(r.status, `${r.stdout}\n${r.stderr}`).toBe(0);
+    const pages = builtFiles(dist).filter((f) => f.split(/[\\/]/)[0] === "songs").sort();
+    expect(pages.map((p) => p.replaceAll("\\", "/"))).toEqual([
+      "songs/test-fixture-01/index.html",
+      "songs/test-fixture-02/index.html",
+      "songs/test-fixture-03/index.html",
+    ]);
+    for (const page of pages) {
+      const html = readFileSync(join(dist, page), "utf8");
+      expect(html, page).toMatch(/<meta name="robots" content="noindex, nofollow">/);
+      expect(html, page).toContain("Synthetic test fixture");
+      expect(html, page).not.toMatch(/<script/);
+    }
+  });
+
+  it("a production build stays production whatever NODE_ENV says (regression: NODE_ENV once enabled dev mode)", () => {
+    for (const nodeEnv of ["development", "test"]) {
+      const dist = join(TMP, `node-env-${nodeEnv}`, "dist");
+      const env: NodeJS.ProcessEnv = { ...process.env, ASTRO_TELEMETRY_DISABLED: "1", NODE_ENV: nodeEnv };
+      delete env["KLA_SITE_MODE"];
+      delete env["KLA_CONTENT_ROOT"];
+      const r = spawnSync(process.execPath, [ASTRO, "build", "--force", "--outDir", dist], { cwd: ROOT, encoding: "utf8", env });
+      expect(r.status, `${r.stdout}\n${r.stderr}`).toBe(0);
+      expect(builtFiles(dist).filter((f) => f.split(/[\\/]/)[0] === "songs"), nodeEnv).toEqual([]);
+    }
+  });
+
+  it("refuses an unknown site mode instead of guessing", () => {
+    const env: NodeJS.ProcessEnv = { ...process.env, ASTRO_TELEMETRY_DISABLED: "1", KLA_SITE_MODE: "staging" };
+    const r = spawnSync(process.execPath, [ASTRO, "build", "--outDir", join(TMP, "bad-mode")], { cwd: ROOT, encoding: "utf8", env });
+    expect(r.status).not.toBe(0);
+    expect(`${r.stdout}\n${r.stderr}`).toMatch(/KLA_SITE_MODE must be "production" or "preview"/);
+  });
+});
+
 describe("real content in src/content (T-05 synthetic fixtures)", () => {
   it("loads the three fixtures through the Astro collections and emits none of them in production", () => {
     const dist = join(TMP, "real-content", "dist");
@@ -94,10 +136,13 @@ describe("real content in src/content (T-05 synthetic fixtures)", () => {
     }
     expect([...(store.get("people")?.keys() ?? [])].sort()).toEqual(["test-person-a", "test-person-b", "test-person-c"]);
 
+    expect(builtFiles(dist).filter((f) => f.split(/[\\/]/)[0] === "songs")).toEqual([]);
+
     // Nothing from the fixtures reaches the production output (pages, assets, any future search index or sitemap).
     const forbidden = [/test-fixture/, /Test Fixture/, /Test Person/, /[ݮݯݰݱځڅ]/u];
     for (const file of builtFiles(dist)) {
       expect(file).not.toMatch(/test-fixture/);
+      if (!/\.(html|css|js|mjs|json|txt|xml|svg|webmanifest)$/.test(file)) continue; // text outputs only (not fonts)
       const content = readFileSync(join(dist, file), "utf8");
       for (const pattern of forbidden) expect(content, `${file} matches ${pattern}`).not.toMatch(pattern);
     }

@@ -1,21 +1,17 @@
 ---
-// T-01 scaffold placeholder so build, e2e, axe and Lighthouse have a page to run against.
-// Replaced by the real homepage in T-21. Not indexable.
-import "../styles/tokens.css";
+// Placeholder until the homepage (T-21). Not indexable.
+import BaseLayout from "../components/layout/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Khowar Lyrics Archive (in development)</title>
-  </head>
-  <body>
-    <main>
-      <h1>Khowar Lyrics Archive</h1>
-      <p>This site is in development.</p>
-    </main>
-  </body>
-</html>
+<BaseLayout title="Khowar Lyrics Archive" noindex>
+  <h1>Khowar Lyrics Archive</h1>
+  <p>This site is in development.</p>
+</BaseLayout>
+
+<style>
+  h1 {
+    margin: 1rem 0 0.5rem;
+    font-family: var(--font-reading);
+    font-weight: 400;
+  }
+</style>

@@ -1,0 +1,29 @@
+/* Khowar script rules (PRD v3.1 §8). PROVISIONAL font: D-03 is open.
+   - One font per Arabic-script run: the webfont's unicode-range covers Arabic only, so it separates Arabic from Latin
+     and never splits Arabic letters across fonts. Latin inside a Khowar line falls through to the reading face.
+   - Same unitless line-height for the webfont and any fallback, so a font swap does not change line boxes.
+   - Fallback metric overrides (size-adjust, ascent/descent-override) are tuned in T-20 once D-03 is decided. */
+@font-face {
+  font-family: "KLA Khowar";
+  src: url("/fonts/noto-nastaliq-urdu-v3.009-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200D, U+25CC;
+}
+
+/* Any element carrying Arabic-script Khowar or Urdu text. */
+:where([lang="khw"], [lang="ur"]) {
+  font-family: var(--font-khowar);
+  line-height: var(--khw-line-height);
+  font-weight: 400;
+  /* Nastaliq marks and dots extend far above and below; never clip them. */
+  overflow: visible;
+  word-spacing: 0.05em;
+}
+
+/* Latin names and numbers inside RTL text keep the reading face and their own direction (<bdi dir="ltr">). */
+:where([lang="khw"], [lang="ur"]) bdi[dir="ltr"] {
+  font-family: var(--font-reading);
+  font-size: 0.75em;
+}

@@ -1,0 +1,140 @@
+---
+// Credits (PRD §7 via resolveCreditDisplay), recordings (link-out only), rights line and takedown link. Static.
+import type { Song } from "../../lib/content/schemas";
+import { resolveCreditDisplay, type PeopleBySlug } from "../../lib/credits/visibility";
+
+interface Props {
+  song: Song;
+  people: PeopleBySlug;
+}
+const { song, people } = Astro.props;
+
+const ROLE_LABEL: Record<string, string> = {
+  lyricist: "Lyrics",
+  composer: "Music",
+  singer: "Singer",
+  transcriber: "Transcription",
+  translator_en: "English translation",
+  romanizer: "Romanization",
+  reviewer: "Review",
+};
+const credits = song.credits.map((c) => resolveCreditDisplay(c, people));
+
+// Public pages never show evidence grades (PRD §6); only a plain rights line.
+const grade = song.rights.lyric.grade;
+const rightsLine = song.synthetic
+  ? "Synthetic test fixture. It is not a song, holds no rights, and is never published."
+  : grade === "E4" || grade === "E5"
+    ? "Published with the written permission of the rights holder."
+    : "Traditional song, published after legal review of its documented sources.";
+---
+
+<section class="details" aria-labelledby="details-heading">
+  <h2 id="details-heading">About this text</h2>
+
+  <h3>Credits</h3>
+  <dl class="credits">
+    {
+      credits.map((c) => (
+        <div>
+          <dt>{ROLE_LABEL[c.role] ?? c.role}</dt>
+          <dd>
+            {c.kind === "traditional" && "Traditional"}
+            {c.kind === "named" && (
+              <>
+                {c.name}
+                {c.nameKhwArab && (
+                  <>
+                    {" "}
+                    <bdi lang="khw" dir="rtl">
+                      {c.nameKhwArab}
+                    </bdi>
+                  </>
+                )}
+              </>
+            )}
+            {c.kind === "initials" && c.initials}
+            {c.kind === "withheld" && <span class="muted">Name withheld</span>}
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  {
+    song.recordings && song.recordings.length > 0 && (
+      <>
+        <h3>Recordings</h3>
+        <ul class="recordings">
+          {song.recordings.map((r) => (
+            <li>
+              <a href={r.url} rel="noopener noreferrer external">
+                {r.platform}
+              </a>
+              {r.official ? " (official)" : ""}
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  <h3>Rights</h3>
+  <p>{rightsLine}</p>
+  <p><a href="/rights/">Request a correction, a credit change, or removal</a></p>
+</section>
+
+<style>
+  .details {
+    max-width: var(--measure);
+    margin: 4rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.95rem;
+  }
+  h2 {
+    margin: 0 0 1rem;
+    font-family: var(--font-reading);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  h3 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .credits {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+  }
+  .credits div {
+    display: grid;
+    grid-template-columns: minmax(7rem, auto) 1fr;
+    gap: 1rem;
+  }
+  dt {
+    color: var(--text-gloss);
+  }
+  dd {
+    margin: 0;
+  }
+  .muted {
+    color: var(--text-gloss);
+  }
+  .recordings {
+    margin: 0;
+    padding-inline-start: 1.25rem;
+  }
+  .recordings a {
+    display: inline-block;
+    padding-block: 0.5rem;
+  }
+  p {
+    margin: 0 0 0.5rem;
+  }
+  p a {
+    display: inline-block;
+    padding-block: 0.5rem;
+  }
+</style>

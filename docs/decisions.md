@@ -78,10 +78,21 @@ Made while implementing PRD §6. Conservative; the owner may revise any of them.
 |---|---|---|
 | 2026-10-10 | The three fixtures (`src/content/songs/test-fixture-0{1,2,3}.yaml`) use **letter-position sequences**, not Khowar wording. Urdu lines are plain Urdu test sentences ("this is a test line"). Credits use fictitious `Test Person A/B/C`; every rights record is E0. **Pending owner review** (D-15: the owner writes or checks the synthetic Khowar text). | The prompt forbids passing synthetic strings off as Khowar poetry; sequences make the joining-context coverage exact and checkable. |
 | 2026-10-10 | The Roman layer uses a mechanical **test transliteration** that follows the PRD §9 fold targets (ݮ j, ݯ ch, ݰ sh, ݱ zh, ځ dz, څ ts; other letters one-to-one), prefixed `[test]`. It is not the D-05 editorial standard. | Gives T-11 search tests predictable Roman input; the owner may replace it. |
+| 2026-10-10 | **The mechanical fixtures are kept permanently as Unicode regression tests.** They are not to be replaced with invented "authentic" Khowar poetry. | Owner. |
+
+## Design and reader (T-08, T-09)
+
+| Date | Choice | Why |
+|---|---|---|
+| 2026-10-10 | **D-17 provisional values** recorded in `docs/design-system/README.md`: paper `#f7f7f4`, ink `#1c2230`, Roman `#3f4757`, English `#5a6170`, accent `#7b2d3b`; centred verse; Urdu-digit stanza numbers. **Pending owner review**; D-17 is not final. | Owner reviews the visual system before it is confirmed. |
+| 2026-10-10 | Provisional Khowar webfont: Noto Nastaliq Urdu 3.009, regular instance, 118 KB subset, `font-display: swap`, line-height 2.4. **D-03 remains open.** Latin uses system serif and sans stacks (0 KB). | Only Noto Nastaliq Urdu and Noto Naskh Arabic passed T-06; Nastaliq chosen provisionally for the reading page; one token switches it. |
+| 2026-10-10 | Hidden layers are hidden **visually** (clip), not with `display: none`, so Roman and English stay in the accessibility tree. | PRD §8: no Khowar screen-reader voice, so the layers must stay available. |
+| 2026-10-10 | Synthetic fixtures render through real song pages only in **preview builds** (`KLA_SITE_MODE=preview`, output to `dist-preview/`, everything noindex) or `astro dev`. "Development" is detected from the Astro command, **never from `NODE_ENV`**. | A build run with `NODE_ENV=test` was treated as development and emitted the synthetic pages. Found by the build tests, fixed, and covered by a regression test. |
+| 2026-10-10 | Header and footer link to `/songs/`, `/search/`, `/about/`, `/rights/` and `/credits/`, which do not exist yet (T-22, T-11, T-23). | Phase 1 is local only; the links become valid as those tasks land. |
 
 ## Font evidence for D-03 (T-06, T-07) — findings, not a decision
 
-D-03 stays **open** until the owner reviews the rendering on devices. Full data: `tests/fonts/results/2026-10-10/`.
+D-03 stays **open** until the owner's manual Khowar typography review is complete (re-confirmed 2026-10-10). T-08 uses Noto Nastaliq Urdu only as a *provisional* reading font. Full data: `tests/fonts/results/2026-10-10/`.
 
 | Date | Finding | Source |
 |---|---|---|
@@ -97,5 +108,5 @@ D-03 stays **open** until the owner reviews the rendering on devices. Full data:
 |---|---|---|
 | 2026-10-10 | Initialize git and add a GitHub remote? Needed for per-step commits (PRD §14) and the CI workflow (T-01 acceptance). | Resolved 2026-10-10: git initialized, `origin` = github.com/ZohaibRahim/Chitral_Bazm, CI workflow added (checks only, no deploy). Pushing is done only on the owner's instruction. |
 | 2026-10-10 | Keep the project inside OneDrive? `node_modules` and test artifacts are large and sync-heavy. | Open |
-| 2026-10-10 | Is dark mode in the design scope? | Open |
-| 2026-10-10 | May design-system notes from `ui-ux-pro-max` be saved under `docs/design-system/`? | Open |
+| 2026-10-10 | Is dark mode in the design scope? | Resolved 2026-10-10: **deferred.** Phase 1 is light mode only; tokens are semantic (`--color-surface`, `--color-ink`, …) so a dark theme can redefine them later. |
+| 2026-10-10 | May design-system notes from `ui-ux-pro-max` be saved under `docs/design-system/`? | Resolved 2026-10-10: **approved.** |

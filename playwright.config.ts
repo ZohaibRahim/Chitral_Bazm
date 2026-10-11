@@ -2,6 +2,8 @@ import { defineConfig, devices } from "@playwright/test";
 
 const PORT = 4321;
 const FONT_PAGE_PORT = 4322;
+/** Preview build with the synthetic fixtures rendered through real song pages (KLA_SITE_MODE=preview). */
+export const PREVIEW_URL = "http://localhost:4323";
 
 // PRD §3 P1-2: layouts are checked at 360, 390 and 430 px wide.
 export const MOBILE_WIDTHS = [360, 390, 430] as const;
@@ -28,10 +30,11 @@ export default defineConfig({
   ],
   webServer: [
     {
-      command: `npm run build && npm run preview -- --port ${PORT}`,
+      // Production build on :4321 and preview build (synthetic fixtures, noindex) on :4323. See scripts/e2e-serve.mjs.
+      command: "node scripts/e2e-serve.mjs",
       url: `http://localhost:${PORT}/`,
       reuseExistingServer: !process.env["CI"],
-      timeout: 180_000,
+      timeout: 300_000,
     },
     {
       command: `node scripts/fonts/serve.mjs --port ${FONT_PAGE_PORT}`,

@@ -1,4 +1,45 @@
-/* Tailwind entry point and design tokens.
-   Tokens are set in T-08 with the UI/UX Pro Max and frontend-design skills (D-17).
-   Khowar script rules (font, line-height, fallback metrics) go in khowar.css (T-08), not here. */
+/* Design tokens (T-08, D-17). Rationale: docs/design-system/README.md.
+   Light mode only in Phase 1. Components use the SEMANTIC tokens below, never raw values,
+   so a future dark theme only redefines this block. */
 @import "tailwindcss";
+
+@theme {
+  /* Palette: paper and ink. One accent, used sparingly. */
+  --color-paper: #f7f7f4;        /* page background: neutral, slightly cool */
+  --color-paper-raised: #ffffff; /* form controls */
+  --color-ink: #1c2230;          /* Khowar text and headings: blue-black ink, 14.8:1 on paper */
+  --color-ink-soft: #3f4757;     /* Roman Khowar layer: 8.7:1 */
+  --color-ink-faint: #5a6170;    /* English layer, metadata: 5.8:1 */
+  --color-rule: #d8dad4;         /* dividers only (decorative, 1.3:1); never used for text */
+  --color-accent: #7b2d3b;       /* madder: links, active controls, stanza numerals. 8.6:1 */
+  --color-notice: #8a4b00;       /* synthetic/development notices. 6.3:1 */
+
+  /* Type. The Khowar face is PROVISIONAL (D-03 open). Latin stays on system fonts in Phase 1 (0 KB). */
+  --font-khowar: "KLA Khowar", "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Urdu Typesetting", serif;
+  --font-reading: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  /* Semantic roles. */
+  --surface: var(--color-paper);
+  --surface-raised: var(--color-paper-raised);
+  --text: var(--color-ink);
+  --text-roman: var(--color-ink-soft);
+  --text-gloss: var(--color-ink-faint);
+  --rule: var(--color-rule);
+  --accent: var(--color-accent);
+  --notice: var(--color-notice);
+  --focus-ring: 0 0 0 3px var(--color-paper), 0 0 0 5px var(--color-accent);
+
+  /* Rhythm. */
+  --measure: 34rem;     /* verse column */
+  --gutter: 1rem;       /* 16 px side gutter at 360 px */
+  --space-line: 1.5rem; /* between line groups */
+  --space-stanza: 3rem; /* between stanzas */
+
+  /* Khowar type. line-height >= 2.2 for Nastaliq (PRD §8); final value set by the D-03 overlap test. */
+  --khw-line-height: 2.4;
+  --khw-size-lyric: clamp(1.625rem, 1.3rem + 1.6vw, 2rem);
+  --khw-size-title: clamp(2.25rem, 1.8rem + 2.4vw, 3rem);
+}

@@ -1,0 +1,81 @@
+---
+// Song page (T-09). Static, zero JavaScript, no islands (D-06).
+// Pages exist only for songs returned by getCatalog(): publishable songs in production; synthetic fixtures only in
+// development and preview builds (KLA_SITE_MODE=preview), always noindex. Production builds of the fixtures emit nothing.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../components/layout/BaseLayout.astro";
+import LyricBlock from "../../components/lyrics/LyricBlock.astro";
+import RtlText from "../../components/lyrics/RtlText.astro";
+import SongDetails from "../../components/lyrics/SongDetails.astro";
+import { getCatalog } from "../../lib/content/catalog";
+import type { Person } from "../../lib/content/schemas";
+import { assertValidCredits } from "../../lib/credits/visibility";
+import type { CatalogEntry } from "../../lib/rights/publishability";
+
+export async function getStaticPaths() {
+  const entries = await getCatalog();
+  return entries.map((entry) => ({ params: { slug: entry.song.slug }, props: { entry } }));
+}
+
+interface Props {
+  entry: CatalogEntry;
+}
+const { song, noindex } = Astro.props.entry;
+const people = new Map<string, Person>((await getCollection("people")).map((p) => [p.data.slug, p.data]));
+assertValidCredits(song.credits, people, `songs/${song.slug}`);
+---
+
+<BaseLayout title={song.titles.roman_popular} noindex={noindex} preloadKhowarFont>
+  {
+    song.synthetic && (
+      <p class="synthetic-notice" role="note">
+        <strong>Synthetic test fixture.</strong> Not a song and not Khowar poetry: these lines are letter sequences for
+        testing script rendering. Shown only in development and preview builds.
+      </p>
+    )
+  }
+  <header class="song-header">
+    <h1 lang="khw" dir="rtl" translate="no"><RtlText text={song.titles.khw_arab} /></h1>
+    <p class="title-roman" lang="khw-Latn" dir="ltr" translate="no">{song.titles.roman_popular}</p>
+    {song.titles.en && <p class="title-en" lang="en" dir="ltr">{song.titles.en}</p>}
+  </header>
+  <LyricBlock song={song} />
+  <SongDetails song={song} people={people} />
+</BaseLayout>
+
+<style>
+  .synthetic-notice {
+    max-width: var(--measure);
+    margin: 0 auto 2rem;
+    padding: 0.75rem 1rem;
+    border-inline-start: 4px solid var(--notice);
+    background: var(--surface-raised);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+  .song-header {
+    max-width: var(--measure);
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+    text-wrap: balance;
+    font-size: var(--khw-size-title);
+    font-weight: 400;
+    color: var(--text);
+    overflow-wrap: anywhere;
+  }
+  .title-roman {
+    margin: 0.25rem 0 0;
+    font-family: var(--font-reading);
+    font-size: 1.2rem;
+    color: var(--text-roman);
+  }
+  .title-en {
+    margin: 0.25rem 0 0;
+    font-family: var(--font-reading);
+    font-style: italic;
+    color: var(--text-gloss);
+  }
+</style>

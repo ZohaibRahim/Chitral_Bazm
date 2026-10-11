@@ -1,0 +1,48 @@
+---
+// One lyric line and its own layers, directly beneath it (PRD §2 principle 3, P1-3). Static; no JavaScript.
+// A missing layer renders nothing: no empty element, no placeholder.
+import type { Line } from "../../lib/content/schemas";
+import RtlText from "./RtlText.astro";
+
+interface Props {
+  line: Line;
+}
+const { line } = Astro.props;
+const roman = line.renderings.roman_popular;
+const en = line.renderings.en;
+---
+
+<li class="line" id={`line-${line.id}`} data-line={line.id}>
+  <p class="original" lang={line.lang} dir="rtl" translate="no" data-layer="original"><RtlText text={line.text} /></p>
+  {roman !== undefined && <p class="layer layer-roman" lang="khw-Latn" dir="ltr" translate="no" data-layer="roman">{roman}</p>}
+  {en !== undefined && <p class="layer layer-en" lang="en" dir="ltr" data-layer="en">{en}</p>}
+</li>
+
+<style>
+  .line + .line {
+    margin-top: var(--space-line);
+  }
+  .original {
+    margin: 0;
+    font-size: var(--khw-size-lyric);
+    color: var(--text);
+    overflow-wrap: anywhere;
+  }
+  .layer {
+    margin: 0.15rem auto 0;
+    max-width: 30rem;
+    font-family: var(--font-reading);
+    overflow-wrap: anywhere;
+  }
+  .layer-roman {
+    color: var(--text-roman);
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+  .layer-en {
+    color: var(--text-gloss);
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.45;
+  }
+</style>

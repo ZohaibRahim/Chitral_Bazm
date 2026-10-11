@@ -1,0 +1,12 @@
+---
+// Original-script text with embedded Latin runs isolated in <bdi dir="ltr">. Text is emitted unchanged, in logical
+// order; the browser's bidi algorithm handles display order. No JavaScript.
+import { directionalRuns } from "../../lib/lyrics/bidi";
+
+interface Props {
+  text: string;
+}
+const runs = directionalRuns(Astro.props.text);
+---
+
+{runs.map((r) => (r.ltr ? <bdi dir="ltr" lang="en">{r.text}</bdi> : r.text))}

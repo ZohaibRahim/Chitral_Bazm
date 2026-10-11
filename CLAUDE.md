@@ -23,7 +23,8 @@ No PostgreSQL, Supabase or CMS until the PRD §10 migration conditions are met (
 
 Commands: `npm run dev` · `build` (`--force`: always re-validates all content) · `typecheck` · `test` (unit) · `test:build` (real negative/positive builds) · `e2e` · `lhci` (after `build`) · `ci`.
 Font tooling (dev-only, needs `.venv` from `scripts/fonts/requirements.txt`): `fonts:fetch` → `fonts:check` (exits 1 while any candidate lacks a required glyph) → `fonts:page` → `fonts:e2e`; `fonts:test` self-tests the checker; `fonts:serve -- --host 0.0.0.0` for phone review. Font binaries are never committed.
-Site modes: production (default) · preview (`KLA_SITE_MODE=preview`, synthetic shown, all noindex) · development (`astro dev`).
+Site modes: production (default) · preview (`KLA_SITE_MODE=preview`, synthetic shown, all noindex, written to `dist-preview/` only) · development (only the `astro dev` command, detected by the `kla-site-mode` integration; never inferred from `NODE_ENV`). Any other `KLA_SITE_MODE` fails the build. Site e2e runs both builds via `scripts/e2e-serve.mjs` (:4321 production, :4323 preview).
+Design system: `docs/design-system/README.md`; tokens in `src/styles/tokens.css` (semantic roles only in components); Khowar rules in `src/styles/khowar.css`; site font built by `scripts/fonts/build_site_fonts.py` (provisional, D-03).
 
 ## Workflow
 - Follow PRD §12 tasks and §14 sequence. One approved task per session; never start a task whose dependencies are unfinished, and never start unrelated tasks.
